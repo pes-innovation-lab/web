@@ -12,8 +12,9 @@ const routes = [
     { title: 'Members', route: `/members` },
     { title: 'Projects', route: `/projects` },
     { title: 'Publications', route: `/publications` },
-    { title: 'Our History', route: `/history` },
     { title: 'Events', route: '/events' },
+    { title: 'Join Us', route: `/` },
+    { title: 'Our History', route: `/history` },
     // {
     //     title: 'Events',
     //     route: `/events`,

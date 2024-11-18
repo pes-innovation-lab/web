@@ -34,7 +34,11 @@ const useStyles = makeStyles((theme) => ({
 
 function Events() {
     const data = [
-        { month: 'February', event_name: 'Incito Ideathon', key: 'incito' },
+        {
+            month: 'Jan-Feb',
+            event_name: 'Hashcode',
+            key: 'hashcode',
+        },
         {
             month: 'March-April',
             event_name: 'Summer Internship Recruitment',
@@ -45,11 +49,10 @@ function Events() {
             event_name: 'Summer Internship',
             key: 'internship',
         },
-        { month: 'August', event_name: 'RoadShow', key: 'roadshow' },
-        {
-            month: 'October/November',
-            event_name: '#Code Hackathon',
-            key: 'hashcode',
+        { 
+            month: 'Sept-Oct', 
+            event_name: 'RoadShow', 
+            key: 'roadshow' 
         },
     ]
 
@@ -59,45 +62,13 @@ function Events() {
     })
 
     const timelineContent = {
-        incito: {
-            text: (
-                <div className="eventSection">
-                    <div className="eventSectionText">
-                        <Link className="eventPageLink" href={`/incito`}>
-                            <Typography className="eventHeading">
-                                Incito
-                            </Typography>
-                        </Link>
-                        <Typography className="eventText">
-                            Incito is the ideathon organized by PES Lab. It is a
-                            conglomerate of brilliant minds, all incubating
-                            innovative ideas. The shortlisted 10 best ideas
-                            battle it out in the final round to win cash prizes
-                            up to Rs. 40,000 in all. The participants test the
-                            design and feasibility of their ideas without the
-                            constraints of implementing the same, hence
-                            encouraging innovative thinking. The best ideas are
-                            also provided the platform and resources to
-                            implement their ideas and make these a reality.
-                        </Typography>
-                    </div>
-                </div>
-            ),
-            image: (
-                <div className="eventSectionImage">
-                    <img src={`/images/mlab/ideathon.png`} />
-                </div>
-            ),
-        },
         recruitment: {
             text: (
                 <div className="eventSection">
                     <div className="eventSectionText">
-                        <Link className="eventPageLink" href={`/join_us`}>
                             <Typography className="eventHeading">
                                 Summer Internship Recruitment
                             </Typography>
-                        </Link>
                         <Typography className="eventText">
                             Every year, we look for enthusiastic and
                             passion-driven people to become a part of our
@@ -120,11 +91,9 @@ function Events() {
             text: (
                 <div className="eventSection">
                     <div className="eventSectionText">
-                        <Link className="eventPageLink" href={`/summer`}>
                             <Typography className="eventHeading">
                                 Summer Internship Program
                             </Typography>
-                        </Link>
                         <Typography className="eventText">
                             We, at PES Innovation Lab, organise an annual summer
                             internship for new recruits to work on cutting-edge
@@ -151,11 +120,9 @@ function Events() {
             text: (
                 <div className="eventSection">
                     <div className="eventSectionText">
-                        <Link className="eventPageLink" href={`/roadshow`}>
                             <Typography className="eventHeading">
                                 Roadshow
                             </Typography>
-                        </Link>
                         <Typography className="eventText">
                             Roadshow is an Innovation Expo organized by the Lab
                             each year after the Summer Internship Program. PES
@@ -182,11 +149,9 @@ function Events() {
             text: (
                 <div className="eventSection">
                     <div className="eventSectionText">
-                        <Link className="eventPageLink" href={`/hashcode`}>
                             <Typography className="eventHeading">
                                 HashCode
                             </Typography>
-                        </Link>
                         <Typography className="eventText">
                             HashCode is the annual 24-hour hackathon organised
                             by the Lab, with students proposing interesting
@@ -196,9 +161,8 @@ function Events() {
                             academia assisting them. Esteemed personalities from
                             different industrial backgrounds come to judge the
                             show, evaluating projects from all possible angles.
-                            HashCode 2020 is the 9th edition of the annual
-                            hackathon. The winners bag cash prizes worth up to
-                            one lakh indian rupees.
+                            The 13th edition of the annual hackathon will happen in 2025. 
+                            The winners bag cash prizes worth up to one lakh indian rupees.
                         </Typography>
                     </div>
                 </div>

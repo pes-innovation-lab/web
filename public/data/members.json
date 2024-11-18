@@ -3,7 +3,7 @@
     "members": [
       {
         "batch": "2015",
-        "name": "Shreya Krishnan ",
+        "name": "Shreya Krishnan",
         "grad_batch": "2018",
         "branch": "ECE",
         "linkedin": "https://www.linkedin.com/in/shreya-krishnan",
@@ -20,9 +20,19 @@
         "email": "jshreyanshjain@gmail.com",
         "github": "https://github.com/ShreyanshJainJ",
         "picture_url": "https://pil-web.web.app/images/members/2015/Shreyansh.jpg"
+      },
+      {
+        "batch": "2015",
+        "name": "Vasisht Guru Prasad",
+        "grad_batch": "2017",
+        "branch": "EEE",
+        "linkedin": "https://www.linkedin.com/in/vasisht-guru-prasad/",
+        "email": "",
+        "github": "",
+        "picture_url": "https://pil-web.web.app/images/members/anon.jpg"
       }
     ],
-    "length": 2
+    "length": 3
   },
   "2016": {
     "members": [
@@ -90,7 +100,17 @@
         "email": "sumanthvrao@gmail.com",
         "github": "https://github.com/sumanthvrao",
         "picture_url": "https://pil-web.web.app/images/members/2017/Sumanth.png"
-      }
+      },
+      {
+        "batch": "2017",
+        "name": "Shree Hari",
+        "grad_batch": "2020",
+        "branch": "CSE",
+        "linkedin": "https://www.linkedin.com/in/sreeharik5/",
+        "email": "",
+        "github": "",
+        "picture_url": "https://pil-web.web.app/images/members/anon.jpg"
+    }
     ],
     "length": 4
   },
@@ -135,6 +155,16 @@
         "email": "",
         "github": "",
         "picture_url": "https://pil-web.web.app/images/members/2018/Karan.jpg"
+      },
+      {
+        "batch": "2018",
+        "name": "Nanda Krishna",
+        "grad_batch": "2021",
+        "branch": "CSE",
+        "linkedin": "https://www.linkedin.com/in/nandakrishna75",
+        "email": "",
+        "github": "",
+        "picture_url": "https://pil-web.web.app/images/members/anon.jpg"
       },
       {
         "batch": "2018",
@@ -269,7 +299,7 @@
         "linkedin": "https://in.linkedin.com/in/tejas-srinivasan",
         "email": "",
         "github": "https://github.com/Ojjie",
-        "picture_url": "https://pil-web.web.app/images/members/2019/Tejas.jpg"
+        "picture_url": "https://pil-web.web.app/images/members/anon.jpg"
       },
       {
         "batch": "2019",

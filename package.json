@@ -30,7 +30,7 @@
 		"@zeit/next-css": "^1.0.1",
 		"framer-motion": "^10.16.4",
 		"material-ui-popup-state": "^1.7.1",
-		"next": "^14.1.4",
+		"next": "^14.2.18",
 		"react": "^18.2.0",
 		"react-alice-carousel": "^2.2.0",
 		"react-dom": "^18.2.0",

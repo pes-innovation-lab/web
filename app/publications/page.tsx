@@ -23,7 +23,7 @@ import { publicationData } from '../../public/data/publications.js'
 const designStyles = makeStyles({
     spinnerTextStyle: {
         textAlign: 'center',
-        color: '#7cb342',
+        color: '#068F13',
     },
 })
 
@@ -167,7 +167,7 @@ export default function Publications() {
                             Loading Data
                         </Typography>{' '}
                         <CircularProgress
-                            style={{ color: '#7cb342', marginTop: '1em' }}
+                            style={{ color: '#068F13', marginTop: '1em' }}
                         />
                     </div>
                 ) : (

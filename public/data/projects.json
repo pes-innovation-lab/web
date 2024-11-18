@@ -9,7 +9,8 @@
         "keywords": "innovation",
         "mentors": "Parag Jain",
         "interns": "Chetan P, Nidhin A, Sahana M, Shivakumar G",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2016/ArrhythmiaClassification.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2016/ArrhythmiaClassification.jpg",
+        "project-id": "SI-2016-01"
       },
       {
         "year": "2016",
@@ -19,7 +20,8 @@
         "keywords": "innovation",
         "mentors": "R Ramapriya",
         "interns": "Anusha Kamath, Goutham A.P, Pallavi M.P",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2016/GreenCorridor.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2016/GreenCorridor.jpg",
+        "project-id": "SI-2016-02"
       },
       {
         "year": "2016",
@@ -29,7 +31,8 @@
         "keywords": "innovation",
         "mentors": "",
         "interns": "Anmol Patil, Sangeetha M, Raja Mathanky S, Ajay S, Shruthi Ramesh",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2016/GynoCare.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2016/GynoCare.jpg",
+        "project-id": "SI-2016-03"
       },
       {
         "year": "2016",
@@ -39,7 +42,8 @@
         "keywords": "innovation",
         "mentors": "Aamir Hasaan, Anush S Kumar, Amogh Manjunath",
         "interns": "Shravanya G, Swati N H",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2016/kuppam.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2016/kuppam.jpg",
+        "project-id": "SI-2016-04"
       },
       {
         "year": "2016",
@@ -49,7 +53,8 @@
         "keywords": "innovation",
         "mentors": "Sanjay P Josh",
         "interns": "Amogh K.M, Chandrika B.H, Sagar. V. Belavadi, Sukruthi S. Rao",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2016/dynamicroutingposter.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2016/dynamicroutingposter.jpg",
+        "project-id": "SI-2016-05"
       },
       {
         "year": "2016",
@@ -59,7 +64,8 @@
         "keywords": "innovation",
         "mentors": "Parag Jain, Ramapriya",
         "interns": "Ninad Vivek P, K.S Rakesh Kumar, Ganesh P, Shridhar Raikar R",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2016/oxysat.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2016/oxysat.jpg",
+        "project-id": "SI-2016-06"
       },
       {
         "year": "2016",
@@ -69,7 +75,8 @@
         "keywords": "innovation",
         "mentors": "Vasist Guru Prasad",
         "interns": "Adithya P Mallar, Mansukh Pamarath, Akarsh K Urs, Sanjith Athlur, Ananya Ravikumar",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2016/SensorNetworkSecurity.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2016/SensorNetworkSecurity.jpg",
+        "project-id": "SI-2016-07"
       },
       {
         "year": "2016",
@@ -79,7 +86,8 @@
         "keywords": "innovation",
         "mentors": "Suhas Ganesh",
         "interns": "K.Prasanna Kumar, Nishanth S Hegde, Pranav Kashyap H, Avinash Kumar",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2016/SpeakerRecognition.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2016/SpeakerRecognition.jpg",
+        "project-id": "SI-2016-08"
       },
       {
         "year": "2016",
@@ -89,7 +97,8 @@
         "keywords": "innovation",
         "mentors": "R Hariharan, Shashi Kiran M R",
         "interns": "Amith Kashyap, K N Namratha, Srividhya R",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2016/VoiceRobot.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2016/VoiceRobot.jpg",
+        "project-id": "SI-2016-09"
       },
       {
         "year": "2016",
@@ -99,7 +108,8 @@
         "keywords": "innovation",
         "mentors": "Suhas Ganesh",
         "interns": "Aniruddh Iyer, Gagan G, Pratik Rajesh Sampal, Pratik R, Rahul Ragesh",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2016/Zenon.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2016/Zenon.jpg",
+        "project-id": "SI-2016-10"
       }
     ],
     "length": 10
@@ -114,7 +124,8 @@
         "keywords": "innovation",
         "mentors": "Vasisht Guru Prasad, Rahul Ragesh, Pratik Shiyal",
         "interns": "Karan Rao, Manasa Jadadeesh, Nikitha Rao, Rohan Mohaptra, Sreenivas M Kandhade",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2017/BrainChild.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2017/BrainChild.jpg",
+        "project-id": "SI-2017-01"
       },
       {
         "year": "2017",
@@ -124,7 +135,8 @@
         "keywords": "innovation",
         "mentors": "Nishanth Hegde, Shashwath S Bharadwaj",
         "interns": "Deepali Prabhu, Manish Soni, Sree Hari K",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2017/EmotionAnalysis.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2017/EmotionAnalysis.jpg",
+        "project-id": "SI-2017-02"
       },
       {
         "year": "2017",
@@ -134,7 +146,8 @@
         "keywords": "innovation",
         "mentors": "Adith Kumar Urs",
         "interns": "Prasanna Venaktesan K S, Manoj Surya K, Tarun Bhargav Sriram, Dweepa Prasad",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2017/ExploDroid.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2017/ExploDroid.jpg",
+        "project-id": "SI-2017-03"
       },
       {
         "year": "2017",
@@ -144,7 +157,8 @@
         "keywords": "Machine Learning, NLP,  ANN",
         "mentors": "Shashwath S Bharadwaj, Nishanth Hegde",
         "interns": "Sumanth V Rao, Suraj Aralihalli, Tanmaya Udupa",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2017/Logophiles%20Companion.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2017/Logophiles%20Companion.jpg",
+        "project-id": "SI-2017-04"
       },
       {
         "year": "2017",
@@ -154,7 +168,8 @@
         "keywords": "innovation",
         "mentors": "Nishanth Hegde, Shashwath S Bharadwaj",
         "interns": "Piyush Surana, Varun Ranganathan",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2017/MappingFacialImage.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2017/MappingFacialImage.jpg",
+        "project-id": "SI-2017-05"
       },
       {
         "year": "2017",
@@ -164,7 +179,8 @@
         "keywords": "innovation",
         "mentors": "Adith Kumar Urs",
         "interns": "Sahiti Vallamreddy, Akshath Kachinthaya",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2017/ModCube.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2017/ModCube.jpg",
+        "project-id": "SI-2017-06"
       },
       {
         "year": "2017",
@@ -174,7 +190,8 @@
         "keywords": "innovation",
         "mentors": "Amith Kashyap",
         "interns": "Sumedh Baradwaj",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2017/ProsthticArm.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2017/ProsthticArm.jpg",
+        "project-id": "SI-2017-07"
       },
       {
         "year": "2017",
@@ -184,7 +201,8 @@
         "keywords": "innovation",
         "mentors": "Vidyasagar V Gaikwad",
         "interns": "Sudarshan CV, Shreyas K Narayan, Tanya Sharma",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2017/StabilizationRobot.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2017/StabilizationRobot.jpg",
+        "project-id": "SI-2017-08"
       },
       {
         "year": "2017",
@@ -194,7 +212,8 @@
         "keywords": "innovation",
         "mentors": "Manish Kumar, Shashwath S bharadwaj",
         "interns": "Lavanya R, Mridula Singhal, Prajwal Kiran Kumar, Shruti V Hegde",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2017/TapToOrder.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2017/TapToOrder.jpg",
+        "project-id": "SI-2017-09"
       },
       {
         "year": "2017",
@@ -204,7 +223,8 @@
         "keywords": "Wireless, sensor network, tenperature sensor, arduino",
         "mentors": "Vasisht, Shreyas Aaradhya, Dr. Venkatrangan M J, Prof. M Rajasekar",
         "interns": "Aiswarya Sriram, rasya ramesh, vinayaka kamath, amogha sekhat, akshar atreya",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2017/WiseNet.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2017/WiseNet.jpg",
+        "project-id": "SI-2017-10"
       },
       {
         "year": "2017",
@@ -214,7 +234,8 @@
         "keywords": "innovation",
         "mentors": "Shashwath S Bharadwaj",
         "interns": "Sameer Dhole, Animesh ND, Meghana V S, Maanvi Nunna",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2017/workinprogress.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2017/workinprogress.jpg",
+        "project-id": "SI-2017-11"
       }
     ],
     "length": 11
@@ -229,7 +250,8 @@
         "keywords": "innovation",
         "mentors": "Tarun, Manoj, Prasanna",
         "interns": "Manik, Karthik PB, Pavan, Sai Krishna",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2018/BallCatcher.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2018/BallCatcher.jpg",
+        "project-id": "SI-2018-01"
       },
       {
         "year": "2018",
@@ -239,7 +261,8 @@
         "keywords": "innovation",
         "mentors": "Sharvanga G",
         "interns": "Aishwarya K, Nishanth Shetty, Tarun K, Tejvi M",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2018/CatchMeIfYouGAN.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2018/CatchMeIfYouGAN.jpg",
+        "project-id": "SI-2018-02"
       },
       {
         "year": "2018",
@@ -249,7 +272,8 @@
         "keywords": "innovation",
         "mentors": "Ananya Ravikumar",
         "interns": "Aakansha pant, Sarang Pramod, Deepesh Sahoo",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2018/WSN.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2018/WSN.jpg",
+        "project-id": "SI-2018-03"
       },
       {
         "year": "2018",
@@ -259,17 +283,19 @@
         "keywords": "innovation",
         "mentors": "Prasanna Venkatesan KS, Tarun Bhargav Sriram",
         "interns": "Athindra Bandi, Mayank Agarwal, Nandakrishna",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2018/Explodroid2.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2018/Explodroid2.jpg",
+        "project-id": "SI-2018-04"
       },
       {
         "year": "2018",
         "title": "Forget me Not",
         "short_description": "",
-        "long_description": "An Android app to help patients suffering from moderate forms of memory impairing diseases such as Alzheimer’s and dementia, and to help reduce the burden on their caretakers.",
+        "long_description": "An Android app to help patients suffering from moderate forms of memory impairing diseases such as Alzheimer\u2019s and dementia, and to help reduce the burden on their caretakers.",
         "keywords": "innovation",
         "mentors": "Animesh ND, Avinash",
         "interns": "Anagha Ananth, Aniket Kaulavkar, Deepika Karanji, Dhruv Vohra, Puneeth Karkera, Vishnu S Murali",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2018/ForgetMeNot.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2018/ForgetMeNot.jpg",
+        "project-id": "SI-2018-05"
       },
       {
         "year": "2018",
@@ -279,7 +305,8 @@
         "keywords": "innovation",
         "mentors": "R Hariharan, Adith Kumar",
         "interns": "Arya Rajiv Chaloli, Karthik K Bhat, Vishwas NS",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2018/Indra.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2018/Indra.jpg",
+        "project-id": "SI-2018-06"
       },
       {
         "year": "2018",
@@ -289,7 +316,8 @@
         "keywords": "innovation",
         "mentors": "Amith Kashyap",
         "interns": "Aushim Nagarkatti, Malaika Vijay, Shruti Mohanty",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2018/MakinWaves.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2018/MakinWaves.jpg",
+        "project-id": "SI-2018-07"
       },
       {
         "year": "2018",
@@ -299,7 +327,8 @@
         "keywords": "innovation",
         "mentors": "Amith Kashyap",
         "interns": "Siddarth Karki, Sumedh Basarkod, Vishal S",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2018/Oculus.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2018/Oculus.jpg",
+        "project-id": "SI-2018-08"
       },
       {
         "year": "2018",
@@ -309,7 +338,8 @@
         "keywords": "Machine Learning, Game Development, Reinforcement Learning",
         "mentors": "Sree Hari K",
         "interns": "Ishaan Lagwankar, Saksham Goyal, Niharika Pentapati",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2018/HumanVsAI.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2018/HumanVsAI.jpg",
+        "project-id": "SI-2018-09"
       },
       {
         "year": "2018",
@@ -319,7 +349,8 @@
         "keywords": "VR, Unity, Image Processing, Floor Plans, Construction, Interactive",
         "mentors": "Amith Kashyap",
         "interns": "Aishwarya Venkatesh, Karan Panjabi, Aditya Girisha",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2018/VRchitect.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2018/VRchitect.jpg",
+        "project-id": "SI-2018-10"
       }
     ],
     "length": 10
@@ -334,17 +365,19 @@
         "keywords": "docker, kubernetes, ML, distributed computing",
         "mentors": "Animesh ND",
         "interns": "Vishwas Rajashekar , Aditi Ahuja, Raunak Sengupta, Sparsh Temani",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2019/ApatheticML.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2019/ApatheticML.jpg",
+        "project-id": "SI-2019-01"
       },
       {
         "year": "2019",
         "title": "CritiQuali",
         "short_description": "Customer review analysis to return company's critical issues.",
-        "long_description": "Built a Customer Feedback Model to analyze the customer review data of a company, and help identify critical issues based on their severity and impact on customers as well as management. Customer review data for a company is collected and classified into categories (buckets). Aspect-based sentiment/emotion analysis is performed to filter out the negative-sentiment issues; Non-granular reviews (reviews that don’t give specific/detailed issues) are removed using dependency parsing, and issues are ranked based on a severity score that is generated, to finally return the top-ranked issues.",
+        "long_description": "Built a Customer Feedback Model to analyze the customer review data of a company, and help identify critical issues based on their severity and impact on customers as well as management. Customer review data for a company is collected and classified into categories (buckets). Aspect-based sentiment/emotion analysis is performed to filter out the negative-sentiment issues; Non-granular reviews (reviews that don\u2019t give specific/detailed issues) are removed using dependency parsing, and issues are ranked based on a severity score that is generated, to finally return the top-ranked issues.",
         "keywords": "innovation",
         "mentors": "Sumanth V Rao",
         "interns": "Abhigna L Shastry, Karan Kumar G, Sumukh Aithal K",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2019/CritiQali.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2019/CritiQali.jpg",
+        "project-id": "SI-2019-02"
       },
       {
         "year": "2019",
@@ -354,7 +387,8 @@
         "keywords": "innovation",
         "mentors": "Athindra Bandi, Karthik PB",
         "interns": "Aravind S, Agnibha Bhattacharyya, Rajat Hegde, Shrenik R",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2019/MultiTerrainDrone.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2019/MultiTerrainDrone.jpg",
+        "project-id": "SI-2019-03"
       },
       {
         "year": "2019",
@@ -364,7 +398,8 @@
         "keywords": "innovation",
         "mentors": "Ananya Ravikumar",
         "interns": "Ashwin R Bharadwaj, Abdur Rahman Hatim, Devika S Nair, Shreeram Suresh Chandra",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2019/MythologicalML.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2019/MythologicalML.jpg",
+        "project-id": "SI-2019-04"
       },
       {
         "year": "2019",
@@ -374,7 +409,8 @@
         "keywords": "innovation",
         "mentors": "Sameer Raju Dhole",
         "interns": "Anirudh S, Pranav Bhatt, Hardik Gourisaria",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2019/P2P.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2019/P2P.jpg",
+        "project-id": "SI-2019-05"
       },
       {
         "year": "2019",
@@ -384,7 +420,8 @@
         "keywords": "innovation",
         "mentors": "Saksham Goyal",
         "interns": "Saahil Jain, Kavya S, Vishwa Pravin",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2019/ProjectX.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2019/ProjectX.jpg",
+        "project-id": "SI-2019-06"
       },
       {
         "year": "2019",
@@ -394,17 +431,19 @@
         "keywords": "Rehabilitation Robotics, Stereo Vision, Convolutional Neural Networks, Wheelchair",
         "mentors": "Dr. Venkatarangan M.J",
         "interns": "B.R Srikrishna, Prajwal Billawa",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2019/ProstheticActuationSystemPoster.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2019/ProstheticActuationSystemPoster.jpg",
+        "project-id": "SI-2019-07"
       },
       {
         "year": "2019",
         "title": "Roadmap",
         "short_description": "Web tool for graphical descriptions of learning flows.",
-        "long_description": "Over the years, the ways and processes people have employed to consume information and learn have changed in innumerable ways. The biggest change perhaps, is the emergence of the internet as the clear victor as a global source of knowledge. For the sake of argument, the internet may be thought of as a big, disorganised kitchen with many chefs and no particular distribution of dish workload among them. Say chef-A fashions a particularly scrumptious starter dish-X while being moderately skilled at making the main course dish-Y and sadly, makes a rather foul dessert dish-Z. His colleague, chef-B makes a Michelin worthy main course dish-Y but is so-so at the other two components of a meal. Enter chef-C. He makes the best Poire la Beaujolaise (call it dish-Z) but is simply incapable of making anything else. Now, if you wanted a 3-course meal, what are your chances of getting an optimal dish-A, dish-B and dish-C and in that particular order? Bleak indeed. This is pre- cisely the issue that Roadmap solves. Deconstructing the analogy, the chefs are websites and the dishes are resources. Akin to a meal, information must be consumed in a particular order and from the right source(s). Roadmap identifies blocks of prerequisite information pertaining to the desired ob- jective topic and presents a platter of ranked resources procured from apt sources. These tasks are accomplished by parsing through various resources and identifying parent-child relationships between entities by virtue of varied approaches such as semantic nets, N-space clustering, ANNs that analyse the statistical occurrences of entities and even contextualised word embeddings. Going back to the analogy one last time, Roadmap takes structured learning from ”too many chefs spoil the broth” to ”the more the merrier”.",
+        "long_description": "Over the years, the ways and processes people have employed to consume information and learn have changed in innumerable ways. The biggest change perhaps, is the emergence of the internet as the clear victor as a global source of knowledge. For the sake of argument, the internet may be thought of as a big, disorganised kitchen with many chefs and no particular distribution of dish workload among them. Say chef-A fashions a particularly scrumptious starter dish-X while being moderately skilled at making the main course dish-Y and sadly, makes a rather foul dessert dish-Z. His colleague, chef-B makes a Michelin worthy main course dish-Y but is so-so at the other two components of a meal. Enter chef-C. He makes the best Poire la Beaujolaise (call it dish-Z) but is simply incapable of making anything else. Now, if you wanted a 3-course meal, what are your chances of getting an optimal dish-A, dish-B and dish-C and in that particular order? Bleak indeed. This is pre- cisely the issue that Roadmap solves. Deconstructing the analogy, the chefs are websites and the dishes are resources. Akin to a meal, information must be consumed in a particular order and from the right source(s). Roadmap identifies blocks of prerequisite information pertaining to the desired ob- jective topic and presents a platter of ranked resources procured from apt sources. These tasks are accomplished by parsing through various resources and identifying parent-child relationships between entities by virtue of varied approaches such as semantic nets, N-space clustering, ANNs that analyse the statistical occurrences of entities and even contextualised word embeddings. Going back to the analogy one last time, Roadmap takes structured learning from \u201dtoo many chefs spoil the broth\u201d to \u201dthe more the merrier\u201d.",
         "keywords": "innovation",
         "mentors": "Siddarth Karki, Tejvi M",
         "interns": "Akshay Vasudeva Rao, Prakruti Prakash Rao, Ruchika Shashidhara, Sourav T Raveendran",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2019/Roadmap.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2019/Roadmap.jpg",
+        "project-id": "SI-2019-08"
       },
       {
         "year": "2019",
@@ -414,7 +453,8 @@
         "keywords": "innovation",
         "mentors": "Aishwarya Venkatesh, Ananya Ravikumar",
         "interns": "Akash Hamirwasia, Rishit Chaudhary, Tanishq Vyas",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2019/TimeTableGeneration.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2019/TimeTableGeneration.jpg",
+        "project-id": "SI-2019-09"
       },
       {
         "year": "2019",
@@ -424,7 +464,8 @@
         "keywords": "Machine Learning, NLP, Web",
         "mentors": "Ishaan Lagwankar, Tejvi M",
         "interns": "Taran, Tejas, Sonam",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2019/UniBot.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2019/UniBot.jpg",
+        "project-id": "SI-2019-10"
       },
       {
         "year": "2019",
@@ -434,7 +475,8 @@
         "keywords": "innovation",
         "mentors": "Deepesh Sahoo, Sarang Pramode",
         "interns": "Anish Reddy Y, Akshobhya Jamadagni K R, Shreyas GS, Shriprajwal Krishnamurthy",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2019/WSNModelling.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2019/WSNModelling.jpg",
+        "project-id": "SI-2019-11"
       }
     ],
     "length": 11
@@ -449,7 +491,8 @@
         "keywords": "ROS, Drone Computing, Image Processing, Neural Network, Path Planning, PID, Kalman Filter, Simulation",
         "mentors": "Srikishna BR, Aravind S, Sameer Dhole",
         "interns": "Suhas Thalanki, Harshith Kumar MB, T Vijay Prashant, Shayak Bhadraray",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2020/DroneForces.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2020/DroneForces.jpg",
+        "project-id": "SI-2020-01"
       },
       {
         "year": "2020",
@@ -459,7 +502,8 @@
         "keywords": "Deep Learning, Secure Function Evaluation, Garbled Circuit, Approximate computing",
         "mentors": "Animesh ND, Taran Singhania",
         "interns": "Aasim Mohammed, Chirag Kashyap S, Rehan Vipin",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2020/ApproximatelyPrivate.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2020/ApproximatelyPrivate.jpg",
+        "project-id": "SI-2020-02"
       },
       {
         "year": "2020",
@@ -469,7 +513,8 @@
         "keywords": "Music Generation, Deep Learning, LSTM, Melodia, Algorithms",
         "mentors": "Tejas S, Sourav T.R",
         "interns": "Murali Krishna, Nihal R, Moyank Giri",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2020/NeuralMusic.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2020/NeuralMusic.jpg",
+        "project-id": "SI-2020-03"
       },
       {
         "year": "2020",
@@ -479,7 +524,8 @@
         "keywords": "Openwhisk, Kafka, Dashboard, FaaS, IoT, Docker",
         "mentors": "Vishwas R, Pranav Bhatt",
         "interns": "Chetan Athni, Sakshi Vattikuti, Hemant Sathish, A Anantha Krishna",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2020/SCCAM.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2020/SCCAM.jpg",
+        "project-id": "SI-2020-04"
       },
       {
         "year": "2020",
@@ -489,7 +535,8 @@
         "keywords": "Automation, Lecture Videos, Transcript, NLP, Image Processing",
         "mentors": "Tanishq Vyas, Akshay Vasudev",
         "interns": "Mayank Agrawal, Himanshu Jain, Rahul D Makhija, Aniket Aayush",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2020/Brevis.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2020/Brevis.jpg",
+        "project-id": "SI-2020-05"
       },
       {
         "year": "2020",
@@ -499,7 +546,8 @@
         "keywords": "Neural Networks, Machine Learning",
         "mentors": "Saahil Jain",
         "interns": "Aanchal Narendran, Kartika Nair, Sujith K",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2020/NODE.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2020/NODE.jpg",
+        "project-id": "SI-2020-06"
       },
       {
         "year": "2020",
@@ -509,17 +557,19 @@
         "keywords": "networks, sensors, wireless, routing, energy-efficiency, algorithms",
         "mentors": "Anish Reddy, Shriprajwal Krishnamurthy",
         "interns": "Hrishit Chaudhuri, Rithvik Rama, Amogh KM, Surya Dutta",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2020/WiSeN.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2020/WiSeN.jpg",
+        "project-id": "SI-2020-07"
       },
       {
         "year": "2020",
         "title": "AQVis",
         "short_description": "Air Quality Visualisation and Analytics on Cloud",
-        "long_description": "Air quality has always been a growing concern in today’s world. AQVis is a cloud-based visualization and analytics platform. This project (AQVis) aims to be the Cloud-based counterpart of the Air Quality sensors. The data is sent from sensors to the cloud (Google Cloud Platform) and then is visualized onto the web page as graphs that users can access. A dashboard created houses the relevant visualizations and maps to generate useful insights from the data.",
+        "long_description": "Air quality has always been a growing concern in today\u2019s world. AQVis is a cloud-based visualization and analytics platform. This project (AQVis) aims to be the Cloud-based counterpart of the Air Quality sensors. The data is sent from sensors to the cloud (Google Cloud Platform) and then is visualized onto the web page as graphs that users can access. A dashboard created houses the relevant visualizations and maps to generate useful insights from the data.",
         "keywords": " Air Quality Visualisation, Google Cloud Platform, OpenLayers, Elastic stack, Kubernetes",
         "mentors": "Dr. Venkatarangan M.J, Animesh ND, Vishwas R, Yashas ND",
         "interns": "Ashutosh Rao, Srinath Kesav Nallamalli, Srujan Vasudevrao Deshpande",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2020/AQVis.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2020/AQVis.jpg",
+        "project-id": "SI-2020-08"
       }
     ],
     "length": 8
@@ -534,7 +584,8 @@
         "keywords": "Contradiction, Sentence pairs, NLP, Deep learning, ML ",
         "mentors": "Hrishit Chaudhuri, Suhas Thalanki, Vibha Masti",
         "interns": "Rida Javed Kutty, Roshni P N, Shreya S Adiga",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2022/DisContNet.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2022/DisContNet.png",
+        "project-id": "SI-2022-01"
       },
       {
         "year": "2022",
@@ -544,7 +595,8 @@
         "keywords": "Network, Reconnaissance, Autonomous, Robots, ROS",
         "mentors": "Harshith Kumar, Shayak Bhadraray, T Vijay Prashant",
         "interns": "Pramuk M P, Samuel Thomas, Sriram Radhakrishna",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2022/VayuBhoomi.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2022/VayuBhoomi.png",
+        "project-id": "SI-2022-02"
       },
       {
         "year": "2022",
@@ -554,7 +606,8 @@
         "keywords": "Federated Learning, Kubernetes, Docker, Distributed Systems, Grafana Monitoring",
         "mentors": "Aanchal Narendran, Animesh ND",
         "interns": "Anirudh Rowjee, Shubhankar V Kuranagatti, Urmil Kalaria",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2022/PseudoDeploy.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2022/PseudoDeploy.png",
+        "project-id": "SI-2022-03"
       },
       {
         "year": "2022",
@@ -564,7 +617,8 @@
         "keywords": "Floating points, Numerical analysis, Compiler design, precision, C",
         "mentors": "Hrishit Chaudhuri",
         "interns": "Disha Jain, Gagan Prashanth K, Vishal J Lodha",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2022/Flovver.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2022/Flovver.png",
+        "project-id": "SI-2022-04"
       },
       {
         "year": "2022",
@@ -574,7 +628,8 @@
         "keywords": "Turing Machine, Automata, Vue, Compiler Design, Simulaton",
         "mentors": "Akash Hamirwasia, Hrishit Chaudhuri",
         "interns": "Abishek Deivam, Tarun M, Thejas N U",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2022/Vyaakaran.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2022/Vyaakaran.png",
+        "project-id": "SI-2022-05"
       },
       {
         "year": "2022",
@@ -584,7 +639,8 @@
         "keywords": "Python, PyScript, React, WebAssembly, Frontend, Reconcilation",
         "mentors": "Murali Krishna, Nihal Ramaswamy",
         "interns": "B R Sinchana, Shreyas Kaundinya, Suraj Rao K P",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2022/ViPyr.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2022/ViPyr.png",
+        "project-id": "SI-2022-06"
       },
       {
         "year": "2022",
@@ -594,7 +650,8 @@
         "keywords": "Placement Process, Software, Automation, Database, Convenience ",
         "mentors": "Akshobhya Jamadagni, Sakshi Vatikutti",
         "interns": "Pavan Nettam, Rakshitha R, Tanishq Chugh",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2022/RePlacement.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2022/RePlacement.png",
+        "project-id": "SI-2022-07"
       },
       {
         "year": "2022",
@@ -604,7 +661,8 @@
         "keywords": "Networks, Throughput, Internet, Machine Learning, Graph Neural Networks, Prediction",
         "mentors": "Professor M Rajasekar, Venkat Ramnan K",
         "interns": "Shreyas S, Spoorthi Kalkunte, Varun Satheesh",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2022/TPML-WLAN.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2022/TPML-WLAN.png",
+        "project-id": "SI-2022-08"
       }
     ],
     "length": 8
@@ -619,7 +677,8 @@
         "keywords": "Air quality monitoring, AQVis, Big Data, Iot, Monitoring, Analyzing, Visualizing",
         "mentors": "Prof. M J Venkatrangan, Shreyas Kaundinya, Gagan P",
         "interns": "Darsh Agarwal, Rashi Bandi, Shreesh Bajpai",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2023/AQVis.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2023/AQVis.png",
+        "project-id": "SI-2023-01"
       },
       {
         "year": "2023",
@@ -629,7 +688,8 @@
         "keywords": "Motion Planning, Robotics, Algorithm Development, C++",
         "mentors": "Srikrishna B.R, Disha Jain",
         "interns": "Ayush Kale, Varuni H K, Vikas Menezes",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2023/BitStarConnect.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2023/BitStarConnect.png",
+        "project-id": "SI-2023-02"
       },
       {
         "year": "2023",
@@ -639,7 +699,8 @@
         "keywords": "Distributed Systems, Kubernetes, Fuzzing, Observability, Reliability",
         "mentors": "Animesh ND, Anirudh Rowjee",
         "interns": "Anirudh Lakhotia, B Monish Moger, Sai Smaran Jawalkar",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2023/DistilledChaos.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2023/DistilledChaos.png",
+        "project-id": "SI-2023-03"
       },
       {
         "year": "2023",
@@ -649,7 +710,8 @@
         "keywords": "Reinforcement Learning, Robotics, Autonomous Robot, Task scheduling, Warehouse Management",
         "mentors": "Sriram Radhakrishna, Samuel Thomas, Shayak Bhadraray, Harshith Kumar",
         "interns": "Amulya Marali, Ashvin Bhat, Pradeep J, Rohan Mahesh Rao",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2023/FRedBots.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2023/FRedBots.png",
+        "project-id": "SI-2023-04"
       },
       {
         "year": "2023",
@@ -659,7 +721,8 @@
         "keywords": "Reinforcement Learning, Deep Learning",
         "mentors": "Samuel Thomas",
         "interns": "Anshul Dasyam, Gautham Krithiwas, Shreya Chakraborty, Suma Grandhi",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2023/MarlonBrando.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2023/MarlonBrando.png",
+        "project-id": "SI-2023-05"
       },
       {
         "year": "2023",
@@ -669,7 +732,8 @@
         "keywords": "Hydrodynamic, AUV, Robust Control, Image Processing",
         "mentors": "Samuel Thomas, Harshith Kumar, Shayak Bhadraray, Sriram Radhakrishna",
         "interns": "Archanaa A Chandaragi, Dhriti Rajesh Krishnan, Himank Bansal, Pranav V Kumar",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2023/Megalodon.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2023/Megalodon.png",
+        "project-id": "SI-2023-06"
       },
       {
         "year": "2023",
@@ -679,7 +743,8 @@
         "keywords": "Reinforcement Learning, ROS, Hardware, Autonomous, Robot",
         "mentors": "Samuel Thomas, Shayak Bhadraray, Sriram Radhakrishna, Harshith Kumar",
         "interns": "Arjun Achar, Pavvan Pradeep, Sanraj Lachhiramka, Srimitravinda Ponnada",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2023/TerraBot.jpg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2023/TerraBot.jpg",
+        "project-id": "SI-2023-07"
       },
       {
         "year": "2023",
@@ -689,7 +754,8 @@
         "keywords": "Throughput Prediction, Graph Attention Networks, Pytorch, Throughput Optimization, Wi-Fi 6",
         "mentors": "Prof. M Rajsekar, Shreyas S, Spoorti K, Varun S",
         "interns": "Akash Kamalesh, Nischal H S, Shreyas M N",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2023/TPGATWiLAN.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2023/TPGATWiLAN.png",
+        "project-id": "SI-2023-08"
       },
       {
         "year": "2023",
@@ -699,7 +765,8 @@
         "keywords": "Audio, Stegnography, Communication, Trojan, Covert",
         "mentors": "Sameer Raju Dhole, Murali Krishna",
         "interns": "Anirudh Revanur, C.P.Sindhu, Shreesh Bajpai",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2023/WhisperWire.png"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2023/WhisperWire.png",
+        "project-id": "SI-2023-09"
       }
     ],
     "length": 9
@@ -708,43 +775,36 @@
     "projects": [
       {
         "year": "2024",
-        "title": "CASNAV",
-        "short_description": "",
-        "long_description": "The goal is to enable seamless navigation through dense social crowds by developing a novel approach that integrates human trajectory prediction with Deep Reinforcement Learning techniques. The objective is for the robot to reach its destination while avoiding human paths in a socially appropriate manner. By adhering to social norms, the robot can smoothly and safely navigate within crowded environments, ensuring minimal disruption to human movement.",
-        "keywords": "Robotics, Social Navigation, RL",
-        "mentors": "Shayak Bhadraray, Harshith Kumar, Himank Bansal, Samuel Thomas",
-        "interns": "Jayant Anand, Kriti Bharadwaj, Samprith Jagtap D",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2024/CASNAV.jpeg"
-      },
-      {
-        "year": "2024",
         "title": "(c)early data",
         "short_description": "",
         "long_description": "Implementing TLS 1.3 early data into libcurl, an open-source library for making network requests using URL syntax. This feature completely eliminates the TLS handshake overhead on resumed connections.",
         "keywords": "Curl, Security, Early Data, C",
         "mentors": "Murali Krishna, Anirudh Lakhotia, Akshobhya Jamadagni",
         "interns": "Kiran Rajpurohit, Prajwal M, Varun Shenoy, Vibhav Tiwari",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2024/CEARLY_DATA.svg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2024/CEARLY_DATA.svg",
+        "project-id": "SI-2024-01"
       },
       {
         "year": "2024",
-        "title": "FredBots 2.0",
+        "title": "CASNAV",
         "short_description": "",
-        "long_description": "FRedBots 2.0 is a multi agent Automated Storage and Retrieval System for 3D environments.",
-        "keywords": "Robotics, ML, Autonomous Robots, Warehouse Managemnet, 3D Space",
-        "mentors": "Sriram Radhakrishna, Samuel Thomas, Vikas Menezes, Amulya Marali, Ashvin Bhat",
-        "interns": "Aditya Naskar, D L Rameshwar, Manisha Venkatesha, Sharanya Madhusudhan",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2024/FRED_BOTS.png"
+        "long_description": "The goal is to enable seamless navigation through dense social crowds by developing a novel approach that integrates human trajectory prediction with Deep Reinforcement Learning techniques. The objective is for the robot to reach its destination while avoiding human paths in a socially appropriate manner. By adhering to social norms, the robot can smoothly and safely navigate within crowded environments, ensuring minimal disruption to human movement.",
+        "keywords": "Robotics, Social Navigation, RL",
+        "mentors": "Shayak Bhadraray, Harshith Kumar, Himank Bansal, Samuel Thomas",
+        "interns": "Jayant Anand, Kriti Bharadwaj, Samprith Jagtap D",
+        "poster_url": "https://pil-web.web.app/images/projects/posters2024/CASNAV.jpeg",
+        "project-id": "SI-2024-02"
       },
       {
         "year": "2024",
-        "title": "RepViz",
+        "title": "C.O.R.E",
         "short_description": "",
-        "long_description": "Benchmarking a novel clock mechanism for keeping time in distributed systems - replay clocks - against the industry standard vector clocks in terms of time and space efficiency.",
-        "keywords": "Time, Vector Clocks, Synchronisation, Clocks, Physical Clocks",
-        "mentors": "Ishaan Lagwankar, Anirudh Rowjee, Smaran Jawalkar, Animesh ND",
-        "interns": "Sriprad Potukuchi, Suparna S Prasad",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2024/REPVIZ.jpeg"
+        "long_description": "CORE (Code Optimization and Review Evaluation) is a system that analyzes GitHub PRs in GoLang to identify custom functions that can be replaced with more efficient, standardized library functions or popular Go packages. Using a combination of Tree-sitter for code parsing and LLMs through RAG pipelines, CORE provides optimized suggestions to improve code performance and maintainability. The project\u2019s novelty lies in its use of Tree-sitter, ensuring precise code analysis and minimization of hallucinations in LLM outputs.",
+        "keywords": "AST, ML, Code, Review, Github, Actions",
+        "mentors": "Rishit Chaudhary, Varuni H K, Gautham Krithiwas, Dhriti Krishnan, Akash Kamalesh",
+        "interns": "Nikita Anup, Prathamesh Devadiga, Siddhi Zanwar, Vishal Srinivasa ",
+        "poster_url": "https://pil-web.web.app/images/projects/posters2024/CORE.jpeg",
+        "project-id": "SI-2024-03"
       },
       {
         "year": "2024",
@@ -754,7 +814,30 @@
         "keywords": "Kinodynamic Motion, Motion Planning, Robotics, Autonomous Robots",
         "mentors": "SriKrishna Bangalore Raghu, Ayush Kale, Vikas Paul Menezes, Himank Bansal",
         "interns": "Sanjana M, Pranav Muppuru",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2024/MAPF.jpeg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2024/MAPF.jpeg",
+        "project-id": "SI-2024-04"
+      },
+      {
+        "year": "2024",
+        "title": "FredBots 2.0",
+        "short_description": "",
+        "long_description": "FRedBots 2.0 is a multi agent Automated Storage and Retrieval System for 3D environments.",
+        "keywords": "Robotics, ML, Autonomous Robots, Warehouse Managemnet, 3D Space",
+        "mentors": "Sriram Radhakrishna, Samuel Thomas, Vikas Menezes, Amulya Marali, Ashvin Bhat",
+        "interns": "Aditya Naskar, D L Rameshwar, Manisha Venkatesha, Sharanya Madhusudhan",
+        "poster_url": "https://pil-web.web.app/images/projects/posters2024/FRED_BOTS.png",
+        "project-id": "SI-2024-05"
+      },
+      {
+        "year": "2024",
+        "title": "RepViz",
+        "short_description": "",
+        "long_description": "Benchmarking a novel clock mechanism for keeping time in distributed systems - replay clocks - against the industry standard vector clocks in terms of time and space efficiency.",
+        "keywords": "Time, Vector Clocks, Synchronisation, Clocks, Physical Clocks",
+        "mentors": "Ishaan Lagwankar, Anirudh Rowjee, Smaran Jawalkar, Animesh ND",
+        "interns": "Sriprad Potukuchi, Suparna S Prasad",
+        "poster_url": "https://pil-web.web.app/images/projects/posters2024/REPVIZ.jpeg",
+        "project-id": "SI-2024-06"
       },
       {
         "year": "2024",
@@ -764,17 +847,8 @@
         "keywords": "Distributed, Storage, 3D, Synchronisation, Partial, Sneakernets, Fault, Tolerance",
         "mentors": "Rishit Chaudhary, Murali Krishna, Anirudh Lakhotia, Smaran Jawalkar",
         "interns": "Achyuth Y Sosale, Samarth Bhat Y, Samar Garg, Manas G Mutalikdesai, Suyog Sampangi",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2024/WILLOW_GO.jpeg"
-      },
-      {
-        "year": "2024",
-        "title": "C.O.R.E",
-        "short_description": "",
-        "long_description": "CORE (Code Optimization and Review Evaluation) is a system that analyzes GitHub PRs in GoLang to identify custom functions that can be replaced with more efficient, standardized library functions or popular Go packages. Using a combination of Tree-sitter for code parsing and LLMs through RAG pipelines, CORE provides optimized suggestions to improve code performance and maintainability. The project’s novelty lies in its use of Tree-sitter, ensuring precise code analysis and minimization of hallucinations in LLM outputs.",
-        "keywords": "AST, ML, Code, Review, Github, Actions",
-        "mentors": "Rishit Chaudhary, Varuni H K, Gautham Krithiwas, Dhriti Krishnan, Akash Kamalesh",
-        "interns": "Nikita Anup, Prathamesh Devadiga, Siddhi Zanwar, Vishal Srinivasa ",
-        "poster_url": "https://pil-web.web.app/images/projects/posters2024/CORE.jpeg"
+        "poster_url": "https://pil-web.web.app/images/projects/posters2024/WILLOW_GO.jpeg",
+        "project-id": "SI-2024-07"
       }
     ],
     "length": 7

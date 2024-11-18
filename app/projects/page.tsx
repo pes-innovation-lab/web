@@ -1,11 +1,13 @@
 'use client'
 import React, { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
+import { Suspense } from 'react'
 
 import projectsData from '../../public/data/projects.json'
 import Cards from '../../components/Cards'
 import LayoutAlt from '../../components/LayoutAlt'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 
 type projectsType = {
     year: string
@@ -18,14 +20,18 @@ type projectsType = {
     poster_url: string
 }[]
 
-export default function NewProjects() {
-    const cards = [1, 2, 3, 4, 5, 6, 7, 8]
-    const [selectedId, setSelectedId] = useState(-1)
+function Projectos() {
+    const searchParams: string | null = useSearchParams().get('project-id')
+    const projectId: string = searchParams ? searchParams : ''
+    
+    const [selectedId, setSelectedId] = useState(projectId.split('-')[2] ? Number(projectId.split('-')[2]) - 1 : -1)
     const containerRefs = useRef(new Array())
 
     const years = [2024, 2023, 2022, 2020, 2019, 2018, 2017, 2016]
+    const defaultYearStr = projectId.split('-')[1]
+    const defaultYear = defaultYearStr && years.includes(Number(defaultYearStr)) ? Number(defaultYearStr) : years.sort((a, b) => { return b - a })[0]
 
-    const [currentYear, setCurrentYear] = useState(years.sort((a, b) => { return b - a })[0])
+    const [currentYear, setCurrentYear] = useState(defaultYear)
 
     const yearElements = years.map((year, ind) => {
         return (
@@ -73,25 +79,13 @@ export default function NewProjects() {
                     >
                         {selectedId === i ? (
                             <div className="flex h-full w-full gap-8 overflow-hidden rounded-lg border-2 border-gray-700 bg-black p-4 pr-0 text-black">
-                                {selectedId === 8 ? (
-                                    <Link
-                                        href={
-                                            'https://drive.google.com/file/d/17zKMNSoI_-jI5c7Mlli-GaQXi7pWYaVx/view?usp=drive_link'
-                                        }
-                                    >
-                                        <img
-                                            className="hidden aspect-auto h-full self-center rounded-md sm:block"
-                                            src={card.poster_url}
-                                            alt={card.title}
-                                        />
-                                    </Link>
-                                ) : (
+                                {
                                     <img
                                         className="hidden aspect-auto h-full self-center rounded-md sm:block"
                                         src={card.poster_url}
                                         alt={card.title}
                                     />
-                                )}
+                                }
 
                                 <div className="flex flex-col justify-between gap-4 overflow-auto pr-4">
                                     <div className="flex flex-col gap-4">
@@ -276,5 +270,13 @@ export default function NewProjects() {
             </div>
             {cardLayout}
         </div>
+    )
+}
+
+export default function NewProjects () {
+    return (
+        <Suspense fallback={<div>SHAKABOOM!</div>}>
+            <Projectos />
+        </Suspense>
     )
 }
