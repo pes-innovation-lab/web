@@ -14,7 +14,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className="font-martian-mono content-center items-center h-screen w-screen">{children}</body>
+            <body className="font-martian-mono content-center items-center h-screen w-screen">
+                {children}
+            </body>
         </html>
     )
 }

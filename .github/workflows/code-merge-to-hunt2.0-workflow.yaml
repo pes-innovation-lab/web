@@ -1,0 +1,16 @@
+name: Code Merge to main Flow
+on:
+  push:
+    paths-ignore:
+      - '**.md'
+    branches:
+      - hunt2.0
+jobs:
+  code-check:
+    uses: ./.github/workflows/code-check-flow.yaml
+  deploy-prod:
+    needs: code-check
+    uses: ./.github/workflows/deploy-to-vercel.yaml
+    secrets: inherit
+    with:
+      environment: production

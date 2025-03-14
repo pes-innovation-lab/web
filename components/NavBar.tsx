@@ -423,11 +423,13 @@ function NavBar(props) {
                                             onClick={handleOpen}
                                         >
                                             <p
-                                                className={
-                                                    usePathname() === r.route
-                                                        ? 'route__active'
-                                                        : 'route__passive'
-                                                }
+                                                // className={
+                                                //     usePathname() === r.route
+                                                //         ? 'route__active'
+                                                //         : 'route__passive'
+                                                // }
+                                                // Fix this.
+                                                className="route_passive"
                                             >
                                                 {r.title}
                                             </p>

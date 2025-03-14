@@ -71,6 +71,7 @@ function History() {
                             ></div>
                             {timelineData.map((event, index) => (
                                 <Timeline
+                                    key={index}
                                     date={event.year}
                                     title={event.event_title}
                                     description={event.event_description}

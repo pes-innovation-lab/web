@@ -77,19 +77,16 @@ function ProjectsNew() {
 
             for (let i = 0; i < projects.length; i++) {
                 const ps = [...projects[i].data.projects].filter((p) => {
-                    )
                     return (
                         p.title.toLowerCase().includes(searchTerm) ||
                         p.keywords?.indexOf(searchTerm) !== -1 ||
                         p.short_description?.toLowerCase().includes(searchTerm)
                     )
                 })
-                
 
                 projects[i] = { data: { projects: ps }, key: projects[i].key }
             }
 
-            
             return { projects: projects }
         })
     }

@@ -9,8 +9,9 @@
 		"export": "next export",
 		"start": "next start",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"lint": "eslint --ext .js,.jsx components pages",
-		"pretty": "prettier --write '**/*.{js,jsx,ts,tsx}'"
+		"lint":  "next lint",
+		"pretty": "prettier --write '**/*.{js,jsx,ts,tsx}'",
+		"fmt-check": "prettier --check '**/*.{js,jsx,ts,tsx}'"
 	},
 	"repository": {
 		"type": "git",
