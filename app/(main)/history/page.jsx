@@ -1,9 +1,9 @@
 'use client'
 
 import React, { useEffect, useState } from 'react'
-import LayoutAlt from '../../components/LayoutAlt'
-import Timeline from '../../components/Timeline'
-import timelineData from '../../public/data/about.json'
+import LayoutAlt from '../../../components/LayoutAlt'
+import Timeline from '../../../components/Timeline'
+import timelineData from '../../../public/data/about.json'
 
 function History() {
     const [data, setData] = useState({ timeline: [] })

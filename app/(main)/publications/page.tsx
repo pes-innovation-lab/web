@@ -18,7 +18,7 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
 import React, { useEffect, useState } from 'react'
 // import '../css/projects.css';
-import { publicationData } from '../../public/data/publications.js'
+import { publicationData } from '../../../public/data/publications.js'
 
 const designStyles = makeStyles({
     spinnerTextStyle: {

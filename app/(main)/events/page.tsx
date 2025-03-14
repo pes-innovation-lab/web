@@ -49,10 +49,10 @@ function Events() {
             event_name: 'Summer Internship',
             key: 'internship',
         },
-        { 
-            month: 'Sept-Oct', 
-            event_name: 'RoadShow', 
-            key: 'roadshow' 
+        {
+            month: 'Sept-Oct',
+            event_name: 'RoadShow',
+            key: 'roadshow',
         },
     ]
 
@@ -66,9 +66,9 @@ function Events() {
             text: (
                 <div className="eventSection">
                     <div className="eventSectionText">
-                            <Typography className="eventHeading">
-                                Summer Internship Recruitment
-                            </Typography>
+                        <Typography className="eventHeading">
+                            Summer Internship Recruitment
+                        </Typography>
                         <Typography className="eventText">
                             Every year, we look for enthusiastic and
                             passion-driven people to become a part of our
@@ -91,9 +91,9 @@ function Events() {
             text: (
                 <div className="eventSection">
                     <div className="eventSectionText">
-                            <Typography className="eventHeading">
-                                Summer Internship Program
-                            </Typography>
+                        <Typography className="eventHeading">
+                            Summer Internship Program
+                        </Typography>
                         <Typography className="eventText">
                             We, at PES Innovation Lab, organise an annual summer
                             internship for new recruits to work on cutting-edge
@@ -120,9 +120,9 @@ function Events() {
             text: (
                 <div className="eventSection">
                     <div className="eventSectionText">
-                            <Typography className="eventHeading">
-                                Roadshow
-                            </Typography>
+                        <Typography className="eventHeading">
+                            Roadshow
+                        </Typography>
                         <Typography className="eventText">
                             Roadshow is an Innovation Expo organized by the Lab
                             each year after the Summer Internship Program. PES
@@ -149,9 +149,9 @@ function Events() {
             text: (
                 <div className="eventSection">
                     <div className="eventSectionText">
-                            <Typography className="eventHeading">
-                                HashCode
-                            </Typography>
+                        <Typography className="eventHeading">
+                            HashCode
+                        </Typography>
                         <Typography className="eventText">
                             HashCode is the annual 24-hour hackathon organised
                             by the Lab, with students proposing interesting
@@ -161,8 +161,9 @@ function Events() {
                             academia assisting them. Esteemed personalities from
                             different industrial backgrounds come to judge the
                             show, evaluating projects from all possible angles.
-                            The 13th edition of the annual hackathon will happen in 2025. 
-                            The winners bag cash prizes worth up to one lakh indian rupees.
+                            The 13th edition of the annual hackathon will happen
+                            in 2025. The winners bag cash prizes worth up to one
+                            lakh indian rupees.
                         </Typography>
                     </div>
                 </div>
@@ -207,9 +208,14 @@ function Events() {
 
     return (
         <Container>
-            <Typography className={'pageHeader'} style={{
-                marginTop: "8rem",
-            }}>What we do</Typography>
+            <Typography
+                className={'pageHeader'}
+                style={{
+                    marginTop: '8rem',
+                }}
+            >
+                What we do
+            </Typography>
             <Typography
                 style={{
                     textAlign: 'center',

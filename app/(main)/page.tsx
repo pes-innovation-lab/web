@@ -280,7 +280,7 @@
 
 // export default Index;
 
-import Home from '../components/root/alt_home'
+import Home from '../../components/root/alt_home'
 
 import { Metadata } from 'next'
 

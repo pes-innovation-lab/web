@@ -37,7 +37,8 @@ export const publicationData = [
             'This paper presents a method to automate the identification of scenes from Indian mythology in works of art such as paintings and line drawings. Artificial neural networks were used to detect mythological characters, animals, landscapes and weapons in the input image to aid scene detection. The mythological texts associated with the image were used to discern the strength of the relationships between characters and build a Character Association Graph, which was used to improve the predictions made by the neural networks. These predictions and a graph-based algorithm were used to map the input image to a set of likely scenes. Experiments were carried out on images from the ancient Indian epic, The Ramayana, with prediction accuracy of 76% on high definition (HD) images and 64% on non-HD images.',
         authors:
             'Ashwin R Bharadwaj , Shreeram Suresh Chandra ,Devika S Nair , Abdur Rahman Hatim , Ananya Ravikumar',
-        conference: '2020 International Conference on Artificial Intelligence and Signal Processing (AISP)',
+        conference:
+            '2020 International Conference on Artificial Intelligence and Signal Processing (AISP)',
         link: 'https://ieeexplore.ieee.org/document/9073474',
     },
     {
