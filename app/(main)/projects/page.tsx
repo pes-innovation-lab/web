@@ -3,9 +3,9 @@ import React, { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Suspense } from 'react'
 
-import projectsData from '../../public/data/projects.json'
-import Cards from '../../components/Cards'
-import LayoutAlt from '../../components/LayoutAlt'
+import projectsData from '../../../public/data/projects.json'
+import Cards from '../../../components/Cards'
+import LayoutAlt from '../../../components/LayoutAlt'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 
@@ -23,13 +23,20 @@ type projectsType = {
 function Projectos() {
     const searchParams: string | null = useSearchParams().get('project-id')
     const projectId: string = searchParams ? searchParams : ''
-    
-    const [selectedId, setSelectedId] = useState(projectId.split('-')[2] ? Number(projectId.split('-')[2]) - 1 : -1)
+
+    const [selectedId, setSelectedId] = useState(
+        projectId.split('-')[2] ? Number(projectId.split('-')[2]) - 1 : -1
+    )
     const containerRefs = useRef(new Array())
 
     const years = [2024, 2023, 2022, 2020, 2019, 2018, 2017, 2016]
     const defaultYearStr = projectId.split('-')[1]
-    const defaultYear = defaultYearStr && years.includes(Number(defaultYearStr)) ? Number(defaultYearStr) : years.sort((a, b) => { return b - a })[0]
+    const defaultYear =
+        defaultYearStr && years.includes(Number(defaultYearStr))
+            ? Number(defaultYearStr)
+            : years.sort((a, b) => {
+                  return b - a
+              })[0]
 
     const [currentYear, setCurrentYear] = useState(defaultYear)
 
@@ -38,8 +45,9 @@ function Projectos() {
             <button
                 key={ind}
                 onClick={() => setCurrentYear(year)}
-                className={`text-sm lg:text-base ${year == currentYear ? 'font-bold text-lab-green' : ''
-                    }`}
+                className={`text-sm lg:text-base ${
+                    year == currentYear ? 'font-bold text-lab-green' : ''
+                }`}
             >
                 {year}
             </button>
@@ -123,33 +131,33 @@ function Projectos() {
                                                 )}
                                                 {i !=
                                                     currentProjects.length -
-                                                    1 && (
-                                                        <button
-                                                            className="relative h-6 w-6 shrink-0 lg:h-8 lg:w-8"
-                                                            onClick={(e) => {
-                                                                e.stopPropagation()
-                                                                setSelectedId(
-                                                                    (prev) =>
-                                                                        prev + 1
-                                                                )
-                                                            }}
+                                                        1 && (
+                                                    <button
+                                                        className="relative h-6 w-6 shrink-0 lg:h-8 lg:w-8"
+                                                        onClick={(e) => {
+                                                            e.stopPropagation()
+                                                            setSelectedId(
+                                                                (prev) =>
+                                                                    prev + 1
+                                                            )
+                                                        }}
+                                                    >
+                                                        <svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="none"
+                                                            viewBox="0 0 24 24"
+                                                            strokeWidth={1.5}
+                                                            stroke="currentColor"
+                                                            className="h-full w-full text-white"
                                                         >
-                                                            <svg
-                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                fill="none"
-                                                                viewBox="0 0 24 24"
-                                                                strokeWidth={1.5}
-                                                                stroke="currentColor"
-                                                                className="h-full w-full text-white"
-                                                            >
-                                                                <path
-                                                                    strokeLinecap="round"
-                                                                    strokeLinejoin="round"
-                                                                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                                                                />
-                                                            </svg>
-                                                        </button>
-                                                    )}
+                                                            <path
+                                                                strokeLinecap="round"
+                                                                strokeLinejoin="round"
+                                                                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                                                            />
+                                                        </svg>
+                                                    </button>
+                                                )}
                                                 <button
                                                     className="relative h-6 w-6 shrink-0 text-white lg:h-8 lg:w-8"
                                                     onClick={(e) => {
@@ -273,7 +281,7 @@ function Projectos() {
     )
 }
 
-export default function NewProjects () {
+export default function NewProjects() {
     return (
         <Suspense fallback={<div>SHAKABOOM!</div>}>
             <Projectos />

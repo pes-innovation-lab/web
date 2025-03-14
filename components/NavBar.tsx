@@ -298,17 +298,16 @@ function NavBar(props) {
 
     return (
         <div
-            className={`navbar font-martian-mono  ${open ? 'navbar__open' : 'navbar__closed'
-                }`}
+            className={`navbar font-martian-mono  ${
+                open ? 'navbar__open' : 'navbar__closed'
+            }`}
         >
             {showHeader ? (
                 <>
                     {/* navbar before open */}
                     <div className="navbar__closed__menu">
                         <div className="navbar__closed__menu-logo md:hidden flex">
-                            <Link
-                                href="/"
-                            >
+                            <Link href="/">
                                 <div className="navbar__logo">
                                     <Image
                                         alt="PES Innovation Lab"
@@ -318,24 +317,22 @@ function NavBar(props) {
                                     />
                                 </div>
                             </Link>
-                            <Link
-                                href="/"
-                            >
+                            <Link href="/">
                                 <div>
                                     <h1 className="lg:text-2xl text-[125%]">
                                         PES Innovation Lab
                                     </h1>
                                 </div>
                             </Link>
-                            <div className="navbar__menu cursor-pointer" onClick={handleOpen}>
+                            <div
+                                className="navbar__menu cursor-pointer"
+                                onClick={handleOpen}
+                            >
                                 {!open && <GiHamburger />}
                             </div>
                         </div>
                         <div className="navbar__closed__menu-logo md:flex hidden">
-                            <Link
-                                href="/"
-                                className=" flex items-center gap-4"
-                            >
+                            <Link href="/" className=" flex items-center gap-4">
                                 <div className="navbar__logo">
                                     <Image
                                         alt="PES Innovation Lab"
@@ -350,11 +347,13 @@ function NavBar(props) {
                                     </h1>
                                 </div>
                             </Link>
-                            <div className="navbar__menu cursor-pointer" onClick={handleOpen}>
+                            <div
+                                className="navbar__menu cursor-pointer"
+                                onClick={handleOpen}
+                            >
                                 {!open && <GiHamburger />}
                             </div>
                         </div>
-
 
                         {/* <div className="navbar__search">
                 <input
@@ -367,86 +366,82 @@ function NavBar(props) {
                 </>
             ) : (
                 <></>
-            )
-            }
-            {
-                showContent ? (
-                    <div className='flex flex-col w-[98%] h-full'>
-                        {/* navbar after open */}
-                        <div
-                            onClick={handleOpen}
-                            className='cursor-pointer navbar_menu w-full flex justify-end md:p-2 p-6'
-                        >
-                            <RxCross2 className='h-10 w-10' />
-                        </div>
-                        <div className='flex md:flex-row flex-col justify-center items-center w-full h-full'>
-                            <div className="navbar__left">
-                                <div className="navbar__l__content">
-                                    <div className="navbar__l__logo">
-                                        <Image
-                                            alt="PES Innovation Lab"
-                                            src="/images/mlab/mlab_logo.png"
-                                            layout="fill"
-                                            objectFit="contain"
-                                        />
-                                    </div>
-                                    <div className="flex flex-col items-center justify-center">
-                                        <h1 className="navbar__l__content-title text-center">
-                                            PES Innovation Lab
-                                        </h1>
-                                        <p className="navbar__l__content-tagline">
-                                            Estd. 2011
-                                        </p>
-                                        <div className="navbar__l__content-socials">
-                                            {socials.map((s) => {
-                                                return (
-                                                    <a
-                                                        className="navbar__l__content-social"
-                                                        key={s.name}
-                                                        href={s.link}
-                                                        referrerPolicy="no-referrer"
-                                                        target="_blank"
-                                                    >
-                                                        {s.icon}
-                                                    </a>
-                                                )
-                                            })}
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="navbar__right">
-                                <div className="navbar__r__routes">
-                                    {routes.map((r) => {
-                                        return (
-                                            <Link
-                                                key={r.title}
-                                                href={r.route}
-                                                onClick={handleOpen}
-                                            >
-                                                <p
-                                                    className={
-                                                        usePathname() === r.route
-                                                            ? 'route__active'
-                                                            : 'route__passive'
-                                                    }
-                                                >
-                                                    {r.title}
-                                                </p>
-                                            </Link>
-                                        )
-                                    })}
-                                </div>
-                            </div>
-                        </div>
-
+            )}
+            {showContent ? (
+                <div className="flex flex-col w-[98%] h-full">
+                    {/* navbar after open */}
+                    <div
+                        onClick={handleOpen}
+                        className="cursor-pointer navbar_menu w-full flex justify-end md:p-2 p-6"
+                    >
+                        <RxCross2 className="h-10 w-10" />
                     </div>
-                ) : (
-                    <></>
-                )
-            }
-        </div >
+                    <div className="flex md:flex-row flex-col justify-center items-center w-full h-full">
+                        <div className="navbar__left">
+                            <div className="navbar__l__content">
+                                <div className="navbar__l__logo">
+                                    <Image
+                                        alt="PES Innovation Lab"
+                                        src="/images/mlab/mlab_logo.png"
+                                        layout="fill"
+                                        objectFit="contain"
+                                    />
+                                </div>
+                                <div className="flex flex-col items-center justify-center">
+                                    <h1 className="navbar__l__content-title text-center">
+                                        PES Innovation Lab
+                                    </h1>
+                                    <p className="navbar__l__content-tagline">
+                                        Estd. 2011
+                                    </p>
+                                    <div className="navbar__l__content-socials">
+                                        {socials.map((s) => {
+                                            return (
+                                                <a
+                                                    className="navbar__l__content-social"
+                                                    key={s.name}
+                                                    href={s.link}
+                                                    referrerPolicy="no-referrer"
+                                                    target="_blank"
+                                                >
+                                                    {s.icon}
+                                                </a>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="navbar__right">
+                            <div className="navbar__r__routes">
+                                {routes.map((r) => {
+                                    return (
+                                        <Link
+                                            key={r.title}
+                                            href={r.route}
+                                            onClick={handleOpen}
+                                        >
+                                            <p
+                                                className={
+                                                    usePathname() === r.route
+                                                        ? 'route__active'
+                                                        : 'route__passive'
+                                                }
+                                            >
+                                                {r.title}
+                                            </p>
+                                        </Link>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ) : (
+                <></>
+            )}
+        </div>
     )
 }
 

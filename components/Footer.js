@@ -59,8 +59,7 @@ const Footer = () => (
             <div className="footerSection">
                 <Typography style={contentTitleStyle}>Connect</Typography>
                 <Typography style={contentBodyStyle}>
-                    pes.mlab@gmail.com
-                    innovationlab@pes.edu
+                    pes.mlab@gmail.com innovationlab@pes.edu
                 </Typography>
                 <Grid container justifyContent="center">
                     <Grid item xs={2} style={{ textAlign: 'center' }}>
