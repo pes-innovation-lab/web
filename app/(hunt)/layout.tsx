@@ -14,6 +14,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
+            <head>
+                <title>DeLorean</title>
+            </head>
             <body className="font-martian-mono content-center items-center h-screen w-screen">
                 {children}
             </body>
