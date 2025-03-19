@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import AboutUs from './AboutUs'
 import Hero from './Hero'
 import ProfessorsInfo from './Professors'
-import RoadShowVideo from './roadshow2024'
+import Hunt3Video from './hunt3_2025'
 
 export default function Home() {
     const [isHeroVisible, setIsHeroVisible] = useState(true)
@@ -49,7 +49,7 @@ export default function Home() {
             {/* VIDEO SECTION */}
             {showVideo && (
                 <div className="fade-in">
-                    <RoadShowVideo onEnded={handleVideoEnd} />
+                    <Hunt3Video onEnded={handleVideoEnd} />
                 </div>
             )}
 
