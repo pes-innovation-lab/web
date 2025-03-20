@@ -18,7 +18,7 @@ export default function RootLayout({
                 <title>DeLorean</title>
             </head>
             <body className="font-martian-mono content-center items-center h-screen w-screen">
-            <NavBar active="Home" search="False" />
+                <NavBar active="Home" search="False" />
                 {children}
             </body>
         </html>
