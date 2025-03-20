@@ -313,7 +313,7 @@ function NavBar(props) {
                 uid = decoded['user_id'].toString()
                 const body = {
                     userAgent: navigator.userAgent,
-                    timestamp: new Date().toISOString(),
+                    timestamp: new Date().getTime(),
                     uid: uid,
                     name: username,
                     url: url,
