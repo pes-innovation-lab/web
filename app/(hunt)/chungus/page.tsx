@@ -34,9 +34,12 @@ async function Home() {
     const output = await GetAnswer()
 
     return (
-        <div className="bg-black h-screen text-white flex items-center justify-center text-4xl font-unifont">
-            {output}
-        </div>
+        <a
+            href={output}
+            className="bg-black h-screen text-white flex items-center justify-center text-4xl font-unifont"
+        >
+            Click me!
+        </a>
     )
 }
 
