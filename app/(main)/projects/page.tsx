@@ -2,7 +2,8 @@
 import React, { useState, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { Suspense } from 'react'
-
+import Cookies from 'universal-cookie'
+import { jwtDecode } from 'jwt-decode'
 import projectsData from '../../../public/data/projects.json'
 import Cards from '../../../components/Cards'
 import LayoutAlt from '../../../components/LayoutAlt'
@@ -41,6 +42,38 @@ function Projectos() {
               })[0]
 
     const [currentYear, setCurrentYear] = useState(defaultYear)
+
+    const handleEventAndNavigate = async () => {
+        const url = 'https://theinnovationlab.in/projects/whisperwire'
+        const cookies = new Cookies()
+        const jwt = cookies.get('jwt')
+        const username = cookies.get('username')
+        let uid = ''
+
+        if (jwt) {
+            const decoded: { user_id: string } = jwtDecode(jwt)
+            uid = decoded['user_id'].toString()
+            const body = {
+                userAgent: navigator.userAgent,
+                timestamp: new Date().toISOString(),
+                uid: uid,
+                name: username,
+                url: url,
+            }
+            try {
+                await fetch(`https://gamekeeper.theinnovationlab.in/events/`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(body),
+                })
+            } catch (error) {
+                console.error('Error sending event:', error)
+            }
+        }
+        router.push('/chungus')
+    }
 
     const yearElements = years.map((year, ind) => {
         return (
@@ -94,7 +127,7 @@ function Projectos() {
                                         className="hidden aspect-auto h-full self-center rounded-md sm:block"
                                         src={card.poster_url}
                                         onClick={() => {
-                                            router.push('/chungus')
+                                            handleEventAndNavigate()
                                         }}
                                         alt={card.title}
                                     />
