@@ -9,7 +9,7 @@
 		"export": "next export",
 		"start": "next start",
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"lint":  "next lint",
+		"lint": "next lint",
 		"pretty": "prettier --write '**/*.{js,jsx,ts,tsx}'",
 		"fmt-check": "prettier --check '**/*.{js,jsx,ts,tsx}'"
 	},
@@ -30,6 +30,7 @@
 		"@material-ui/lab": "^4.0.0-alpha.57",
 		"@zeit/next-css": "^1.0.1",
 		"framer-motion": "^10.16.4",
+		"jwt-decode": "^4.0.0",
 		"material-ui-popup-state": "^1.7.1",
 		"next": "^14.2.18",
 		"react": "^18.2.0",
@@ -44,6 +45,7 @@
 		"react-responsive-carousel": "^3.2.23",
 		"sass": "^1.69.0",
 		"sharp": "^0.33.3",
+		"universal-cookie": "^8.0.1",
 		"webpack": "^4.44.1"
 	},
 	"devDependencies": {

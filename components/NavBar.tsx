@@ -2,7 +2,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Cookies from 'universal-cookie'
+import { jwtDecode } from 'jwt-decode'
 import { GiHamburger } from 'react-icons/gi'
 import { RxCross2 } from 'react-icons/rx'
 import { SiGmail, SiInstagram, SiTwitter, SiWhatsapp } from 'react-icons/si'
@@ -295,6 +297,46 @@ function NavBar(props) {
         }
         setOpen((p) => !p)
     }
+
+    const pathname = usePathname()
+
+    useEffect(() => {
+        const handleRouteChange = async (pathname: string) => {
+            const url = 'https://theinnovationlab.in' + pathname
+            const cookies = new Cookies()
+            const jwt = cookies.get('jwt')
+            const username = cookies.get('username')
+            let uid = ''
+
+            if (jwt) {
+                const decoded: { user_id: string } = jwtDecode(jwt)
+                uid = decoded['user_id'].toString()
+                const body = {
+                    userAgent: navigator.userAgent,
+                    timestamp: new Date().toISOString(),
+                    uid: uid,
+                    name: username,
+                    url: url,
+                }
+                try {
+                    await fetch(
+                        `https://gamekeeper.theinnovationlab.in/events/`,
+                        {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(body),
+                        }
+                    )
+                } catch (error) {
+                    console.error('Error sending event:', error)
+                }
+            }
+        }
+
+        handleRouteChange(pathname)
+    }, [pathname])
 
     return (
         <div
