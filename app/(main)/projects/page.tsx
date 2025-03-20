@@ -8,6 +8,7 @@ import Cards from '../../../components/Cards'
 import LayoutAlt from '../../../components/LayoutAlt'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 type projectsType = {
     year: string
@@ -21,6 +22,7 @@ type projectsType = {
 }[]
 
 function Projectos() {
+    const router = useRouter()
     const searchParams: string | null = useSearchParams().get('project-id')
     const projectId: string = searchParams ? searchParams : ''
 
@@ -87,13 +89,22 @@ function Projectos() {
                     >
                         {selectedId === i ? (
                             <div className="flex h-full w-full gap-8 overflow-hidden rounded-lg border-2 border-gray-700 bg-black p-4 pr-0 text-black">
-                                {
+                                {i === 8 ? (
+                                    <img
+                                        className="hidden aspect-auto h-full self-center rounded-md sm:block"
+                                        src={card.poster_url}
+                                        onClick={() => {
+                                            router.push('/chungus')
+                                        }}
+                                        alt={card.title}
+                                    />
+                                ) : (
                                     <img
                                         className="hidden aspect-auto h-full self-center rounded-md sm:block"
                                         src={card.poster_url}
                                         alt={card.title}
                                     />
-                                }
+                                )}
 
                                 <div className="flex flex-col justify-between gap-4 overflow-auto pr-4">
                                     <div className="flex flex-col gap-4">
@@ -186,69 +197,28 @@ function Projectos() {
                                             {card.long_description}
                                         </div>
                                     </div>
-                                    {i === 8 ? (
-                                        <div className="flex w-fit flex-col self-end font-martian-mono text-white xl:text-lg">
-                                            <div className="font-martian-mono">
-                                                <span className="font-martian-mono text-lab-green">
-                                                    {card.interns.includes(
-                                                        ','
-                                                    ) ? (
-                                                        <>INTERNS</>
-                                                    ) : (
-                                                        <>INTERN&nbsp;</>
-                                                    )}
-                                                </span>{' '}
-                                                : {card.interns}
-                                            </div>
-                                            <div className="font-martian-mono">
-                                                <span className="font-martian-mono text-lab-green">
-                                                    {card.mentors.includes(
-                                                        ','
-                                                    ) ? (
-                                                        <>MENTORS</>
-                                                    ) : (
-                                                        <>MENTOR&nbsp;</>
-                                                    )}
-                                                </span>{' '}
-                                                :
-                                                <Link
-                                                    href={
-                                                        'https://drive.google.com/file/d/17zKMNSoI_-jI5c7Mlli-GaQXi7pWYaVx/view?usp=drive_link'
-                                                    }
-                                                    className="pl-2"
-                                                >
-                                                    {card.mentors}
-                                                </Link>
-                                            </div>
+                                    <div className="flex w-fit flex-col self-end font-martian-mono text-white xl:text-lg">
+                                        <div className="font-martian-mono">
+                                            <span className="font-martian-mono text-lab-green">
+                                                {card.interns.includes(',') ? (
+                                                    <>INTERNS</>
+                                                ) : (
+                                                    <>INTERN&nbsp;</>
+                                                )}
+                                            </span>{' '}
+                                            : {card.interns}
                                         </div>
-                                    ) : (
-                                        <div className="flex w-fit flex-col self-end font-martian-mono text-white xl:text-lg">
-                                            <div className="font-martian-mono">
-                                                <span className="font-martian-mono text-lab-green">
-                                                    {card.interns.includes(
-                                                        ','
-                                                    ) ? (
-                                                        <>INTERNS</>
-                                                    ) : (
-                                                        <>INTERN&nbsp;</>
-                                                    )}
-                                                </span>{' '}
-                                                : {card.interns}
-                                            </div>
-                                            <div className="font-martian-mono">
-                                                <span className="font-martian-mono text-lab-green">
-                                                    {card.mentors.includes(
-                                                        ','
-                                                    ) ? (
-                                                        <>MENTORS</>
-                                                    ) : (
-                                                        <>MENTOR&nbsp;</>
-                                                    )}
-                                                </span>{' '}
-                                                : {card.mentors}
-                                            </div>
+                                        <div className="font-martian-mono">
+                                            <span className="font-martian-mono text-lab-green">
+                                                {card.mentors.includes(',') ? (
+                                                    <>MENTORS</>
+                                                ) : (
+                                                    <>MENTOR&nbsp;</>
+                                                )}
+                                            </span>{' '}
+                                            : {card.mentors}
                                         </div>
-                                    )}
+                                    </div>
                                 </div>
                             </div>
                         ) : (

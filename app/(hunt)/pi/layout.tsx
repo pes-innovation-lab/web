@@ -1,6 +1,6 @@
-import NavBar from '../../components/NavBar'
-import Footer from '../../components/Footer'
-import '../../css/global.css'
+import NavBar from '../../../components/NavBar'
+import Footer from '../../../components/Footer'
+import '../../../css/global.css'
 
 export const metadata = {
     title: 'Next.js',
