@@ -18,7 +18,6 @@ async function GetAnswer() {
             }
         )
         const data = await res.json()
-        console.log(data, res.status)
 
         if (res.status == 200) {
             return data.answer

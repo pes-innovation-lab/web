@@ -55,7 +55,7 @@ function Projectos() {
             uid = decoded['user_id'].toString()
             const body = {
                 userAgent: navigator.userAgent,
-                timestamp: new Date(),
+                timestamp: Math.floor(Date.now() / 1000).toString(),
                 uid: uid,
                 name: username,
                 url: url,
