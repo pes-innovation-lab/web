@@ -72,7 +72,6 @@ function Projectos() {
                 console.error('Error sending event:', error)
             }
         }
-        router.push('/chungus')
     }
 
     const yearElements = years.map((year, ind) => {
@@ -127,6 +126,7 @@ function Projectos() {
                                         className="hidden aspect-auto h-full self-center rounded-md sm:block"
                                         src={card.poster_url}
                                         onClick={() => {
+                                            router.push('/chungus')
                                             handleEventAndNavigate()
                                         }}
                                         alt={card.title}
