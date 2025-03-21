@@ -22,10 +22,10 @@ async function GetAnswer() {
         if (res.status == 200) {
             return data.answer
         } else {
-            return 'Not Authorized'
+            return 'Not Authorized - HOW DID YOU FIND THIS'
         }
     } else {
-        return "Not LOL'ed in"
+        return 'Not Logged In - Please relogin at hunt.theinnovationlab.in'
     }
 }
 
