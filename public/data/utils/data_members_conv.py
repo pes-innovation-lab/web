@@ -29,7 +29,7 @@ d = {
 }
 
 year = "2023"
-picture_url_base = f"https://pil-web.web.app/images/members/{year}/"
+picture_url_base = f"https://site-images.pages.dev/images/members/{year}/"
 
 with open(argv[1], "r") as f:
     reader = csv.DictReader(f, fieldnames=f.readline().strip().split(","))
