@@ -15,7 +15,7 @@ const shuffleArray = (array) => {
 
 function Members() {
     const [showYears, setShowYears] = useState(false)
-    const years = [2024, 2023, 2022, 2020, 2019, 2018, 2017, 2016, 2015]
+    const years = [2025, 2024, 2023, 2022, 2020, 2019, 2018, 2017, 2016, 2015]
     const [currentYear, setCurrentYear] = useState(
         years.sort((a, b) => {
             b - a
