@@ -323,5 +323,60 @@
             }
           ],
           "length": 4
+      },
+      "2025": {
+        "heads": [
+          {
+            "batch": "2024",
+            "name": "Varun Shenoy",
+            "grad_batch": "2026",
+            "branch": "CSE",
+            "email": "varun123shenoy@gmail.com",
+            "linkedin": "https://www.linkedin.com/in/varun-shenoy-77a133242/",
+            "github": "https://github.com/bar0n624",
+            "picture_url": "https://site-images.pages.dev/images/members/2024/Varun.jpeg"
+          },
+          {
+            "batch": "2024",
+            "name": "Siddhi Zanwar ",
+            "grad_batch": "2026",
+            "branch": "AI ML",
+            "email": "siddhizanwar03@gmail.com",
+            "linkedin": "https://www.linkedin.com/in/siddhi-zanwar-241876277",
+            "github": "https://github.com/siddhi-zanwar",
+            "picture_url": "https://site-images.pages.dev/images/members/2024/Siddhi.jpeg"
+          },
+          {
+            "batch": "2024",
+            "name": "Samar Garg",
+            "grad_batch": "2026",
+            "branch": "CSE",
+            "email": "aries.samar@gmail.com",
+            "linkedin": "https://www.linkedin.com/in/samar-garg-431911279/",
+            "github": "https://github.com/Samsonnyyeet",
+            "picture_url": "https://site-images.pages.dev/images/members/2024/Samar.jpeg"
+          },
+          {
+            "batch": "2024",
+            "name": "Samarth Bhat Y",
+            "grad_batch": "2026",
+            "branch": "CSE",
+            "email": "samarthbhaty@gmail.com",
+            "linkedin": "www.linkedin.com/in/samarth-bhat-y",
+            "github": "https://github.com/samarth-clone",
+            "picture_url": "https://site-images.pages.dev/images/members/2024/Samarth.jpeg"
+          },
+          {
+            "batch": "2024",
+            "name": "Manas G Mutalikdesai",
+            "grad_batch": "2026",
+            "branch": "CSE",
+            "email": "manasg1111@gmail.com",
+            "linkedin": "http://linkedin.com/in/manas-g-424249256",
+            "github": "https://github.com/mana-sg",
+            "picture_url": "https://site-images.pages.dev/images/members/2024/Manas.jpeg"
+          }
+        ],
+        "length": 5
       }
 }

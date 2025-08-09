@@ -14,7 +14,7 @@ export default function MemberCard(props) {
                     />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
-                <div className="absolute inset-0 flex translate-y-[50%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+                <div className="absolute inset-0 flex translate-y-[48%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
                     <h1 className="mb-10 text-3xl font-bold text-white">
                         {name}
                     </h1>
@@ -24,7 +24,7 @@ export default function MemberCard(props) {
                     <div className="flex items-center justify-center">
                         <a
                             className="mr-6  text-neutral-600 dark:text-neutral-200"
-                            href={gmail}
+                            href={`mailto:${gmail}`}
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
