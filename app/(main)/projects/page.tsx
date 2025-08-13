@@ -32,7 +32,7 @@ function Projectos() {
     )
     const containerRefs = useRef(new Array())
 
-    const years = [2024, 2023, 2022, 2020, 2019, 2018, 2017, 2016]
+    const years = [2025, 2024, 2023, 2022, 2020, 2019, 2018, 2017, 2016]
     const defaultYearStr = projectId.split('-')[1]
     const defaultYear =
         defaultYearStr && years.includes(Number(defaultYearStr))
