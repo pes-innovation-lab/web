@@ -852,5 +852,87 @@
       }
     ],
     "length": 7
+  },
+  "2025": {
+    "projects": [
+      {
+        "year": "2025",
+        "title": "MiCoz",
+        "short_description": "",
+        "long_description": "MiCoz is a causal profiler designed for distributed microservice systems, adapting ideas from the COZ profiler to analyze how speeding up an individual service affects overall performance. Instead of profiling code lines or threads, MiCoz profiles services by virtually speeding one up—slowing down all other services proportionally to simulate optimization without changing the code. It uses delay counters to track and inject delays, ensuring delays propagate correctly along service call chains. This approach helps identify which microservices are true bottlenecks, guiding optimization efforts to where they have the greatest impact on end-to-end system performance",
+        "keywords": "Microservices, Virtual Speedup, Causal Profiling, Optimizations",
+        "mentors": "Smaran Jawalkar, Animesh ND, Achyuth Y Sosale",
+        "interns": "Navneet Nayak, Nathan Matthew Paul, Lekhyasree Medarametla, Suchitra Shankar",
+        "poster_url": "https://site-images.pages.dev/images/projects/posters2025/Micoz.jpg",
+        "project-id": "SI-2025-01"
+      },
+      {
+        "year": "2025",
+        "title": "PortMux",
+        "short_description": "",
+        "long_description": "PortMux is an application-layer port multiplexer that lets multiple services run securely behind a single exposed port. It intercepts incoming traffic, and analyses the headers of the initial packet in a connection to identify the intended service. Then, based on rules specified by the user either in a yaml config file or a custom python script, PortMux routes traffic between the client and the corresponding backend service. By acting as a transparent intermediary between the clients and the services, PortMux minimizes the attack surface and simplifies network exposure, while providing flexible, scriptable control over traffic distribution.",
+        "keywords": "Port Multiplexer, Traffic Analysis, Application Layer",
+        "mentors": "Anirudh Revanur, Samar Garg, Samarth Bhat Y, Sriprad Potukuchi, Varun Shenoy, Vibhav Tiwari",
+        "interns": "Anirudh Sripada Koundinya M, Atharv Rawal, Darshana Muraly, Mihir Amol Bhave",
+        "poster_url": "https://site-images.pages.dev/images/projects/posters2025/PortMux.jpg",
+        "project-id": "SI-2025-02"
+      },
+      {
+        "year": "2025",
+        "title": "DiRAC",
+        "short_description": "",
+        "long_description": "A system that lets large groups of robots (~10,000) work together without any central controller. The system operates without centralized control, relying on local sensing, peer-to-peer communication, and self-organization.",
+        "keywords": "Decentralized, P2P, Swarm Robotics, Distributed, Path Finding",
+        "mentors": "Sriram Radhakrishna, Aditya Naskar, D L Rameshwar",
+        "interns": "Kashish Mittal, Lakshasri S, Manjari Vishal Kulkarni, Uday Gopan ",
+        "poster_url": "https://site-images.pages.dev/images/projects/posters2025/DiRAC.jpg",
+        "project-id": "SI-2025-03"
+      },
+      {
+        "year": "2025",
+        "title": "fpKiller",
+        "short_description": "",
+        "long_description": "fpKiller explores whether the Posit number format can serve as a practical alternative to IEEE 754 floating-point numbers in distributed neural network training. By implementing both representations in software, the project aims to fairly compare their precision, performance, and communication efficiency. It evaluates how Posits affect overall training time, considering the tradeoff between faster network transmission due to smaller data sizes and potentially slower computation compared to traditional floats.",
+        "keywords": "Posits, Floating Point, Distributed Neural Networks, Communication",
+        "mentors": "Animesh ND, Murali Krishna, Kiran Rajpurohit, Manas G Mutalikdesai",
+        "interns": "Akshaj Anantharaman Gopalakrishnan, Anagha Rao, Shashank R S",
+        "poster_url": "https://site-images.pages.dev/images/projects/posters2025/fpKiller.jpg",
+        "project-id": "SI-2025-04"
+      },
+      {
+        "year": "2025",
+        "title": "Picos",
+        "short_description": "",
+        "long_description": "PicOS is a lightweight operating system built for the Raspberry Pi Pico family, aimed at enabling dynamic task execution without the need to re-flash programs. At its core is a preemptive scheduler that efficiently distributes workloads across the Pico’s dual ARM Cortex-M0+ cores. By implementing safe context switching and leveraging hardware timers through the official SDK, PicOS allows edge devices to move beyond single-purpose applications and support multiple concurrent routines. This opens up new possibilities for using low-powered microcontrollers in more flexible and modular ways.",
+        "keywords": "Embedded Systems, Operating Systems, Schedulers, Raspberry Pi",
+        "mentors": "Sriprad Potukuchi, Kiran Rajpurohit, Aditya Naskar",
+        "interns": "Aditya Hegde, Adhesh Athrey, Prachi Jha",
+        "poster_url": "https://site-images.pages.dev/images/projects/posters2025/Picos.jpg",
+        "project-id": "SI-2025-05"
+      },
+      {
+        "year": "2025",
+        "title": "PrefHEtch",
+        "short_description": "",
+        "long_description": "PreFHEtch is a privacy-preserving vector search system that enables clients to find similar items in a server’s database without revealing their query, while maintaining practical performance. Combining Homomorphic Encryption (HE) with vector quantization, PreFHEtch introduces a two-phase prefiltering architecture to reduce computational overhead. In the first phase, clients encrypt queries and send it to the server to perform a coarse search over select clusters of quantized vectors in the database. The coarse distances are decrypted on the client to eliminate irrelevant data efficiently. In the second phase, a precise search is performed on a much smaller candidate set, and the final results are retrieved privately using keyword PIR protocols. This design significantly lowers the cost of secure similarity search, bridging the gap between strong privacy guarantees and real-world scalability.",
+        "keywords": "Vector Search, Homomorphic Encryption, Fast, Pre-Filtering",
+        "mentors": "Aditi Ahuja, Anirudh Lakhotia, Gautham Krithiwas, Nischal H S, Siddhi Zanwar",
+        "interns": "Anirudh Sudhir, Pranavjeet S, Tejas Ramakrishnan, Tharun N Nanju",
+        "poster_url": "https://site-images.pages.dev/images/projects/posters2025/PrefHEtch.jpg",
+        "project-id": "SI-2025-06"
+      },
+      {
+        "year": "2025",
+        "title": "SUBGNN",
+        "short_description": "",
+        "long_description": "This project aims to make subgraph matching faster and more efficient on large graphs by using machine learning to narrow down where to look. Instead of checking every possible place a subgraph could appear, the system trains a neural network to learn patterns of where matches are likely to be. It does this by creating numerical summaries (embeddings) of graphs and learning to tell when one graph contains another. After training, the model can quickly divide the target graph into smaller sections and point to the most promising areas to search. This approach saves time and computing power compared to traditional methods that try every possibility, making it easier to handle large graph datasets.",
+        "keywords": "Graphs, Graph Neural Networks, Subgraph Matching, Embeddings",
+        "mentors": "Varuni H K, Siddhi Zanwar, Prathamesh Devadiga",
+        "interns": "Amogh Kulkarni, Ayush Chakraborty, Shourya, Swastik Mohapatra",
+        "poster_url": "https://site-images.pages.dev/images/projects/posters2025/SubGNN.jpg",
+        "project-id": "SI-2025-07"
+      }
+    ],
+    "length": 7
   }
 }
