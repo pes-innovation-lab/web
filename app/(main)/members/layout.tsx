@@ -1,17 +1,13 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Members',
+    title: 'Members',
 }
 
 export default function MembersLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode
 }) {
-  return (
-    <>
-      {children}
-    </>
-  )
+    return <>{children}</>
 }

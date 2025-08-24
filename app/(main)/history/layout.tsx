@@ -1,17 +1,13 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'History',
+    title: 'History',
 }
 
 export default function HistoryLayout({
-  children,
+    children,
 }: {
-  children: React.ReactNode
+    children: React.ReactNode
 }) {
-  return (
-    <>
-      {children}
-    </>
-  )
+    return <>{children}</>
 }
