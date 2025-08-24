@@ -7,7 +7,7 @@ function LayoutAlt(props) {
         <div className="layout">
             <Head>
                 <title>{props.title}</title>
-                <link rel="shortcut icon" href={`/images/favicon.ico`} />
+                <link rel="shortcut icon" href={`/images/icon.png`} />
             </Head>
             <NavBar
                 active={props.active}

@@ -24,7 +24,7 @@ function Layout(props) {
         <div style={layoutStyle}>
             <Head>
                 <title>{props.title}</title>
-                <link rel="shortcut icon" href={`/images/favicon.ico`} />
+                <link rel="shortcut icon" href={`/images/icon.png`} />
                 <style>{`
                 html, body {
                     margin: 0;

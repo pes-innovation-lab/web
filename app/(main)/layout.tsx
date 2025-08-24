@@ -10,7 +10,7 @@ export const metadata: Metadata = {
         default: 'PIL',
     },
     icons: {
-        icon: '/images/favicon.ico',
+        icon: '/images/icon.png',
     },
 }
 
