@@ -282,6 +282,12 @@
 
 import Home from '../../components/root/alt_home'
 
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'PIL | Home',
+}
+
 export default function MyHome() {
     return <Home />
 }
