@@ -4,7 +4,7 @@ on:
     paths-ignore:
       - '**.md'
     branches:
-      - hunt2.0
+      - master
 jobs:
   code-check:
     uses: ./.github/workflows/code-check-flow.yaml
