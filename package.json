@@ -28,8 +28,10 @@
 		"@material-ui/core": "^4.11.2",
 		"@material-ui/icons": "^4.11.2",
 		"@material-ui/lab": "^4.0.0-alpha.57",
+		"@tabler/icons-react": "^3.34.1",
 		"@zeit/next-css": "^1.0.1",
-		"framer-motion": "^10.16.4",
+		"clsx": "^2.1.1",
+		"framer-motion": "^10.18.0",
 		"jwt-decode": "^4.0.0",
 		"material-ui-popup-state": "^1.7.1",
 		"next": "^14.2.18",
@@ -45,8 +47,9 @@
 		"react-responsive-carousel": "^3.2.23",
 		"sass": "^1.69.0",
 		"sharp": "^0.33.3",
+		"tailwind-merge": "^3.3.1",
 		"universal-cookie": "^8.0.1",
-		"webpack": "^4.44.1"
+		"webpack": "^5.101.3"
 	},
 	"devDependencies": {
 		"@types/node": "20.8.3",
