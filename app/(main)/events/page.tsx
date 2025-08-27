@@ -13,7 +13,7 @@ import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent'
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator'
 import Link from 'next/link'
 import { useMediaQuery } from 'react-responsive'
-// import '../css/events.css';
+import '../../../css/events.css'
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -66,9 +66,11 @@ function Events() {
             text: (
                 <div className="eventSection">
                     <div className="eventSectionText">
-                        <Typography className="eventHeading">
-                            Summer Internship Recruitment
-                        </Typography>
+                        <Link href="/events/recruitment" className="eventPageLink">
+                            <Typography className="eventHeading">
+                                Summer Internship Recruitment
+                            </Typography>
+                        </Link>
                         <Typography className="eventText">
                             Every year, we look for enthusiastic and
                             passion-driven people to become a part of our
@@ -91,9 +93,11 @@ function Events() {
             text: (
                 <div className="eventSection">
                     <div className="eventSectionText">
-                        <Typography className="eventHeading">
-                            Summer Internship Program
-                        </Typography>
+                        <Link href="/events/internship" className="eventPageLink">
+                            <Typography className="eventHeading">
+                                Summer Internship Program
+                            </Typography>
+                        </Link>
                         <Typography className="eventText">
                             We, at PES Innovation Lab, organise an annual summer
                             internship for new recruits to work on cutting-edge
@@ -120,9 +124,11 @@ function Events() {
             text: (
                 <div className="eventSection">
                     <div className="eventSectionText">
-                        <Typography className="eventHeading">
-                            Roadshow
-                        </Typography>
+                        <Link href="/events/roadshow" className="eventPageLink">
+                            <Typography className="eventHeading">
+                                Roadshow
+                            </Typography>
+                        </Link>
                         <Typography className="eventText">
                             Roadshow is an Innovation Expo organized by the Lab
                             each year after the Summer Internship Program. PES
@@ -149,9 +155,11 @@ function Events() {
             text: (
                 <div className="eventSection">
                     <div className="eventSectionText">
-                        <Typography className="eventHeading">
-                            HashCode
-                        </Typography>
+                        <a href="https://hashcode.theinnovationlab.in" target="_blank" rel="noopener noreferrer" className="eventPageLink">
+                            <Typography className="eventHeading">
+                                HashCode
+                            </Typography>
+                        </a>
                         <Typography className="eventText">
                             HashCode is the annual 24-hour hackathon organised
                             by the Lab, with students proposing interesting

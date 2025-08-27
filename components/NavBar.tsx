@@ -354,8 +354,8 @@ function NavBar(props) {
                                     <Image
                                         alt="PES Innovation Lab"
                                         src="/images/mlab/mlab_logo.png"
-                                        layout="fill"
-                                        objectFit="contain"
+                                        fill
+                                        style={{ objectFit: "contain" }}
                                     />
                                 </div>
                             </Link>
@@ -379,8 +379,8 @@ function NavBar(props) {
                                     <Image
                                         alt="PES Innovation Lab"
                                         src="/images/mlab/mlab_logo.png"
-                                        layout="fill"
-                                        objectFit="contain"
+                                        fill
+                                        style={{ objectFit: "contain" }}
                                     />
                                 </div>
                                 <div>
@@ -425,8 +425,8 @@ function NavBar(props) {
                                     <Image
                                         alt="PES Innovation Lab"
                                         src="/images/mlab/mlab_logo.png"
-                                        layout="fill"
-                                        objectFit="contain"
+                                        fill
+                                        style={{ objectFit: "contain" }}
                                     />
                                 </div>
                                 <div className="flex flex-col items-center justify-center">

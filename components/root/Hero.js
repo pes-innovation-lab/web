@@ -56,8 +56,8 @@ export default function Hero() {
                 <div className="relative left-2 h-48 w-48 sm:h-60 sm:w-60">
                     <Image
                         src="/images/mlab/mlab_logo.png"
-                        layout="fill"
-                        objectFit="cover"
+                        fill
+                        style={{ objectFit: "cover" }}
                     />
                 </div>
                 {/* TITLE */}
