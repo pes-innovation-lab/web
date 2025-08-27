@@ -30,7 +30,7 @@ function RecruitmentPage() {
                 </Typography>
 
                 <Typography variant="body1" paragraph>
-                    We're working on bringing you detailed information about our
+                    We&apos;re working on bringing you detailed information about our
                     Summer Internship Recruitment process. Stay tuned for
                     updates!
                 </Typography>

@@ -82,7 +82,7 @@ function Events() {
                             </Typography>
                         </a>
                         <Typography className="eventText">
-                            We've got the ultimate test for you! Prove your
+                            We&apos;ve got the ultimate test for you! Prove your
                             mettle while you compete against others in a 24 hour
                             online treasure hunt! The Top 15 Participants will
                             get a direct opportunity to interview for our
