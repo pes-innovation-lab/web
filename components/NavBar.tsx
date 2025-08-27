@@ -15,7 +15,7 @@ const routes = [
     { title: 'Projects', route: `/projects` },
     { title: 'Publications', route: `/publications` },
     { title: 'Events', route: '/events' },
-    { title: 'Join Us', route: `/` },
+    { title: 'Join Us', route: `/events/recruitment` },
     { title: 'Our History', route: `/history` },
     // {
     //     title: 'Events',
@@ -354,8 +354,8 @@ function NavBar(props) {
                                     <Image
                                         alt="PES Innovation Lab"
                                         src="/images/mlab/mlab_logo.png"
-                                        fill
-                                        style={{ objectFit: 'contain' }}
+                                        layout="fill"
+                                        objectFit="contain"
                                     />
                                 </div>
                             </Link>
@@ -379,8 +379,8 @@ function NavBar(props) {
                                     <Image
                                         alt="PES Innovation Lab"
                                         src="/images/mlab/mlab_logo.png"
-                                        fill
-                                        style={{ objectFit: 'contain' }}
+                                        layout="fill"
+                                        objectFit="contain"
                                     />
                                 </div>
                                 <div>
@@ -425,8 +425,8 @@ function NavBar(props) {
                                     <Image
                                         alt="PES Innovation Lab"
                                         src="/images/mlab/mlab_logo.png"
-                                        fill
-                                        style={{ objectFit: 'contain' }}
+                                        layout="fill"
+                                        objectFit="contain"
                                     />
                                 </div>
                                 <div className="flex flex-col items-center justify-center">

@@ -15,68 +15,24 @@ function InternshipPage() {
                 Summer Internship Program
             </Typography>
 
-            <div style={{ marginTop: '2rem', color: 'white' }}>
-                <Typography variant="body1" paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam auctor, nisl eget ultricies aliquam, nunc nunc
-                    lacinia nunc, vitae aliquam nisl nunc vitae nisl. Sed vitae
-                    nisl eget nunc lacinia aliquam. Sed vitae nisl eget nunc
-                    lacinia aliquam.
-                </Typography>
-
-                <Typography variant="body1" paragraph>
-                    Nullam auctor, nisl eget ultricies aliquam, nunc nunc
-                    lacinia nunc, vitae aliquam nisl nunc vitae nisl. Sed vitae
-                    nisl eget nunc lacinia aliquam. Sed vitae nisl eget nunc
-                    lacinia aliquam. Nullam auctor, nisl eget ultricies aliquam,
-                    nunc nunc lacinia nunc, vitae aliquam nisl nunc vitae nisl.
-                </Typography>
-
+            <div
+                style={{
+                    marginTop: '2rem',
+                    color: 'white',
+                    textAlign: 'center',
+                }}
+            >
                 <Typography
-                    variant="h6"
-                    style={{
-                        color: '#068f13',
-                        marginTop: '2rem',
-                        marginBottom: '1rem',
-                    }}
+                    variant="h5"
+                    style={{ color: '#068f13', marginBottom: '2rem' }}
                 >
-                    Project Domains
+                    Content coming soon
                 </Typography>
 
-                <ul style={{ color: 'white' }}>
-                    <li>
-                        <Typography variant="body1">Robotics</Typography>
-                    </li>
-                    <li>
-                        <Typography variant="body1">
-                            Machine Learning
-                        </Typography>
-                    </li>
-                    <li>
-                        <Typography variant="body1">
-                            Artificial Intelligence
-                        </Typography>
-                    </li>
-                    <li>
-                        <Typography variant="body1">
-                            Sensor Networking
-                        </Typography>
-                    </li>
-                    <li>
-                        <Typography variant="body1">Virtual Reality</Typography>
-                    </li>
-                    <li>
-                        <Typography variant="body1">
-                            Brain-Computer Interface
-                        </Typography>
-                    </li>
-                    <li>
-                        <Typography variant="body1">Cloud Computing</Typography>
-                    </li>
-                    <li>
-                        <Typography variant="body1">App Development</Typography>
-                    </li>
-                </ul>
+                <Typography variant="body1" paragraph>
+                    We're working on bringing you detailed information about our
+                    Summer Internship Program. Stay tuned for updates!
+                </Typography>
             </div>
 
             <div style={{ marginTop: '2rem', textAlign: 'center' }}>

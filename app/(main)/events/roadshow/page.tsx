@@ -1,23 +1,9 @@
 'use client'
 
-import {
-    Container,
-    Typography,
-    Grid,
-    Card,
-    CardMedia,
-    CardContent,
-} from '@material-ui/core'
+import { Container, Typography } from '@material-ui/core'
 import Link from 'next/link'
 
 function RoadshowPage() {
-    // Placeholder data for past roadshows
-    const pastRoadshows = [
-        { year: '2024', image: '/images/mlab/roadshow.png' },
-        { year: '2023', image: '/images/mlab/roadshow.png' },
-        { year: '2022', image: '/images/mlab/roadshow.png' },
-    ]
-
     return (
         <Container>
             <Typography
@@ -29,64 +15,25 @@ function RoadshowPage() {
                 Roadshow
             </Typography>
 
-            <div style={{ marginTop: '2rem', color: 'white' }}>
-                <Typography variant="body1" paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam auctor, nisl eget ultricies aliquam, nunc nunc
-                    lacinia nunc, vitae aliquam nisl nunc vitae nisl. Sed vitae
-                    nisl eget nunc lacinia aliquam. Sed vitae nisl eget nunc
-                    lacinia aliquam.
-                </Typography>
-
-                <Typography variant="body1" paragraph>
-                    Nullam auctor, nisl eget ultricies aliquam, nunc nunc
-                    lacinia nunc, vitae aliquam nisl nunc vitae nisl. Sed vitae
-                    nisl eget nunc lacinia aliquam. Sed vitae nisl eget nunc
-                    lacinia aliquam. Nullam auctor, nisl eget ultricies aliquam,
-                    nunc nunc lacinia nunc, vitae aliquam nisl nunc vitae nisl.
-                </Typography>
-            </div>
-
-            <Typography
-                variant="h5"
+            <div
                 style={{
-                    color: '#068f13',
-                    marginTop: '3rem',
-                    marginBottom: '1.5rem',
+                    marginTop: '2rem',
+                    color: 'white',
+                    textAlign: 'center',
                 }}
             >
-                Past Roadshows
-            </Typography>
+                <Typography
+                    variant="h5"
+                    style={{ color: '#068f13', marginBottom: '2rem' }}
+                >
+                    Content coming soon
+                </Typography>
 
-            <Grid container spacing={4}>
-                {pastRoadshows.map((roadshow) => (
-                    <Grid item xs={12} sm={4} key={roadshow.year}>
-                        <Card style={{ background: '#1E1E1E' }}>
-                            <CardMedia
-                                component="img"
-                                height="180"
-                                image={roadshow.image}
-                                alt={`Roadshow ${roadshow.year}`}
-                            />
-                            <CardContent>
-                                <Typography
-                                    variant="h6"
-                                    style={{ color: 'white' }}
-                                >
-                                    Roadshow {roadshow.year}
-                                </Typography>
-                                <Typography
-                                    variant="body2"
-                                    style={{ color: '#AAAAAA' }}
-                                >
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit.
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-                ))}
-            </Grid>
+                <Typography variant="body1" paragraph>
+                    We're working on bringing you detailed information about our
+                    annual Roadshow event. Stay tuned for updates!
+                </Typography>
+            </div>
 
             <div style={{ marginTop: '2rem', textAlign: 'center' }}>
                 <Link

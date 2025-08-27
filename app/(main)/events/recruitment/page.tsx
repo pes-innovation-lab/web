@@ -15,28 +15,24 @@ function RecruitmentPage() {
                 Summer Internship Recruitment
             </Typography>
 
-            <div style={{ marginTop: '2rem', color: 'white' }}>
-                <Typography variant="body1" paragraph>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nullam auctor, nisl eget ultricies aliquam, nunc nunc
-                    lacinia nunc, vitae aliquam nisl nunc vitae nisl. Sed vitae
-                    nisl eget nunc lacinia aliquam. Sed vitae nisl eget nunc
-                    lacinia aliquam.
+            <div
+                style={{
+                    marginTop: '2rem',
+                    color: 'white',
+                    textAlign: 'center',
+                }}
+            >
+                <Typography
+                    variant="h5"
+                    style={{ color: '#068f13', marginBottom: '2rem' }}
+                >
+                    Content coming soon
                 </Typography>
 
                 <Typography variant="body1" paragraph>
-                    Nullam auctor, nisl eget ultricies aliquam, nunc nunc
-                    lacinia nunc, vitae aliquam nisl nunc vitae nisl. Sed vitae
-                    nisl eget nunc lacinia aliquam. Sed vitae nisl eget nunc
-                    lacinia aliquam. Nullam auctor, nisl eget ultricies aliquam,
-                    nunc nunc lacinia nunc, vitae aliquam nisl nunc vitae nisl.
-                </Typography>
-
-                <Typography variant="body1" paragraph>
-                    Sed vitae nisl eget nunc lacinia aliquam. Sed vitae nisl
-                    eget nunc lacinia aliquam. Nullam auctor, nisl eget
-                    ultricies aliquam, nunc nunc lacinia nunc, vitae aliquam
-                    nisl nunc vitae nisl.
+                    We're working on bringing you detailed information about our
+                    Summer Internship Recruitment process. Stay tuned for
+                    updates!
                 </Typography>
             </div>
 
