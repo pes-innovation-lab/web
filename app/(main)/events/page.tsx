@@ -35,11 +35,6 @@ const useStyles = makeStyles((theme) => ({
 function Events() {
     const data = [
         {
-            month: 'Jan-Feb',
-            event_name: 'Hashcode',
-            key: 'hashcode',
-        },
-        {
             month: 'March',
             event_name: 'The Hunt',
             key: 'hunt',
@@ -58,6 +53,11 @@ function Events() {
             month: 'Sept-Oct',
             event_name: 'RoadShow',
             key: 'roadshow',
+        },
+        {
+            month: 'Oct',
+            event_name: 'Hashcode',
+            key: 'hashcode',
         },
     ]
 
@@ -123,7 +123,7 @@ function Events() {
             ),
             image: (
                 <div className="eventSectionImage">
-                    <img src={`/images/mlab/recruitment.png`} />
+                    <img src={`/images/mlab/hackathon.png`} />
                 </div>
             ),
         },

@@ -13,7 +13,6 @@ const routes = [
     { title: 'Projects', route: `/projects` },
     { title: 'Publications', route: `/publications` },
     { title: 'Events', route: '/events' },
-    { title: 'Join Us', route: `/events/recruitment` },
     { title: 'Our History', route: `/history` },
 ]
 
@@ -57,7 +56,7 @@ function NavBar() {
 
     // need to add the right link here
     const JoinUsButton = ({ isMobile = false }) => (
-        <Link href="">
+        <Link href="/events/recruitment">
             <span
                 className={`block whitespace-nowrap bg-lab-green text-black font-bold rounded-md hover:bg-green-400 transition-colors duration-300 ${isMobile ? 'text-lg px-6 py-3' : 'text-sm px-4 py-2'}`}
             >
