@@ -30,7 +30,7 @@ function RoadshowPage() {
                 </Typography>
 
                 <Typography variant="body1" paragraph>
-                    We're working on bringing you detailed information about our
+                    We&apos;re working on bringing you detailed information about our
                     annual Roadshow event. Stay tuned for updates!
                 </Typography>
             </div>
