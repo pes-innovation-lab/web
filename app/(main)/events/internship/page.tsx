@@ -30,8 +30,8 @@ function InternshipPage() {
                 </Typography>
 
                 <Typography variant="body1" paragraph>
-                    We&apos;re working on bringing you detailed information about our
-                    Summer Internship Program. Stay tuned for updates!
+                    We&apos;re working on bringing you detailed information
+                    about our Summer Internship Program. Stay tuned for updates!
                 </Typography>
             </div>
 
