@@ -54,8 +54,9 @@ function NavBar() {
         setIsMenuOpen(!isMenuOpen)
     }
 
+    // need to add the right link here
     const JoinUsButton = ({ isMobile = false }) => (
-        <Link href="/join_us">
+        <Link href="">
             <span
                 className={`block whitespace-nowrap bg-lab-green text-black font-bold rounded-md hover:bg-green-400 transition-colors duration-300 ${isMobile ? 'text-lg px-6 py-3' : 'text-sm px-4 py-2'}`}
             >
