@@ -40,6 +40,11 @@ function Events() {
             key: 'hashcode',
         },
         {
+            month: 'March',
+            event_name: 'The Hunt',
+            key: 'hunt',
+        },
+        {
             month: 'March-April',
             event_name: 'Summer Internship Recruitment',
             key: 'recruitment',
@@ -53,11 +58,6 @@ function Events() {
             month: 'Sept-Oct',
             event_name: 'RoadShow',
             key: 'roadshow',
-        },
-        {
-            month: 'Oct',
-            event_name: 'Hashcode',
-            key: 'hashcode',
         },
     ]
 
@@ -82,11 +82,7 @@ function Events() {
                             </Typography>
                         </a>
                         <Typography className="eventText">
-                            We&apos;ve got the ultimate test for you! Prove your
-                            mettle while you compete against others in a 24 hour
-                            online treasure hunt! The Top 15 Participants will
-                            get a direct opportunity to interview for our
-                            prestigious internship program!
+                            We've got the ultimate test for you! Prove your mettle while you compete against others in a 24 hour online treasure hunt! The Top 15 Participants will get a direct opportunity to interview for our prestigious internship program!
                         </Typography>
                     </div>
                 </div>
