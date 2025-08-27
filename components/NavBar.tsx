@@ -13,6 +13,7 @@ const routes = [
     { title: 'Projects', route: `/projects` },
     { title: 'Publications', route: `/publications` },
     { title: 'Events', route: '/events' },
+    { title: 'Join Us', route: `/events/recruitment` },
     { title: 'Our History', route: `/history` },
 ]
 
