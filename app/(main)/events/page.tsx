@@ -66,7 +66,10 @@ function Events() {
             text: (
                 <div className="eventSection">
                     <div className="eventSectionText">
-                        <Link href="/events/recruitment" className="eventPageLink">
+                        <Link
+                            href="/events/recruitment"
+                            className="eventPageLink"
+                        >
                             <Typography className="eventHeading">
                                 Summer Internship Recruitment
                             </Typography>
@@ -93,7 +96,10 @@ function Events() {
             text: (
                 <div className="eventSection">
                     <div className="eventSectionText">
-                        <Link href="/events/internship" className="eventPageLink">
+                        <Link
+                            href="/events/internship"
+                            className="eventPageLink"
+                        >
                             <Typography className="eventHeading">
                                 Summer Internship Program
                             </Typography>
@@ -155,7 +161,12 @@ function Events() {
             text: (
                 <div className="eventSection">
                     <div className="eventSectionText">
-                        <a href="https://hashcode.theinnovationlab.in" target="_blank" rel="noopener noreferrer" className="eventPageLink">
+                        <a
+                            href="https://hashcode.theinnovationlab.in"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="eventPageLink"
+                        >
                             <Typography className="eventHeading">
                                 HashCode
                             </Typography>

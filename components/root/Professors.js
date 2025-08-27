@@ -53,7 +53,7 @@ export default function ProfessorsInfo() {
                                     ].image
                                 }
                                 fill
-                                style={{ objectFit: "contain" }}
+                                style={{ objectFit: 'contain' }}
                             />
                         </div>
                     </div>

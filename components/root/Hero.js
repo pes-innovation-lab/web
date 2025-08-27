@@ -57,7 +57,7 @@ export default function Hero() {
                     <Image
                         src="/images/mlab/mlab_logo.png"
                         fill
-                        style={{ objectFit: "cover" }}
+                        style={{ objectFit: 'cover' }}
                     />
                 </div>
                 {/* TITLE */}
