@@ -38,7 +38,7 @@ export default function Home() {
     }
 
     return (
-        <div className="bg-lab-bg pt-28 text-white">
+        <div className="bg-lab-bg pt-16 text-white">
             {/* HERO SECTION */}
             {isHeroVisible && (
                 <div className={heroFadeOut ? 'fade-out' : ''}>

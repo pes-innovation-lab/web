@@ -269,7 +269,7 @@ function Projectos() {
 
     return (
         <div
-            className={`flex flex-col gap-10 px-4 pb-20 pt-24 phone:px-6 sm:px-12`}
+            className={`flex flex-col gap-10 px-4 pb-20 pt-16 phone:px-6 sm:px-12`}
         >
             <div className="flex flex-col items-center justify-between gap-4 sm:flex-row sm:gap-0">
                 <div className="font-martian-mono text-4xl text-lab-green lg:text-6xl">

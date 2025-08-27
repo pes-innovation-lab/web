@@ -24,8 +24,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className="font-martian-mono">
-                <NavBar active="Home" search="False" />
-                {children}
+                <NavBar />
+                    {children}
                 <Footer />
             </body>
         </html>
