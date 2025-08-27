@@ -7,7 +7,6 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { IoClose } from 'react-icons/io5'
 import { SiGmail, SiInstagram, SiTwitter, SiWhatsapp } from 'react-icons/si'
 
-
 const routes = [
     { title: 'Home', route: `/` },
     { title: 'Members', route: `/members` },
@@ -33,9 +32,12 @@ export const socials = [
         name: 'Twitter',
         icon: <SiTwitter size={18} />,
     },
-    { link: 'mailto:pes.mlab@gmail.com', name: 'Email', icon: <SiGmail size={18} /> },
+    {
+        link: 'mailto:pes.mlab@gmail.com',
+        name: 'Email',
+        icon: <SiGmail size={18} />,
+    },
 ]
-
 
 function NavBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -43,10 +45,10 @@ function NavBar() {
 
     //close mobile menu
     useEffect(() => {
-        if(isMenuOpen) {
-            setIsMenuOpen(false);
+        if (isMenuOpen) {
+            setIsMenuOpen(false)
         }
-    }, [pathname]);
+    }, [pathname])
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
@@ -54,11 +56,13 @@ function NavBar() {
 
     const JoinUsButton = ({ isMobile = false }) => (
         <Link href="/join_us">
-             <span className={`block whitespace-nowrap bg-lab-green text-black font-bold rounded-md hover:bg-green-400 transition-colors duration-300 ${isMobile ? 'text-lg px-6 py-3' : 'text-sm px-4 py-2'}`}>
+            <span
+                className={`block whitespace-nowrap bg-lab-green text-black font-bold rounded-md hover:bg-green-400 transition-colors duration-300 ${isMobile ? 'text-lg px-6 py-3' : 'text-sm px-4 py-2'}`}
+            >
                 Join Us
             </span>
         </Link>
-    );
+    )
 
     return (
         <>
@@ -118,7 +122,6 @@ function NavBar() {
                         <JoinUsButton />
                     </div>
 
-
                     <div className="md:hidden">
                         <button onClick={toggleMenu} aria-label="Open menu">
                             <GiHamburgerMenu size={24} />
@@ -126,7 +129,6 @@ function NavBar() {
                     </div>
                 </div>
             </header>
-
 
             <div
                 onClick={toggleMenu}
@@ -150,7 +152,13 @@ function NavBar() {
                     <nav className="flex flex-col items-center flex-grow gap-6 text-white text-xl">
                         {routes.map((r) => (
                             <Link key={r.title} href={r.route}>
-                                <p className={pathname === r.route ? 'text-lab-green font-bold' : ''}>
+                                <p
+                                    className={
+                                        pathname === r.route
+                                            ? 'text-lab-green font-bold'
+                                            : ''
+                                    }
+                                >
                                     {r.title}
                                 </p>
                             </Link>
@@ -158,7 +166,7 @@ function NavBar() {
                     </nav>
 
                     <div className="flex flex-col items-center gap-8">
-                        <JoinUsButton isMobile={true}/>
+                        <JoinUsButton isMobile={true} />
                         <div className="flex justify-center items-center gap-6 text-white">
                             {socials.map((s) => (
                                 <a
