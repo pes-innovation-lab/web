@@ -1,13 +1,11 @@
 'use client'
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Suspense } from 'react'
 import Cookies from 'universal-cookie'
 import { jwtDecode } from 'jwt-decode'
 import projectsData from '../../../public/data/projects.json'
 import Cards from '../../../components/Cards'
-import LayoutAlt from '../../../components/LayoutAlt'
-import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/navigation'
 
@@ -24,23 +22,24 @@ type projectsType = {
 
 function Projectos() {
     const router = useRouter()
-    const searchParams: string | null = useSearchParams().get('project-id')
-    const projectId: string = searchParams ? searchParams : ''
+    const allProjects = Object.values(projectsData).flatMap((y) => y.projects)
+    
+    const searchParams: string | null = useSearchParams().get('project')
+    const projectName: string = searchParams ? searchParams : ''
 
-    const [selectedId, setSelectedId] = useState(
-        projectId.split('-')[2] ? Number(projectId.split('-')[2]) - 1 : -1
+    const formatForUrl = (s: string) => s.replaceAll(' ', '-')
+    const project = allProjects.find(
+        (p) => formatForUrl(p.title) === projectName
     )
+
     const containerRefs = useRef(new Array())
 
     const years = [2025, 2024, 2023, 2022, 2020, 2019, 2018, 2017, 2016]
-    const defaultYearStr = projectId.split('-')[1]
-    const defaultYear =
-        defaultYearStr && years.includes(Number(defaultYearStr))
-            ? Number(defaultYearStr)
-            : years.sort((a, b) => {
-                  return b - a
-              })[0]
-
+    const defaultYear = project
+        ? Number(project.year)
+        : years.sort((a, b) => {
+              return b - a
+          })[0]
     const [currentYear, setCurrentYear] = useState(defaultYear)
 
     const handleEventAndNavigate = async () => {
@@ -89,15 +88,23 @@ function Projectos() {
     })
 
     const projects = projectsData
-
     const currentProjects: projectsType =
         projects[currentYear.toString()]['projects']
 
-    // const AllProjects = Object.values(projectsData).map(
-    // 	(item) => item.projects
-    // );
+    const [selectedId, setSelectedId] = useState(
+        currentProjects.findIndex(
+            (project) => formatForUrl(project.title) === projectName
+        )
+    )
+    useEffect(() => {
+        if (selectedId !== -1) {
+            const card = currentProjects[selectedId]
+            router.push(`projects?project=${formatForUrl(card.title)}`)
+            return
+        }
 
-    // const FlattenedAllProjects = AllProjects.flat(1);
+        router.push(`projects`)
+    }, [selectedId])
 
     const cardLayout = (
         <div className="flex flex-wrap justify-around gap-8 lg:justify-center">
@@ -262,6 +269,7 @@ function Projectos() {
             })}
             <motion.div
                 className="dim-layer"
+                initial={false}
                 animate={{ opacity: selectedId != -1 ? 0.8 : 0 }}
             />
         </div>
