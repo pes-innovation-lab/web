@@ -158,7 +158,7 @@ export default function Publications() {
     // }, [])
 
     return (
-        <div className="pt-20">
+        <div className="pt-12">
             <Typography className="pageHeader">Recent Publications</Typography>
             <Container>
                 {!isDataLoaded ? (

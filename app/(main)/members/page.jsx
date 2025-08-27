@@ -63,7 +63,7 @@ function Members() {
 
     return (
         <>
-            <div className="mt-10 flex flex-col gap-10 px-12 pb-20 pt-20">
+            <div className="mt-10 flex flex-col gap-10 px-12 pb-20 pt-26">
                 <div className="flex md:flex-row flex-col items-center gap-8 justify-between">
                     <div className="md:gap-4 gap-2 font-martian-mono md:text-4xl text-3xl text-white flex flex-wrap md:flex-row justify-center">
                         {membersOrHeadsMd}
