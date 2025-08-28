@@ -7,6 +7,11 @@ import {
     HiChevronRight,
     HiCalendar,
     HiArrowTopRightOnSquare,
+    HiCodeBracket,
+    HiMagnifyingGlass,
+    HiUserGroup,
+    HiAcademicCap,
+    HiPresentationChartLine,
 } from 'react-icons/hi2'
 
 interface Event {
@@ -16,6 +21,7 @@ interface Event {
     description: string
     timing: string
     image: string
+    icon: React.ComponentType<{ className?: string }>
     link?: string
     isExternal?: boolean
     features: string[]
@@ -33,6 +39,7 @@ function Events() {
                 'Our flagship hackathon where innovation meets execution. Students propose groundbreaking ideas and build solutions across diverse domains with mentorship from industry experts.',
             timing: 'October',
             image: '/images/mlab/hackathon.png',
+            icon: HiCodeBracket,
             link: 'https://hashcode.theinnovationlab.in',
             isExternal: true,
             features: [
@@ -49,7 +56,8 @@ function Events() {
             description:
                 'Prove your mettle in our intensive 24-hour online treasure hunt. Top performers get direct interview opportunities for our prestigious internship program.',
             timing: 'March',
-            image: '/images/mlab/recruitment.png',
+            image: '/images/mlab/roadmap.jpg',
+            icon: HiMagnifyingGlass,
             link: 'https://hunt.theinnovationlab.in',
             isExternal: true,
             features: [
@@ -67,6 +75,7 @@ function Events() {
                 'We seek passionate individuals to join our community. Through aptitude challenges and assessments, we identify those ready to tackle real-world engineering problems.',
             timing: 'March - April',
             image: '/images/mlab/recruitment.png',
+            icon: HiUserGroup,
             link: '/events/recruitment',
             isExternal: false,
             features: [
@@ -84,6 +93,7 @@ function Events() {
                 'Work on groundbreaking research projects in various domains for an entire summer.',
             timing: 'June - July',
             image: '/images/mlab/internship.png',
+            icon: HiAcademicCap,
             link: '/events/internship',
             isExternal: false,
             features: [
@@ -101,6 +111,7 @@ function Events() {
                 'Our annual innovation expo where summer interns showcase their groundbreaking projects.',
             timing: 'September - October',
             image: '/images/mlab/roadshow.png',
+            icon: HiPresentationChartLine,
             link: '/events/roadshow',
             isExternal: false,
             features: [
@@ -197,13 +208,9 @@ function Events() {
                                         </p>
                                     </div>
 
-                                    {/* Event Image */}
-                                    <div className="w-16 h-16 ml-4 rounded-xl overflow-hidden border-2 border-lab-green/30 group-hover:border-lab-green transition-colors duration-300">
-                                        <img
-                                            src={event.image}
-                                            alt={event.title}
-                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                                        />
+                                    {/* Event Icon */}
+                                    <div className="w-16 h-16 ml-4 rounded-xl bg-lab-green/20 border-2 border-lab-green/30 group-hover:border-lab-green transition-colors duration-300 flex items-center justify-center">
+                                        <event.icon className="w-8 h-8 text-lab-light-green group-hover:text-white transition-colors duration-300" />
                                     </div>
                                 </div>
 
