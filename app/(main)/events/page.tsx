@@ -19,7 +19,6 @@ interface Event {
     link?: string
     isExternal?: boolean
     features: string[]
-    bgGradient: string
 }
 
 function Events() {
@@ -32,7 +31,7 @@ function Events() {
             subtitle: 'Annual 24-Hour Hackathon',
             description:
                 'Our flagship hackathon where innovation meets execution. Students propose groundbreaking ideas and build solutions across diverse domains with mentorship from industry experts.',
-            timing: 'January - February',
+            timing: 'October',
             image: '/images/mlab/hackathon.png',
             link: 'https://hashcode.theinnovationlab.in',
             isExternal: true,
@@ -42,8 +41,6 @@ function Events() {
                 'Industry Mentors',
                 'Multi-Domain Projects',
             ],
-            bgGradient:
-                'from-lab-green/20 via-lab-light-green/20 to-emerald-600/20',
         },
         {
             id: 'hunt',
@@ -61,8 +58,6 @@ function Events() {
                 'Top 15 Participants',
                 'Skill Assessment',
             ],
-            bgGradient:
-                'from-lab-green/20 via-lab-light-green/20 to-emerald-600/20',
         },
         {
             id: 'recruitment',
@@ -80,8 +75,6 @@ function Events() {
                 'Real-World Problems',
                 'Community Selection',
             ],
-            bgGradient:
-                'from-lab-green/20 via-lab-light-green/20 to-emerald-600/20',
         },
         {
             id: 'internship',
@@ -99,8 +92,6 @@ function Events() {
                 'Roadshow Presentation',
                 'Prototype Development',
             ],
-            bgGradient:
-                'from-lab-green/20 via-lab-light-green/20 to-emerald-600/20',
         },
         {
             id: 'roadshow',
@@ -118,8 +109,6 @@ function Events() {
                 'Knowledge Platform',
                 'Innovation Expo',
             ],
-            bgGradient:
-                'from-lab-green/20 via-lab-light-green/20 to-emerald-600/20',
         },
     ]
 
@@ -133,25 +122,8 @@ function Events() {
         },
     }
 
-    const cardVariants = {
-        hidden: {
-            opacity: 0,
-            y: 50,
-            scale: 0.9,
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            transition: {
-                duration: 0.6,
-                ease: 'easeOut',
-            },
-        },
-    }
-
     return (
-        <div className="min-h-screen bg-gradient-to-br from-lab-bg via-lab-sec to-lab-bg">
+        <div className="min-h-screen bg-lab-bg">
             {/* Hero Section */}
             <div className="pt-32 pb-16 px-6 text-center">
                 <motion.div
@@ -160,7 +132,7 @@ function Events() {
                     transition={{ duration: 0.8 }}
                     className="max-w-4xl mx-auto"
                 >
-                    <h1 className="text-step-8 font-bold bg-gradient-to-r from-lab-light-green via-white to-lab-green bg-clip-text text-transparent mb-6">
+                    <h1 className="text-step-8 font-bold text-lab-green mb-6">
                         What We Do
                     </h1>
                     <h2 className="text-step-4 text-white font-dm-sans font-medium mb-4">
@@ -184,10 +156,9 @@ function Events() {
                     {events.map((event, index) => (
                         <motion.div
                             key={event.id}
-                            variants={cardVariants}
                             onHoverStart={() => setHoveredCard(event.id)}
                             onHoverEnd={() => setHoveredCard(null)}
-                            className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${event.bgGradient} backdrop-blur-sm border border-gray-700/50 group cursor-pointer transition-all duration-500 ${
+                            className={`relative overflow-hidden rounded-2xl backdrop-blur-sm border border-lab-green/20 group cursor-pointer transition-all duration-500 ${
                                 hoveredCard === event.id
                                     ? 'scale-[1.02] shadow-2xl shadow-lab-green/20'
                                     : ''
@@ -302,36 +273,6 @@ function Events() {
                             <motion.div className="absolute inset-0 bg-gradient-to-br from-lab-green/5 via-transparent to-lab-light-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                         </motion.div>
                     ))}
-                </div>
-            </motion.div>
-
-            {/* Call to Action Section */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1, duration: 0.8 }}
-                className="py-16 text-center"
-            >
-                <div className="max-w-3xl mx-auto px-6">
-                    <h3 className="text-step-3 font-bold text-white mb-4">
-                        Ready to Join the Innovation?
-                    </h3>
-                    <p className="text-step-0 text-gray-300 mb-8">
-                        Be part of our vibrant community and experience
-                        cutting-edge technology firsthand
-                    </p>
-                    <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        <Link
-                            href="/members"
-                            className="inline-flex items-center gap-3 bg-gradient-to-r from-lab-green to-lab-light-green text-white font-medium px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-lab-green/30 transition-all duration-300"
-                        >
-                            Meet Our Team
-                            <HiChevronRight className="w-5 h-5" />
-                        </Link>
-                    </motion.div>
                 </div>
             </motion.div>
         </div>
