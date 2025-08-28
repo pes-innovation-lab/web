@@ -8,6 +8,7 @@ import projectsData from '../../../public/data/projects.json'
 import ProjectCard from '../../../components/ProjectCard'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/navigation'
+import YearSelector from '../../../components/YearSelector'
 
 type projectsType = {
     year: string
@@ -72,20 +73,6 @@ function Projectos() {
             }
         }
     }
-
-    const yearElements = years.map((year, ind) => {
-        return (
-            <button
-                key={ind}
-                onClick={() => setCurrentYear(year)}
-                className={`text-sm lg:text-base ${
-                    year == currentYear ? 'font-bold text-lab-green' : ''
-                }`}
-            >
-                {year}
-            </button>
-        )
-    })
 
     const projects = projectsData
     const currentProjects: projectsType =
@@ -280,14 +267,19 @@ function Projectos() {
 
     return (
         <div
-            className={`flex flex-col gap-10 px-4 pb-20 pt-16 phone:px-6 sm:px-12`}
+            className={`flex flex-col gap-10 px-4 pb-20 pt-6 phone:px-6 sm:px-12`}
         >
             <div className="flex flex-col items-center justify-between gap-4 sm:flex-row sm:gap-0">
-                <div className="font-martian-mono text-4xl text-lab-green lg:text-6xl">
+                <div className="font-bold font-martian-mono text-2xl text-lab-green lg:text-4xl border-lab-green/50 border-2 rounded-md p-2">
                     PROJECTS
                 </div>
-                <div className="grid grid-cols-4 gap-4 rounded-md border-2 border-gray-900 p-2 text-lg text-gray-400 phone:flex">
-                    {yearElements}
+
+                <div className="md:gap-4 gap-2 p-2 text-lg text-gray-400 flex flex-wrap md:flex-row justify-center ">
+                    <YearSelector
+                        years={years}
+                        currentYear={currentYear}
+                        setCurrentYear={setCurrentYear}
+                    />
                 </div>
             </div>
             {cardLayout}

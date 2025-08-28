@@ -1,20 +1,50 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 
-export default function MemberCard(props) {
-    const { name, pfp, gmail, github, linkedin, course, batch } = props
+export default function MemberCard({
+    name,
+    pfp,
+    gmail,
+    github,
+    linkedin,
+    course,
+    batch,
+}) {
+    const [imageLoaded, setImageLoaded] = useState(false)
+    const imgRef = useRef<HTMLImageElement>(null)
+
+    useEffect(() => {
+        const img = imgRef.current
+        if (img && img.complete && img.naturalHeight !== 0) {
+            setImageLoaded(true)
+            return
+        }
+        setImageLoaded(false)
+    }, [name])
+
     return (
-        <>
-            <div className="group relative cursor-pointer items-center justify-center overflow-hidden rounded-xl border-2 border-gray-800 transition-shadow hover:shadow-xl hover:shadow-black/30">
-                <div className="h-96 w-72">
-                    {/* <img className="h-full w-full object-cover transition-transform duration-500" src={pfp} alt="pfp" /> */}
-                    <img
-                        className="h-full w-full object-cover transition-transform duration-500  group-hover:scale-125"
-                        src={pfp}
-                        alt=""
-                    />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
-                <div className="absolute inset-0 flex translate-y-[48%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+        <div className="group relative cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-black shadow-2xl transition-all duration-500 hover:shadow-xl hover:shadow-black/10">
+            {!imageLoaded && (
+                <div className="absolute inset-0 z-0 animate-pulse bg-gradient-to-b from-gray-700/40 via-gray-900/70 to-black/80 backdrop-blur-sm" />
+            )}
+
+            <div className="h-96 w-72">
+                <img
+                    ref={imgRef}
+                    src={pfp}
+                    alt={name}
+                    className={`h-full w-full object-cover transition-transform duration-500 ${
+                        imageLoaded
+                            ? 'opacity-100 scale-100 group-hover:scale-125'
+                            : 'opacity-0 scale-105'
+                    }`}
+                    onLoad={() => setImageLoaded(true)}
+                />
+            </div>
+
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+
+            {imageLoaded && (
+                <div className="absolute inset-0 flex translate-y-[48%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0 z-10">
                     <h1 className="mb-10 text-3xl font-bold text-white">
                         {name}
                     </h1>
@@ -23,7 +53,7 @@ export default function MemberCard(props) {
                     </p>
                     <div className="flex items-center justify-center">
                         <a
-                            className="mr-6  text-neutral-600 dark:text-neutral-200"
+                            className="mr-6 text-neutral-600 dark:text-neutral-200"
                             href={`mailto:${gmail}`}
                         >
                             <svg
@@ -37,7 +67,7 @@ export default function MemberCard(props) {
                             </svg>
                         </a>
                         <a
-                            className="mr-6 text-neutral-600 dark:text-neutral-200 "
+                            className="mr-6 text-neutral-600 dark:text-neutral-200"
                             href={linkedin}
                         >
                             <svg
@@ -64,10 +94,7 @@ export default function MemberCard(props) {
                         </a>
                     </div>
                 </div>
-            </div>
-        </>
+            )}
+        </div>
     )
-}
-{
-    /* <img className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125" src={pfp} alt="" /> */
 }
