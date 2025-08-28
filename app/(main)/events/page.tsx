@@ -88,7 +88,7 @@ function Events() {
             title: 'Summer Internship Program',
             subtitle: 'Cutting-Edge Research Experience',
             description:
-                'Work on groundbreaking research projects spanning Robotics, AI, ML, VR, BCI, and more. Present your innovations at our renowned Roadshow event.',
+                'Work on groundbreaking research projects in various domains for an entire summer.',
             timing: 'June - July',
             image: '/images/mlab/internship.png',
             link: '/events/internship',
@@ -107,7 +107,7 @@ function Events() {
             title: 'Roadshow',
             subtitle: 'Innovation Expo & Project Showcase',
             description:
-                'Our annual innovation expo where summer interns showcase their groundbreaking projects. A platform for knowledge sharing and professional feedback.',
+                'Our annual innovation expo where summer interns showcase their groundbreaking projects.',
             timing: 'September - October',
             image: '/images/mlab/roadshow.png',
             link: '/events/roadshow',
