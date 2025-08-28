@@ -125,7 +125,7 @@ function Events() {
     return (
         <div className="min-h-screen bg-lab-bg">
             {/* Hero Section */}
-            <div className="pt-32 pb-16 px-6 text-center">
+            <div className="pt-20 pb-16 px-6 text-center">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -138,10 +138,6 @@ function Events() {
                     <h2 className="text-step-4 text-white font-dm-sans font-medium mb-4">
                         A Year at PES Innovation Lab
                     </h2>
-                    <p className="text-step-1 text-gray-300 font-dm-sans leading-relaxed">
-                        We have the perfect platform and events for your skills
-                        and ideas to explore new heights
-                    </p>
                 </motion.div>
             </div>
 
@@ -152,7 +148,7 @@ function Events() {
                 animate="visible"
                 className="max-w-7xl mx-auto px-6 pb-20"
             >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 [&>*:last-child:nth-child(odd)]:col-span-2 [&>*:last-child:nth-child(odd)]:lg:mx-auto lg:[&>*:last-child:nth-child(odd)]:max-w-[calc(50%-1rem)]">
                     {events.map((event, index) => (
                         <motion.div
                             key={event.id}
