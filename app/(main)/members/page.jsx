@@ -28,7 +28,7 @@ function Members() {
             <button
                 key={ind}
                 onClick={() => setMorH(morh)}
-                className={`${morh == mOrH ? 'font-bold text-lab-green border-lab-green/50 rounded-md border-2 p-2' : ''}`}
+                className={`${morh == mOrH ? 'font-bold text-lab-green border-green-900/50 rounded-md border-2 p-2' : ''}`}
             >
                 {morh}
             </button>

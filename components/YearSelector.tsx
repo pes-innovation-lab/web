@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function YearSelector({ years, currentYear, setCurrentYear }) {
     return (
-        <div className="flex flex-wrap gap-1 sm:gap-2 border-2 border-lab-green/50 p-2 rounded-md">
+        <div className="flex flex-wrap gap-1 sm:gap-2 border-2 border-green-900/50 p-2 rounded-md">
             {years.map((year) => {
                 const isActive = year === currentYear
                 return (
