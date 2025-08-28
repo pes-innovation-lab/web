@@ -1,299 +1,340 @@
 'use client'
 
-// pages/events.js
-import { Container, Typography } from '@material-ui/core'
-import { makeStyles } from '@material-ui/core/styles'
-import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward'
-import Timeline from '@material-ui/lab/Timeline'
-import TimelineConnector from '@material-ui/lab/TimelineConnector'
-import TimelineContent from '@material-ui/lab/TimelineContent'
-import TimelineDot from '@material-ui/lab/TimelineDot'
-import TimelineItem from '@material-ui/lab/TimelineItem'
-import TimelineOppositeContent from '@material-ui/lab/TimelineOppositeContent'
-import TimelineSeparator from '@material-ui/lab/TimelineSeparator'
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { useMediaQuery } from 'react-responsive'
-import '../../../css/events.css'
+import {
+    HiChevronRight,
+    HiCalendar,
+    HiArrowTopRightOnSquare,
+} from 'react-icons/hi2'
 
-const useStyles = makeStyles((theme) => ({
-    paper: {
-        padding: '6px 16px',
-    },
-    secondaryTail: {
-        backgroundColor: theme.palette.secondary.main,
-    },
-    date: {
-        margin: '5px',
-        color: 'white',
-        fontSize: '1rem',
-    },
-    content: {
-        margin: '5px',
-    },
-}))
+interface Event {
+    id: string
+    title: string
+    subtitle: string
+    description: string
+    timing: string
+    image: string
+    link?: string
+    isExternal?: boolean
+    features: string[]
+    bgGradient: string
+}
 
 function Events() {
-    const data = [
+    const [hoveredCard, setHoveredCard] = useState<string | null>(null)
+
+    const events: Event[] = [
         {
-            month: 'Jan-Feb',
-            event_name: 'Hashcode',
-            key: 'hashcode',
+            id: 'hashcode',
+            title: 'HashCode',
+            subtitle: 'Annual 24-Hour Hackathon',
+            description:
+                'Our flagship hackathon where innovation meets execution. Students propose groundbreaking ideas and build solutions across diverse domains with mentorship from industry experts.',
+            timing: 'January - February',
+            image: '/images/mlab/hackathon.png',
+            link: 'https://hashcode.theinnovationlab.in',
+            isExternal: true,
+            features: [
+                '24-Hour Challenge',
+                'Cash Prizes up to ₹1L',
+                'Industry Mentors',
+                'Multi-Domain Projects',
+            ],
+            bgGradient:
+                'from-lab-green/20 via-lab-light-green/20 to-emerald-600/20',
         },
         {
-            month: 'March',
-            event_name: 'The Hunt',
-            key: 'hunt',
+            id: 'hunt',
+            title: 'The Hunt',
+            subtitle: 'Ultimate Treasure Hunt Challenge',
+            description:
+                'Prove your mettle in our intensive 24-hour online treasure hunt. Top performers get direct interview opportunities for our prestigious internship program.',
+            timing: 'March',
+            image: '/images/mlab/recruitment.png',
+            link: 'https://hunt.theinnovationlab.in',
+            isExternal: true,
+            features: [
+                '24-Hour Online Hunt',
+                'Direct Interview Access',
+                'Top 15 Participants',
+                'Skill Assessment',
+            ],
+            bgGradient:
+                'from-lab-green/20 via-lab-light-green/20 to-emerald-600/20',
         },
         {
-            month: 'March-April',
-            event_name: 'Summer Internship Recruitment',
-            key: 'recruitment',
+            id: 'recruitment',
+            title: 'Summer Internship Recruitment',
+            subtitle: 'Join Our Innovation Community',
+            description:
+                'We seek passionate individuals to join our community. Through aptitude challenges and assessments, we identify those ready to tackle real-world engineering problems.',
+            timing: 'March - April',
+            image: '/images/mlab/recruitment.png',
+            link: '/events/recruitment',
+            isExternal: false,
+            features: [
+                'Aptitude Challenge',
+                'Passion Assessment',
+                'Real-World Problems',
+                'Community Selection',
+            ],
+            bgGradient:
+                'from-lab-green/20 via-lab-light-green/20 to-emerald-600/20',
         },
         {
-            month: 'June-July',
-            event_name: 'Summer Internship',
-            key: 'internship',
+            id: 'internship',
+            title: 'Summer Internship Program',
+            subtitle: 'Cutting-Edge Research Experience',
+            description:
+                'Work on groundbreaking research projects spanning Robotics, AI, ML, VR, BCI, and more. Present your innovations at our renowned Roadshow event.',
+            timing: 'June - July',
+            image: '/images/mlab/internship.png',
+            link: '/events/internship',
+            isExternal: false,
+            features: [
+                'Research Projects',
+                'Multiple Domains',
+                'Roadshow Presentation',
+                'Prototype Development',
+            ],
+            bgGradient:
+                'from-lab-green/20 via-lab-light-green/20 to-emerald-600/20',
         },
         {
-            month: 'Sept-Oct',
-            event_name: 'RoadShow',
-            key: 'roadshow',
+            id: 'roadshow',
+            title: 'Roadshow',
+            subtitle: 'Innovation Expo & Project Showcase',
+            description:
+                'Our annual innovation expo where summer interns showcase their groundbreaking projects. A platform for knowledge sharing and professional feedback.',
+            timing: 'September - October',
+            image: '/images/mlab/roadshow.png',
+            link: '/events/roadshow',
+            isExternal: false,
+            features: [
+                'Project Showcase',
+                'Expert Feedback',
+                'Knowledge Platform',
+                'Innovation Expo',
+            ],
+            bgGradient:
+                'from-lab-green/20 via-lab-light-green/20 to-emerald-600/20',
         },
     ]
 
-    const classes = useStyles()
-    const isDesktop = useMediaQuery({
-        query: '(min-device-width: 545px)',
-    })
-
-    const timelineContent = {
-        hunt: {
-            text: (
-                <div className="eventSection">
-                    <div className="eventSectionText">
-                        <a
-                            href="https://hunt.theinnovationlab.in"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="eventPageLink"
-                        >
-                            <Typography className="eventHeading">
-                                The Hunt
-                            </Typography>
-                        </a>
-                        <Typography className="eventText">
-                            We&apos;ve got the ultimate test for you! Prove your
-                            mettle while you compete against others in a 24 hour
-                            online treasure hunt! The Top 15 Participants will
-                            get a direct opportunity to interview for our
-                            prestigious internship program!
-                        </Typography>
-                    </div>
-                </div>
-            ),
-            image: (
-                <div className="eventSectionImage">
-                    <img src={`/images/mlab/recruitment.png`} />
-                </div>
-            ),
-        },
-        recruitment: {
-            text: (
-                <div className="eventSection">
-                    <div className="eventSectionText">
-                        <Link
-                            href="/events/recruitment"
-                            className="eventPageLink"
-                        >
-                            <Typography className="eventHeading">
-                                Summer Internship Recruitment
-                            </Typography>
-                        </Link>
-                        <Typography className="eventText">
-                            Every year, we look for enthusiastic and
-                            passion-driven people to become a part of our
-                            community. To find those among you who are a good
-                            fit, we conduct an aptitude challenge and give you
-                            an opportunity to show us how passionate you are
-                            about engineering and building solutions to
-                            real-world problems.
-                        </Typography>
-                    </div>
-                </div>
-            ),
-            image: (
-                <div className="eventSectionImage">
-                    <img src={`/images/mlab/hackathon.png`} />
-                </div>
-            ),
-        },
-        internship: {
-            text: (
-                <div className="eventSection">
-                    <div className="eventSectionText">
-                        <Link
-                            href="/events/internship"
-                            className="eventPageLink"
-                        >
-                            <Typography className="eventHeading">
-                                Summer Internship Program
-                            </Typography>
-                        </Link>
-                        <Typography className="eventText">
-                            We, at PES Innovation Lab, organise an annual summer
-                            internship for new recruits to work on cutting-edge
-                            research projects in varied domains such as
-                            Robotics, Machine Learning, Artificial Intelligence,
-                            Sensor Networking, Virtual Reality, Brain-Computer
-                            Interface, Cloud computing and App Development. The
-                            results and prototype demonstrations of these
-                            projects are presented at Roadshow, an event
-                            attended by a large number of students across
-                            disciplines at PES University. The recruitments for
-                            the same are carried out between March and April.
-                        </Typography>
-                    </div>
-                </div>
-            ),
-            image: (
-                <div className="eventSectionImage">
-                    <img src={`/images/mlab/internship.png`} />
-                </div>
-            ),
-        },
-        roadshow: {
-            text: (
-                <div className="eventSection">
-                    <div className="eventSectionText">
-                        <Link href="/events/roadshow" className="eventPageLink">
-                            <Typography className="eventHeading">
-                                Roadshow
-                            </Typography>
-                        </Link>
-                        <Typography className="eventText">
-                            Roadshow is an Innovation Expo organized by the Lab
-                            each year after the Summer Internship Program. PES
-                            Lab summer interns present the projects that they
-                            have worked on during the internship. This serves as
-                            a great platform for students from PES University to
-                            interact with members and gain knowledge about the
-                            cutting-edge technologies that we work on. Roadshow
-                            also serves as a platform where our interns receive
-                            constructive feedback and further insights on their
-                            projects from experienced professionals, professors
-                            and their peers.
-                        </Typography>
-                    </div>
-                </div>
-            ),
-            image: (
-                <div className="eventSectionImage">
-                    <img src={`/images/mlab/roadshow.png`} />
-                </div>
-            ),
-        },
-        hashcode: {
-            text: (
-                <div className="eventSection">
-                    <div className="eventSectionText">
-                        <a
-                            href="https://hashcode.theinnovationlab.in"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="eventPageLink"
-                        >
-                            <Typography className="eventHeading">
-                                HashCode
-                            </Typography>
-                        </a>
-                        <Typography className="eventText">
-                            HashCode is the annual 24-hour hackathon organised
-                            by the Lab, with students proposing interesting
-                            ideas and presenting projects from several domains.
-                            The hackathon also provides a learning platform to
-                            participating teams, with mentors and members of
-                            academia assisting them. Esteemed personalities from
-                            different industrial backgrounds come to judge the
-                            show, evaluating projects from all possible angles.
-                            The 13th edition of the annual hackathon will happen
-                            in 2025. The winners bag cash prizes worth up to one
-                            lakh indian rupees.
-                        </Typography>
-                    </div>
-                </div>
-            ),
-            image: (
-                <div className="eventSectionImage">
-                    <img src={`/images/mlab/hackathon.png`} />
-                </div>
-            ),
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+            },
         },
     }
-    const timelineElements = data.map((event) => (
-        <TimelineItem style={{ textAlign: 'left' }} key={event.key}>
-            <TimelineOppositeContent className="event-timelineOppositeContent">
-                <Typography variant="body2" className={classes.date}>
-                    {event.month}
-                </Typography>
-                {timelineContent[event.key].image}
-            </TimelineOppositeContent>
-            <TimelineSeparator style={{ float: 'left' }}>
-                <TimelineDot
-                    style={{ color: 'white', backgroundColor: 'green' }}
-                >
-                    <ArrowDownwardIcon />
-                </TimelineDot>
-                <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent>
-                {isDesktop ? null : (
-                    <Typography
-                        variant="body2"
-                        className={`${classes.date} event-timelineDate`}
-                    >
-                        {event.month}
-                    </Typography>
-                )}
-                {isDesktop ? null : timelineContent[event.key].image}
-                {timelineContent[event.key].text}
-            </TimelineContent>
-        </TimelineItem>
-    ))
+
+    const cardVariants = {
+        hidden: {
+            opacity: 0,
+            y: 50,
+            scale: 0.9,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            transition: {
+                duration: 0.6,
+                ease: 'easeOut',
+            },
+        },
+    }
 
     return (
-        <Container>
-            <Typography
-                className={'pageHeader'}
-                style={{
-                    marginTop: '8rem',
-                }}
-            >
-                What we do
-            </Typography>
-            <Typography
-                style={{
-                    textAlign: 'center',
-                    color: 'white',
-                    fontSize: '1.8rem',
-                }}
-            >
-                A year at PES Innovation Lab
-            </Typography>
-            <Typography
-                style={{
-                    textAlign: 'center',
-                    color: 'white',
-                    fontSize: '1.4rem',
-                }}
-            >
-                We have the perfect platform and events for your skills and
-                ideas to explore new heights
-            </Typography>
+        <div className="min-h-screen bg-gradient-to-br from-lab-bg via-lab-sec to-lab-bg">
+            {/* Hero Section */}
+            <div className="pt-32 pb-16 px-6 text-center">
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="max-w-4xl mx-auto"
+                >
+                    <h1 className="text-step-8 font-bold bg-gradient-to-r from-lab-light-green via-white to-lab-green bg-clip-text text-transparent mb-6">
+                        What We Do
+                    </h1>
+                    <h2 className="text-step-4 text-white font-dm-sans font-medium mb-4">
+                        A Year at PES Innovation Lab
+                    </h2>
+                    <p className="text-step-1 text-gray-300 font-dm-sans leading-relaxed">
+                        We have the perfect platform and events for your skills
+                        and ideas to explore new heights
+                    </p>
+                </motion.div>
+            </div>
 
-            <Timeline align={isDesktop ? 'alternate' : 'left'}>
-                {timelineElements}
-            </Timeline>
-        </Container>
+            {/* Events Grid */}
+            <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                className="max-w-7xl mx-auto px-6 pb-20"
+            >
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {events.map((event, index) => (
+                        <motion.div
+                            key={event.id}
+                            variants={cardVariants}
+                            onHoverStart={() => setHoveredCard(event.id)}
+                            onHoverEnd={() => setHoveredCard(null)}
+                            className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${event.bgGradient} backdrop-blur-sm border border-gray-700/50 group cursor-pointer transition-all duration-500 ${
+                                hoveredCard === event.id
+                                    ? 'scale-[1.02] shadow-2xl shadow-lab-green/20'
+                                    : ''
+                            }`}
+                        >
+                            {/* Background Pattern */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80" />
+
+                            {/* Content */}
+                            <div className="relative p-8 h-full flex flex-col">
+                                {/* Header */}
+                                <div className="flex items-start justify-between mb-6">
+                                    <div className="flex-1">
+                                        <div className="flex items-center gap-3 mb-2">
+                                            <HiCalendar className="w-5 h-5 text-lab-light-green" />
+                                            <span className="text-lab-light-green font-medium text-sm tracking-wide">
+                                                {event.timing}
+                                            </span>
+                                        </div>
+                                        <Link
+                                            href={event.link || '#'}
+                                            target={
+                                                event.isExternal
+                                                    ? '_blank'
+                                                    : '_self'
+                                            }
+                                            rel={
+                                                event.isExternal
+                                                    ? 'noopener noreferrer'
+                                                    : undefined
+                                            }
+                                            className="block"
+                                        >
+                                            <h3 className="text-step-3 font-bold text-white mb-2 group-hover:text-lab-light-green transition-colors duration-300 cursor-pointer hover:text-lab-light-green">
+                                                {event.title}
+                                            </h3>
+                                        </Link>
+                                        <p className="text-step-0 text-gray-300 font-medium">
+                                            {event.subtitle}
+                                        </p>
+                                    </div>
+
+                                    {/* Event Image */}
+                                    <div className="w-16 h-16 ml-4 rounded-xl overflow-hidden border-2 border-lab-green/30 group-hover:border-lab-green transition-colors duration-300">
+                                        <img
+                                            src={event.image}
+                                            alt={event.title}
+                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        />
+                                    </div>
+                                </div>
+
+                                {/* Description */}
+                                <p className="text-gray-300 text-step--1 leading-relaxed mb-6 flex-1">
+                                    {event.description}
+                                </p>
+
+                                {/* Features */}
+                                <div className="grid grid-cols-2 gap-2 mb-6">
+                                    {event.features.map(
+                                        (feature, featureIndex) => (
+                                            <motion.div
+                                                key={featureIndex}
+                                                initial={{ opacity: 0, x: -20 }}
+                                                animate={{ opacity: 1, x: 0 }}
+                                                transition={{
+                                                    delay:
+                                                        0.3 +
+                                                        featureIndex * 0.1,
+                                                }}
+                                                className="flex items-center gap-2 text-sm text-gray-400"
+                                            >
+                                                <div className="w-1.5 h-1.5 bg-lab-green rounded-full" />
+                                                <span>{feature}</span>
+                                            </motion.div>
+                                        )
+                                    )}
+                                </div>
+
+                                {/* CTA Button */}
+                                <Link
+                                    href={event.link || '#'}
+                                    target={
+                                        event.isExternal ? '_blank' : '_self'
+                                    }
+                                    rel={
+                                        event.isExternal
+                                            ? 'noopener noreferrer'
+                                            : undefined
+                                    }
+                                    className="group/btn"
+                                >
+                                    <motion.div
+                                        whileHover={{ scale: 1.02 }}
+                                        whileTap={{ scale: 0.98 }}
+                                        className="flex items-center justify-between bg-lab-green/20 hover:bg-lab-green/30 border border-lab-green/50 hover:border-lab-green rounded-xl px-6 py-3 transition-all duration-300"
+                                    >
+                                        <span className="text-white font-medium">
+                                            Learn More
+                                        </span>
+                                        <div className="flex items-center gap-2">
+                                            {event.isExternal && (
+                                                <HiArrowTopRightOnSquare className="w-4 h-4 text-lab-light-green" />
+                                            )}
+                                            <HiChevronRight className="w-4 h-4 text-lab-light-green group-hover/btn:translate-x-1 transition-transform duration-300" />
+                                        </div>
+                                    </motion.div>
+                                </Link>
+                            </div>
+
+                            {/* Hover Effect Overlay */}
+                            <motion.div className="absolute inset-0 bg-gradient-to-br from-lab-green/5 via-transparent to-lab-light-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                        </motion.div>
+                    ))}
+                </div>
+            </motion.div>
+
+            {/* Call to Action Section */}
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1, duration: 0.8 }}
+                className="py-16 text-center"
+            >
+                <div className="max-w-3xl mx-auto px-6">
+                    <h3 className="text-step-3 font-bold text-white mb-4">
+                        Ready to Join the Innovation?
+                    </h3>
+                    <p className="text-step-0 text-gray-300 mb-8">
+                        Be part of our vibrant community and experience
+                        cutting-edge technology firsthand
+                    </p>
+                    <motion.div
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                    >
+                        <Link
+                            href="/members"
+                            className="inline-flex items-center gap-3 bg-gradient-to-r from-lab-green to-lab-light-green text-white font-medium px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-lab-green/30 transition-all duration-300"
+                        >
+                            Meet Our Team
+                            <HiChevronRight className="w-5 h-5" />
+                        </Link>
+                    </motion.div>
+                </div>
+            </motion.div>
+        </div>
     )
 }
 
