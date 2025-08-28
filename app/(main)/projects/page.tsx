@@ -5,7 +5,7 @@ import { Suspense } from 'react'
 import Cookies from 'universal-cookie'
 import { jwtDecode } from 'jwt-decode'
 import projectsData from '../../../public/data/projects.json'
-import Cards from '../../../components/Cards'
+import ProjectCard from '../../../components/ProjectCard'
 import { useSearchParams } from 'next/navigation'
 import { useRouter } from 'next/navigation'
 
@@ -23,7 +23,7 @@ type projectsType = {
 function Projectos() {
     const router = useRouter()
     const allProjects = Object.values(projectsData).flatMap((y) => y.projects)
-    
+
     const searchParams: string | null = useSearchParams().get('project')
     const projectName: string = searchParams ? searchParams : ''
 
@@ -99,11 +99,11 @@ function Projectos() {
     useEffect(() => {
         if (selectedId !== -1) {
             const card = currentProjects[selectedId]
-            router.push(`projects?project=${formatForUrl(card.title)}`)
+            router.replace(`projects?project=${formatForUrl(card.title)}`)
             return
         }
 
-        router.push(`projects`)
+        router.replace(`projects`)
     }, [selectedId])
 
     const cardLayout = (
@@ -117,7 +117,7 @@ function Projectos() {
                                 : 'hidden') +
                             (selectedId === i
                                 ? ' opened-card h-[75%] w-[95%] md:h-[75%] md:w-[95%] lg:h-[75%] lg:w-[80%]'
-                                : 'inline-block w-fit overflow-hidden rounded-lg bg-gray-800 p-1 phone:m-4')
+                                : 'inline-block w-fit overflow-hidden rounded-lg p-1 phone:m-4')
                         }
                         onClick={() => {
                             if (selectedId == -1) setSelectedId(i)
@@ -262,7 +262,10 @@ function Projectos() {
                                 </div>
                             </div>
                         ) : (
-                            <Cards name={card.title} pfp={card.poster_url} />
+                            <ProjectCard
+                                title={card.title}
+                                poster_url={card.poster_url}
+                            />
                         )}
                     </motion.div>
                 )
