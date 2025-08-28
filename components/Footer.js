@@ -15,7 +15,7 @@ import Link from 'next/link'
 // };
 
 const contentTitleStyle = {
-    color: '#8bc34a',
+    color: 'var(--lab-accent)',
     fontSize: '1.5rem',
     textAlign: 'center',
 }

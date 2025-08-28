@@ -33,11 +33,12 @@
     margin-bottom: 40px;
 }
 
-.statBlob {    
-    text-align:"center";
+.statBlob {
+    text-align: "center";
     background-color: transparent !important;
     height: 150px;
 }
+
 /* 
 .statSection {
     background-image: url("/images/mlab/hws.jpg");
@@ -57,7 +58,7 @@
 
 .profCard {
     width: 250px;
-    background-color: black !important;    
+    background-color: black !important;
     margin: 20px auto !important;
 }
 
@@ -109,7 +110,7 @@
 } */
 
 .profDialogContentHeading {
-    color: #8bc34a;
+    color: var(--lab-light-green);
     font-size: 2rem !important;
 }
 
