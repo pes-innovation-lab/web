@@ -13,6 +13,7 @@ const routes = [
     { title: 'Projects', route: `/projects` },
     { title: 'Publications', route: `/publications` },
     { title: 'Events', route: '/events' },
+    { title: 'Blog', route: '/blog' },
     { title: 'Our History', route: `/history` },
 ]
 
@@ -67,7 +68,7 @@ function NavBar() {
 
     return (
         <>
-            <header className="sticky top-0 z-50 px-3 bg-black/80 backdrop-blur-lg border-b border-lab-green/50 font-martian-mono">
+            <header className="sticky top-0 z-50 px-3 bg-black/80 backdrop-blur-lg border-b border-b-navbar-border font-martian-mono">
                 <div className="relative sm:px-10 flex justify-between items-center py-3 text-white">
                     <Link href="/" className="flex items-center gap-3">
                         <div className="relative h-8 w-8">

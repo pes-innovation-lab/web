@@ -165,9 +165,9 @@ function Events() {
                             key={event.id}
                             onHoverStart={() => setHoveredCard(event.id)}
                             onHoverEnd={() => setHoveredCard(null)}
-                            className={`relative overflow-hidden rounded-2xl backdrop-blur-sm border border-lab-green/20 group cursor-pointer transition-all duration-500 ${
+                            className={`relative overflow-hidden rounded-2xl backdrop-blur-sm border border-lab-accent-border group cursor-pointer transition-all duration-500 ${
                                 hoveredCard === event.id
-                                    ? 'scale-[1.02] shadow-2xl shadow-lab-green/20'
+                                    ? 'scale-[1.02] shadow-accent-glow'
                                     : ''
                             }`}
                         >
@@ -209,8 +209,8 @@ function Events() {
                                     </div>
 
                                     {/* Event Icon */}
-                                    <div className="w-16 h-16 ml-4 rounded-xl bg-lab-green/20 border-2 border-lab-green/30 group-hover:border-lab-green transition-colors duration-300 flex items-center justify-center">
-                                        <event.icon className="w-8 h-8 text-lab-light-green group-hover:text-white transition-colors duration-300" />
+                                    <div className="w-16 h-16 ml-4 rounded-xl bg-lab-accent/20 border-2 border-lab-accent/30 group-hover:border-lab-accent transition-colors duration-300 flex items-center justify-center">
+                                        <event.icon className="w-8 h-8 text-lab-accent group-hover:text-white transition-colors duration-300" />
                                     </div>
                                 </div>
 
@@ -234,7 +234,7 @@ function Events() {
                                                 }}
                                                 className="flex items-center gap-2 text-sm text-gray-400"
                                             >
-                                                <div className="w-1.5 h-1.5 bg-lab-green rounded-full" />
+                                                <div className="w-1.5 h-1.5 bg-lab-accent rounded-full" />
                                                 <span>{feature}</span>
                                             </motion.div>
                                         )
@@ -257,23 +257,23 @@ function Events() {
                                     <motion.div
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
-                                        className="flex items-center justify-between bg-lab-green/20 hover:bg-lab-green/30 border border-lab-green/50 hover:border-lab-green rounded-xl px-6 py-3 transition-all duration-300"
+                                        className="flex items-center justify-between bg-lab-accent/20 hover:bg-lab-accent/30 border border-lab-accent/50 hover:border-lab-accent rounded-xl px-6 py-3 transition-all duration-300"
                                     >
                                         <span className="text-white font-medium">
                                             Learn More
                                         </span>
                                         <div className="flex items-center gap-2">
                                             {event.isExternal && (
-                                                <HiArrowTopRightOnSquare className="w-4 h-4 text-lab-light-green" />
+                                                <HiArrowTopRightOnSquare className="w-4 h-4 text-lab-accent" />
                                             )}
-                                            <HiChevronRight className="w-4 h-4 text-lab-light-green group-hover/btn:translate-x-1 transition-transform duration-300" />
+                                            <HiChevronRight className="w-4 h-4 text-lab-accent group-hover/btn:translate-x-1 transition-transform duration-300" />
                                         </div>
                                     </motion.div>
                                 </Link>
                             </div>
 
                             {/* Hover Effect Overlay */}
-                            <motion.div className="absolute inset-0 bg-gradient-to-br from-lab-green/5 via-transparent to-lab-light-green/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                            <motion.div className="absolute inset-0 bg-gradient-to-br from-lab-accent/5 via-transparent to-lab-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                         </motion.div>
                     ))}
                 </div>

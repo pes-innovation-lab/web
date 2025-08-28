@@ -36,6 +36,10 @@ instead of regular `git pull`. It’s best to write your commits prefacing the f
 index: Fix UI layout in mobile view.
 ```
 
+## Adding new blogs
+
+Blogs written in the markdown format are rendered and displayed on the site. To add a new blog, create a file with the `.md` extension in the `blogs/` directory under the root folder.
+
 Contact
 -----
 email : pes.mlab@gmail.com <br/>

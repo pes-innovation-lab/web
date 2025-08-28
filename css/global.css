@@ -1,3 +1,45 @@
+:root {
+	--lab-green: #068f13;
+	--lab-accent: #f38f03;
+	--lab-bg: #070808;
+	--lab-sec: #1b1b1d;
+	--text-white: #ffffff;
+	--text-gray-300: #d1d5db;
+	--text-gray-400: #9ca3af;
+	--text-gray-500: #6b7280;
+	--text-gray-600: #4b5563;
+	--border-color: rgba(6, 143, 19, 0.3);
+	--card-border-color: #374151;
+	--sidebar-border-color: #4b5563;
+	--toc-active-bg: rgba(6, 143, 19, 0.1);
+	--toc-hover-bg: rgba(6, 143, 19, 0.05);
+
+	/* Blog specific variables */
+	--blog-text-primary: var(--text-gray-300);
+	--blog-text-secondary: var(--text-gray-400);
+	--blog-heading-primary: var(--text-white);
+	--blog-heading-accent: var(--lab-green);
+	--blog-heading-secondary: var(--lab-accent);
+	--blog-border-primary: var(--lab-green);
+	--blog-border-secondary: var(--lab-sec);
+	--blog-bg-primary: var(--lab-bg);
+	--blog-bg-secondary: var(--lab-sec);
+
+	/* Transparent variants */
+	--lab-sec-transparent: rgba(27, 27, 29, 0.3);
+	--navbar-border-color: rgba(6, 143, 19, 0.5);
+
+	/* Shadow color variants for box-shadow */
+	--lab-accent-shadow: rgba(243, 143, 3, 0.2);
+	--lab-accent-glow: rgba(243, 143, 3, 0.3);
+
+	/* Border color variants */
+	--lab-accent-border: rgba(243, 143, 3, 0.15);
+
+	/* Legacy variable */
+	--lab-light-green: var(--lab-accent);
+}
+
 /* html, body {
     margin: 0;
     padding: 0;
@@ -15,6 +57,7 @@
 		transform: translateX(-300%);
 	}
 }
+
 @keyframes slide_2 {
 	0% {
 		transform: translateX(-300%);
@@ -37,6 +80,7 @@
 @import './CardCarousel.css';
 @import './layout.css';
 @import './alt_home.css';
+@import './blog.css';
 /* @import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;200;300;400;600;700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,100&display=swap');
 
@@ -63,7 +107,7 @@ body {
 .dialogTitle {
 	flex: 1;
 	margin-left: 24px;
-	color: #8bc34a;
+	color: var(--lab-light-green);
 }
 
 .dialogContainer {
@@ -72,14 +116,14 @@ body {
 }
 
 .pageHeader {
-	color: #8bc34a;
+	color: var(--lab-light-green);
 	font-family: 'Red Hat Display', sans-serif !important;
 	text-align: center;
 	font-size: 3rem !important;
 }
 
 .pageSubHeader {
-	color: #8bc34a;
+	color: var(--lab-light-green);
 	font-family: 'Red Hat Display', sans-serif !important;
 	font-size: 2rem !important;
 	margin-bottom: 20px !important;
@@ -90,4 +134,35 @@ body {
 
 .iiz__img {
 	width: 600px !important;
+}
+
+.timeline .text-lab-light-green {
+	color: var(--lab-green) !important;
+}
+
+.timeline .bg-lab-light-green {
+	background-color: var(--lab-green) !important;
+}
+
+.timeline .from-lab-light-green {
+	--tw-gradient-from: var(--lab-green) var(--tw-gradient-from-position) !important;
+	--tw-gradient-to: rgba(6, 143, 19, 0) var(--tw-gradient-to-position) !important;
+}
+
+.timeline .to-lab-light-green {
+	--tw-gradient-to: var(--lab-green) var(--tw-gradient-to-position) !important;
+}
+
+.blog-card {
+	transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.blog-card:hover {
+	border-color: var(--navbar-border-color) !important;
+	box-shadow: 0 20px 25px -5px rgba(6, 143, 19, 0.1), 0 10px 10px -5px rgba(6, 143, 19, 0.04);
+	transform: translateY(-2px);
+}
+
+.blog-card:hover h2 {
+	color: white !important;
 }

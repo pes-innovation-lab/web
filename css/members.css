@@ -17,5 +17,5 @@
 }
 
 .memberCardSocialIcons {
-  color: #7cb342;
+  color: var(--lab-accent);
 }
