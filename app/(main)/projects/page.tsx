@@ -133,13 +133,13 @@ function Projectos() {
                                     />
                                 )}
 
-                                <div className="flex flex-col justify-between gap-4 overflow-auto pr-4">
-                                    <div className="flex flex-col gap-4">
-                                        <div className="flex flex-row items-center justify-between gap-2 text-white sm:flex-col-reverse md:flex-row md:gap-0">
-                                            <div className=" font-martian-mono text-2xl font-bold lg:text-3xl xl:text-4xl">
+                                <div className="flex flex-col justify-between gap-4 overflow-auto pr-4 w-full">
+                                    <div className="flex flex-col gap-4 w-full">
+                                        <div className="flex flex-row items-center gap-2 text-white sm:flex-col-reverse md:flex-row md:gap-0 w-full">
+                                            <div className="font-martian-mono text-2xl font-bold lg:text-3xl xl:text-4xl">
                                                 {card.title}
                                             </div>
-                                            <div className="flex h-fit shrink-0 items-center gap-4 sm:self-end md:self-auto">
+                                            <div className="flex h-fit shrink-0 items-center gap-4 ml-auto">
                                                 {i != 0 && (
                                                     <button
                                                         className="relative h-6 w-6 shrink-0 lg:h-8 lg:w-8"
@@ -220,29 +220,27 @@ function Projectos() {
                                                 </button>
                                             </div>
                                         </div>
-                                        <div className="font-martian-mono text-sm text-gray-400 xl:text-base">
+
+                                        <div className="font-martian-mono text-sm text-gray-400 xl:text-base w-full">
                                             {card.long_description}
                                         </div>
                                     </div>
-                                    <div className="flex w-fit flex-col self-end font-martian-mono text-white xl:text-lg">
-                                        <div className="font-martian-mono">
-                                            <span className="font-martian-mono text-lab-green">
-                                                {card.interns.includes(',') ? (
-                                                    <>INTERNS</>
-                                                ) : (
-                                                    <>INTERN&nbsp;</>
-                                                )}
-                                            </span>{' '}
+
+                                    <div className="flex w-full flex-col items-start font-martian-mono text-white xl:text-lg">
+                                        <div>
+                                            <span className="text-lab-green">
+                                                {card.interns.includes(',')
+                                                    ? 'INTERNS'
+                                                    : 'INTERN '}
+                                            </span>
                                             : {card.interns}
                                         </div>
-                                        <div className="font-martian-mono">
-                                            <span className="font-martian-mono text-lab-green">
-                                                {card.mentors.includes(',') ? (
-                                                    <>MENTORS</>
-                                                ) : (
-                                                    <>MENTOR&nbsp;</>
-                                                )}
-                                            </span>{' '}
+                                        <div>
+                                            <span className="text-lab-green">
+                                                {card.mentors.includes(',')
+                                                    ? 'MENTORS'
+                                                    : 'MENTOR '}
+                                            </span>
                                             : {card.mentors}
                                         </div>
                                     </div>
@@ -271,7 +269,7 @@ function Projectos() {
         >
             <div className="flex flex-col items-center justify-between gap-4 sm:flex-row sm:gap-0">
                 <div className="font-bold font-martian-mono text-2xl text-lab-green lg:text-4xl border-2 border-green-900/50 rounded-md p-2">
-                    PROJECTS
+                    Projects
                 </div>
 
                 <div className="md:gap-4 gap-2 p-2 text-lg text-gray-400 flex flex-wrap md:flex-row justify-center ">
