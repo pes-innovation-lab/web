@@ -190,18 +190,6 @@ export default function PublicationsPage() {
         },
     }
 
-    const cardVariants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                duration: 0.6,
-                ease: 'easeOut',
-            },
-        },
-    }
-
     return (
         <div className="min-h-screen bg-lab-bg">
             {/* Hero Section */}
@@ -257,7 +245,6 @@ export default function PublicationsPage() {
                         filteredPublications.map((publication, index) => (
                             <motion.div
                                 key={`${publication.title}-${index}`}
-                                variants={cardVariants}
                                 onHoverStart={() =>
                                     setHoveredCard(
                                         `${publication.title}-${index}`
@@ -275,10 +262,7 @@ export default function PublicationsPage() {
                             </motion.div>
                         ))
                     ) : (
-                        <motion.div
-                            variants={cardVariants}
-                            className="col-span-full text-center py-20"
-                        >
+                        <motion.div className="col-span-full text-center py-20">
                             <div className="text-gray-400 text-xl mb-4 font-dm-sans">
                                 No publications found
                             </div>
