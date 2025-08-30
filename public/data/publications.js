@@ -24,6 +24,8 @@ export const publicationData = [
     {
         year: '2020',
         title: 'A Novel Approach to Classify Cardiac Arrhythmia Using Different Machine Learning Techniques.',
+        short_description:
+            'The major cause of deaths around the world is cardiovascular disease. Arrhythmia is one such disease in which the heart beats in an abnormal rhythm or rate. The detection and classification of various types of cardiac arrhythmia is a challenging task for doctors. If it’s not done accurately or not done on time, the patient’s life can be at a great risk, as few arrhythmias are serious, and some can even cause potentially fatal symptoms. This paper illustrates an effective solution to help doctors in the critical diagnosis of various types of cardiac arrhythmias. To classify the type of arrhythmia, the patient might be suffering from, the solution utilizes a variety of machine learning algorithms. UCI machine learning repository dataset is used for training and testing the model. Implementing the solution can provide a much-needed early diagnosis that proves to be critical in saving many human lives.',
         authors:
             'Rajasekar Mohan, Parag Jain, C. S. Arjun Babu, Sahana Mohandoss, Nidhin Anisham, Shivakumar Gadade, Srinivas A',
         conference:

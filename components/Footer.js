@@ -31,6 +31,20 @@ const Footer = () => (
     <div className="footer">
         <div className="footerContent">
             <div className="footerSection"></div>
+            {/* Address first */}
+            <div className="footerSection">
+                <Typography style={contentTitleStyle}>Address</Typography>
+                <Typography style={contentBodyStyle}>
+                    PES University, RR Campus 100 Feet Ring Road,
+                    <br />
+                    BSK III Stage,
+                    <br />
+                    Bangalore-560085
+                    <br />
+                    Karnataka, India
+                </Typography>
+            </div>
+            {/* Logo in the middle */}
             <div className="footerSection">
                 <Grid container justifyContent="center">
                     <Link href={`/`}>
@@ -44,22 +58,11 @@ const Footer = () => (
                     </Link>
                 </Grid>
             </div>
-            <div className="footerSection">
-                <Typography style={contentTitleStyle}>Address</Typography>
-                <Typography style={contentBodyStyle}>
-                    PES University, RR Campus 100 Feet Ring Road,
-                    <br />
-                    BSK III Stage,
-                    <br />
-                    Bangalore-560085
-                    <br />
-                    Karnataka, India
-                </Typography>
-            </div>
+            {/* Contact/Connect last */}
             <div className="footerSection">
                 <Typography style={contentTitleStyle}>Connect</Typography>
                 <Typography style={contentBodyStyle}>
-                    pes.mlab@gmail.com innovationlab@pes.edu
+                    innovationlab@pes.edu pes.mlab@gmail.com
                 </Typography>
                 <Grid container justifyContent="center">
                     <Grid item xs={2} style={{ textAlign: 'center' }}>

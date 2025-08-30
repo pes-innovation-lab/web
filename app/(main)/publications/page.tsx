@@ -1,213 +1,294 @@
 'use client'
 
-import { Chip, Container } from '@material-ui/core'
-import Box from '@material-ui/core/Box'
-import CircularProgress from '@material-ui/core/CircularProgress'
-import Collapse from '@material-ui/core/Collapse'
-import IconButton from '@material-ui/core/IconButton'
-import Paper from '@material-ui/core/Paper'
-import Table from '@material-ui/core/Table'
-import TableBody from '@material-ui/core/TableBody'
-import TableCell from '@material-ui/core/TableCell'
-import TableContainer from '@material-ui/core/TableContainer'
-import TableHead from '@material-ui/core/TableHead'
-import TableRow from '@material-ui/core/TableRow'
-import Typography from '@material-ui/core/Typography'
-import { makeStyles } from '@material-ui/core/styles'
-import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown'
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
-import React, { useEffect, useState } from 'react'
-// import '../css/projects.css';
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import { IoOpenOutline, IoCalendarOutline } from 'react-icons/io5'
 import { publicationData } from '../../../public/data/publications.js'
 
-const designStyles = makeStyles({
-    spinnerTextStyle: {
-        textAlign: 'center',
-        color: '#068F13',
-    },
-})
-
-const useRowStyles = makeStyles({
-    root: {
-        '& > *': {
-            borderBottom: 'unset',
-        },
-    },
-    headingStyle: {
-        fontSize: '1.5rem',
-        marginTop: '1em',
-    },
-    contentStyle: {
-        fontSize: '1rem',
-        marginTop: '1em',
-    },
-})
-
-function Row(props) {
-    const { row } = props
-    const [open, setOpen] = React.useState(false)
-    const classes = useRowStyles()
-
-    return (
-        <React.Fragment>
-            <TableRow className={classes.root}>
-                <TableCell>
-                    <IconButton
-                        aria-label="expand row"
-                        size="small"
-                        onClick={() => setOpen(!open)}
-                    >
-                        {open ? (
-                            <KeyboardArrowUpIcon />
-                        ) : (
-                            <KeyboardArrowDownIcon />
-                        )}
-                    </IconButton>
-                </TableCell>
-                <TableCell component="th" scope="row">
-                    <strong>{row.title}</strong>
-                </TableCell>
-                <TableCell align="center">{row.year}</TableCell>
-                <TableCell align="center">{row.conference}</TableCell>
-            </TableRow>
-            <TableRow>
-                <TableCell
-                    style={{ paddingBottom: 0, paddingTop: 0 }}
-                    colSpan={6}
-                >
-                    <Collapse in={open} timeout="auto" unmountOnExit>
-                        <Box margin={1}>
-                            <Typography
-                                variant="h6"
-                                gutterBottom
-                                component="div"
-                            >
-                                Authors:
-                            </Typography>
-                            {row.authors.map((person) => (
-                                <Chip
-                                    key={person}
-                                    label={person}
-                                    className="projectKeywordChip"
-                                ></Chip>
-                            ))}
-                            <Typography className={classes.headingStyle}>
-                                Description:
-                            </Typography>
-                            <Typography className={classes.contentStyle}>
-                                {row.short_description}
-                            </Typography>
-                            <Typography className={classes.contentStyle}>
-                                <strong>Link to publication: </strong>{' '}
-                                <a
-                                    style={{ color: '#8bc34a' }}
-                                    href={row.link}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    {row.link}
-                                </a>
-                            </Typography>
-                        </Box>
-                    </Collapse>
-                </TableCell>
-            </TableRow>
-        </React.Fragment>
-    )
+interface Publication {
+    year: string
+    title: string
+    short_description: string
+    authors: string
+    conference: string
+    link: string
 }
 
-export default function Publications() {
-    // deep copy of the data
-    const publications = JSON.parse(JSON.stringify(publicationData))
-
-    for (const key in publications) {
-        publications[key].authors = publications[key].authors.split(',')
-    }
-    const data = { publications }
-
-    const [isDataLoaded, setDataLoaded] = useState(true)
-    const designstyles = designStyles()
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         // const result = await fetch('https://api-vercel-mlabwebdev.vercel.app/publications');
-    //         const result = await fetch('/data/publications.json')
-    //         if ((await result.status) !== 200) {
-    //             alert('API Error. Try again later')
-    //         } else {
-    //             const publications = await result.json()
-    //             for (const key in publications) {
-    //                 publications[key].authors =
-    //                     publications[key].authors.split(',')
-    //             }
-    //             setData({ publications: publications })
-    //             setDataLoaded(true)
-    //         }
-    //     }
-    //     // fetchData();
-    //     const fetch = () => {
-    //         var publications = publicationData
-    //
-    //         for (const key in publications) {
-    //
-    //             publications[key].authors = publications[key].authors.split(',')
-    //         }
-    //         setData({ publications: publications })
-    //         setDataLoaded(true)
-    //     }
-    //     fetch()
-    // }, [])
+function PublicationCard({ publication }: { publication: Publication }) {
+    const [isAbstractExpanded, setIsAbstractExpanded] = useState(false)
 
     return (
-        <div className="pt-12">
-            <Typography className="pageHeader">Recent Publications</Typography>
-            <Container>
-                {!isDataLoaded ? (
-                    <div className={designstyles.spinnerTextStyle}>
-                        <Typography style={{ fontSize: '1.5rem' }}>
-                            Loading Data
-                        </Typography>{' '}
-                        <CircularProgress
-                            style={{ color: '#068F13', marginTop: '1em' }}
-                        />
+        <div className="relative h-full flex flex-col">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/60 to-black/80" />
+
+            {/* Content */}
+            <div className="relative p-8 h-full flex flex-col">
+                {/* Date */}
+                <div className="mb-4">
+                    <div className="flex items-center gap-2">
+                        <IoCalendarOutline className="w-5 h-5 text-lab-accent" />
+                        <span className="text-lab-accent font-medium text-sm tracking-wide font-martian-mono">
+                            {publication.year}
+                        </span>
                     </div>
-                ) : (
-                    <TableContainer
-                        component={Paper}
-                        style={{ marginBottom: 50, marginTop: 50 }}
+                </div>
+
+                {/* Paper Title */}
+                <h3 className="text-step-3 font-bold text-white mb-3 group-hover:text-lab-green transition-colors duration-300 font-dm-sans leading-tight">
+                    {publication.title}
+                </h3>
+
+                {/* Conference Name */}
+                <div className="mb-4">
+                    <span className="text-lab-green font-medium text-sm font-martian-mono">
+                        {publication.conference}
+                    </span>
+                </div>
+
+                {/* Authors */}
+                <div className="mb-6">
+                    <div className="text-sm text-gray-300 bg-lab-bg/30 px-4 py-3 rounded-xl border border-lab-green/10 backdrop-blur-sm">
+                        <span className="font-semibold text-lab-green font-martian-mono text-xs uppercase tracking-wider">
+                            Authors
+                        </span>
+                        <div className="mt-2 font-dm-sans text-gray-200 leading-relaxed">
+                            {publication.authors}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Abstract */}
+                <div className="mb-6 flex-1">
+                    <h4 className="text-lab-accent font-semibold mb-3 font-martian-mono text-sm uppercase tracking-wider">
+                        Abstract
+                    </h4>
+                    <div className="text-gray-300 text-step--1 leading-relaxed font-dm-sans">
+                        {!isAbstractExpanded ? (
+                            <div>
+                                <p
+                                    className="overflow-hidden"
+                                    style={{
+                                        display: '-webkit-box',
+                                        WebkitLineClamp: 2,
+                                        WebkitBoxOrient: 'vertical' as const,
+                                        lineHeight: '1.5',
+                                        maxHeight: '3rem',
+                                    }}
+                                >
+                                    {publication.short_description}
+                                </p>
+                                <button
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        setIsAbstractExpanded(true)
+                                    }}
+                                    className="text-lab-accent hover:text-lab-green transition-colors duration-300 font-martian-mono text-sm font-medium mt-2 cursor-pointer"
+                                >
+                                    View More →
+                                </button>
+                            </div>
+                        ) : (
+                            <div>
+                                <p className="whitespace-pre-line">
+                                    {publication.short_description}
+                                </p>
+                                <button
+                                    onClick={(e) => {
+                                        e.preventDefault()
+                                        setIsAbstractExpanded(false)
+                                    }}
+                                    className="text-lab-accent hover:text-lab-green transition-colors duration-300 font-martian-mono text-sm font-medium mt-2 cursor-pointer"
+                                >
+                                    View Less ↑
+                                </button>
+                            </div>
+                        )}
+                    </div>
+                </div>
+
+                {/* View Publication Button */}
+                {publication.link && (
+                    <motion.a
+                        href={publication.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-between bg-lab-green/20 hover:bg-lab-green/30 border border-lab-green/50 hover:border-lab-green rounded-xl px-6 py-3 transition-all duration-300 group/btn mt-auto"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
                     >
-                        <Table aria-label="collapsible table">
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell />
-                                    <TableCell>
-                                        <strong>Title</strong>
-                                    </TableCell>
-                                    <TableCell align="center">
-                                        <strong>Year</strong>
-                                    </TableCell>
-                                    <TableCell align="center">
-                                        <strong>Conference</strong>
-                                    </TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {data.publications.map((pub) => (
-                                    <Row key={pub.title} row={pub} />
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
+                        <span className="text-white font-medium font-martian-mono">
+                            View Publication
+                        </span>
+                        <div className="flex items-center gap-2">
+                            <IoOpenOutline className="w-4 h-4 text-lab-green" />
+                        </div>
+                    </motion.a>
                 )}
-            </Container>
+            </div>
+
+            {/* Hover Effect Overlay */}
+            <motion.div className="absolute inset-0 bg-gradient-to-br from-lab-green/5 via-transparent to-lab-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
         </div>
     )
 }
+function FilterChip({
+    label,
+    isActive,
+    onClick,
+}: {
+    label: string
+    isActive: boolean
+    onClick: () => void
+}) {
+    return (
+        <motion.button
+            onClick={onClick}
+            className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 border font-martian-mono backdrop-blur-sm ${
+                isActive
+                    ? 'bg-lab-green/30 text-lab-green border-lab-green/50 shadow-lg shadow-accent-glow scale-105'
+                    : 'bg-lab-sec/50 text-gray-400 border-card-border hover:bg-lab-sec hover:border-lab-green/30 hover:text-lab-green hover:scale-105'
+            }`}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+        >
+            {label}
+        </motion.button>
+    )
+}
 
-// export async function getServerSideProps(context){
-//     const res = await fetch("https://api-vercel-mlabwebdev.vercel.app/publications");
-//     const publications = await res.json();
-//     for (let key in publications){
-//         publications[key].authors = publications[key].authors.split(",");
-//     }
-//     return {props:{publications}};
-// }
+export default function PublicationsPage() {
+    const [selectedYear, setSelectedYear] = useState('All')
+    const [hoveredCard, setHoveredCard] = useState<string | null>(null)
+
+    // Transform publications
+    const publications: Publication[] = publicationData.map((pub) => ({
+        ...pub,
+        short_description: pub.short_description || 'No description available',
+    }))
+
+    // Get unique years for filters
+    const years = [
+        'All',
+        ...Array.from(new Set(publications.map((pub) => pub.year))).sort(
+            (a, b) => b.localeCompare(a)
+        ),
+    ]
+
+    // Filter publications by year only
+    const filteredPublications = publications.filter((publication) => {
+        return selectedYear === 'All' || publication.year === selectedYear
+    })
+
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+            },
+        },
+    }
+
+    const cardVariants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                ease: 'easeOut',
+            },
+        },
+    }
+
+    return (
+        <div className="min-h-screen bg-lab-bg">
+            {/* Hero Section */}
+            <div className="pt-20 pb-16 px-6 text-center">
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="max-w-4xl mx-auto"
+                >
+                    <h1 className="text-step-8 font-bold text-lab-green mb-6 font-martian-mono">
+                        Publications
+                    </h1>
+                    <h2 className="text-step-4 text-white font-dm-sans font-medium mb-4">
+                        Research & Academic Contributions
+                    </h2>
+                </motion.div>
+            </div>
+
+            {/* Year Filter */}
+            <div className="max-w-7xl mx-auto px-6 pb-8">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="text-center"
+                >
+                    <h3 className="text-step-1 font-semibold text-lab-green mb-6 font-martian-mono">
+                        Filter by Year
+                    </h3>
+                    <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+                        {years.map((year) => (
+                            <FilterChip
+                                key={year}
+                                label={year}
+                                isActive={selectedYear === year}
+                                onClick={() => setSelectedYear(year)}
+                            />
+                        ))}
+                    </div>
+                </motion.div>
+            </div>
+
+            {/* Publications Grid */}
+            <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+                className="max-w-7xl mx-auto px-6 pb-20"
+            >
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 [&>*:last-child:nth-child(odd)]:col-span-2 [&>*:last-child:nth-child(odd)]:lg:mx-auto lg:[&>*:last-child:nth-child(odd)]:max-w-[calc(50%-1rem)]">
+                    {filteredPublications.length > 0 ? (
+                        filteredPublications.map((publication, index) => (
+                            <motion.div
+                                key={`${publication.title}-${index}`}
+                                variants={cardVariants}
+                                onHoverStart={() =>
+                                    setHoveredCard(
+                                        `${publication.title}-${index}`
+                                    )
+                                }
+                                onHoverEnd={() => setHoveredCard(null)}
+                                className={`relative overflow-hidden rounded-2xl backdrop-blur-sm border border-lab-accent-border group transition-all duration-500 ${
+                                    hoveredCard ===
+                                    `${publication.title}-${index}`
+                                        ? 'scale-[1.02] shadow-accent-glow'
+                                        : ''
+                                }`}
+                            >
+                                <PublicationCard publication={publication} />
+                            </motion.div>
+                        ))
+                    ) : (
+                        <motion.div
+                            variants={cardVariants}
+                            className="col-span-full text-center py-20"
+                        >
+                            <div className="text-gray-400 text-xl mb-4 font-dm-sans">
+                                No publications found
+                            </div>
+                            <p className="text-gray-500 font-dm-sans">
+                                Try selecting a different year
+                            </p>
+                        </motion.div>
+                    )}
+                </div>
+            </motion.div>
+        </div>
+    )
+}

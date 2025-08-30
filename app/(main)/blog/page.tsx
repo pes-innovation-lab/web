@@ -1,5 +1,10 @@
 import Link from 'next/link'
 import { getAllBlogPosts, formatBlogDate } from '../../../utils/blog'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Blog',
+}
 
 interface BlogPost {
     slug: string
