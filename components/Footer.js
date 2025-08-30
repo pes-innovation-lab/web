@@ -31,7 +31,7 @@ const Footer = () => (
     <div className="footer">
         <div className="footerContent">
             <div className="footerSection"></div>
-                        {/* Address first */}
+            {/* Address first */}
             <div className="footerSection">
                 <Typography style={contentTitleStyle}>Address</Typography>
                 <Typography style={contentBodyStyle}>
@@ -62,7 +62,7 @@ const Footer = () => (
             <div className="footerSection">
                 <Typography style={contentTitleStyle}>Connect</Typography>
                 <Typography style={contentBodyStyle}>
-                    pes.mlab@gmail.com innovationlab@pes.edu
+                    innovationlab@pes.edu pes.mlab@gmail.com
                 </Typography>
                 <Grid container justifyContent="center">
                     <Grid item xs={2} style={{ textAlign: 'center' }}>

@@ -22,7 +22,7 @@ export default function MemberCard({
     }, [name])
 
     return (
-        <div className="group relative cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-black shadow-2xl transition-all duration-500 hover:shadow-xl hover:shadow-black/10">
+        <div className="group relative items-center justify-center overflow-hidden rounded-xl bg-black shadow-2xl transition-all duration-500 hover:shadow-xl hover:shadow-black/10">
             {!imageLoaded && (
                 <div className="absolute inset-0 z-0 animate-pulse bg-gradient-to-b from-gray-700/40 via-gray-900/70 to-black/80 backdrop-blur-sm" />
             )}
@@ -53,7 +53,7 @@ export default function MemberCard({
                     </p>
                     <div className="flex items-center justify-center">
                         <a
-                            className="mr-6 text-neutral-600 dark:text-neutral-200"
+                            className="mr-6 text-neutral-600 dark:text-neutral-200 cursor-pointer"
                             href={`mailto:${gmail}`}
                         >
                             <svg
@@ -67,7 +67,7 @@ export default function MemberCard({
                             </svg>
                         </a>
                         <a
-                            className="mr-6 text-neutral-600 dark:text-neutral-200"
+                            className="mr-6 text-neutral-600 dark:text-neutral-200 cursor-pointer"
                             href={linkedin}
                         >
                             <svg
@@ -80,7 +80,7 @@ export default function MemberCard({
                             </svg>
                         </a>
                         <a
-                            className="text-neutral-600 dark:text-neutral-200"
+                            className="text-neutral-600 dark:text-neutral-200 cursor-pointer"
                             href={github}
                         >
                             <svg

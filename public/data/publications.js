@@ -24,6 +24,8 @@ export const publicationData = [
     {
         year: '2020',
         title: 'A Novel Approach to Classify Cardiac Arrhythmia Using Different Machine Learning Techniques.',
+        short_description:
+            'The major cause of deaths around the world is cardiovascular disease. Arrhythmia is one such disease in which the heart beats in an abnormal rhythm or rate. The detection and classification of various types of cardiac arrhythmia is a challenging task for doctors. If it’s not done accurately or not done on time, the patient’s life can be at a great risk, as few arrhythmias are serious, and some can even cause potentially fatal symptoms. This paper illustrates an effective solution to help doctors in the critical diagnosis of various types of cardiac arrhythmias. To classify the type of arrhythmia, the patient might be suffering from, the solution utilizes a variety of machine learning algorithms. UCI machine learning repository dataset is used for training and testing the model. Implementing the solution can provide a much-needed early diagnosis that proves to be critical in saving many human lives.',
         authors:
             'Rajasekar Mohan, Parag Jain, C. S. Arjun Babu, Sahana Mohandoss, Nidhin Anisham, Shivakumar Gadade, Srinivas A',
         conference:
@@ -42,7 +44,7 @@ export const publicationData = [
         link: 'https://ieeexplore.ieee.org/document/9073474',
     },
     {
-        year: '2019',
+        year: '2020',
         title: 'A novel helmet design and implementation for drowsiness and fall detection of workers on-site using EEG and Random-Forest Classifier',
         short_description:
             'This paper proposes a low-cost novel EEG based BCI prototype to detect if an on-site worker is sleep-deprived or not elegantly. The worker is required to wear a modified safety helmet with an innocuously placed signal acquisition device and it’s paraphernalia that does not hinder the worker’s activities. A few time and frequency domain features have been derived from the collected data to recognize sleep deprivation of workers. The smart helmet communicates with a local server within radio range. The server runs a random forest classifier algorithm to classify if the worker is sleep deprived or not and alerts the supervisor if necessary. A single Inertial Measurement Unit (IMU) sensor is utilized to detect if the worker has fallen down. The entire setup is supported by an android application that keeps the supervisor up-to-date on the statuses of the workers. A classification accuracy as high as 98% for the helmet based EEG setup was obtained through in-house live experiments upon sleep-deprived subjects.',
