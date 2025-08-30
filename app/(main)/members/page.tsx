@@ -36,7 +36,9 @@ const shuffleArray = <T,>(array: T[]): T[] => {
 }
 
 function Members() {
-    const years: number[] = [2025, 2024, 2023, 2022, 2020, 2019, 2018, 2017, 2016, 2015]
+    const years: number[] = [
+        2025, 2024, 2023, 2022, 2020, 2019, 2018, 2017, 2016, 2015,
+    ]
     const [currentYear, setCurrentYear] = useState<number>(
         years.sort((a, b) => b - a)[0]
     )
@@ -65,10 +67,12 @@ function Members() {
         setDataLoaded(false)
         setCards([])
         const fetch = () => {
-            const membersOutput = (membersData as YearData)[currentYear.toString()].members
+            const membersOutput = (membersData as YearData)[
+                currentYear.toString()
+            ].members
             const headsOutput = (headsData as HeadsData)[currentYear.toString()]
                 ? (headsData as HeadsData)[currentYear.toString()].heads
-        : []
+                : []
             setData({ members: membersOutput, heads: headsOutput })
             setTimeout(() => {
                 setDataLoaded(true)
@@ -102,7 +106,10 @@ function Members() {
                             <div key={index}>
                                 <MemberCard
                                     name={member.name}
-                                    pfp={member.picture_url || './images/members/unknown.png'}
+                                    pfp={
+                                        member.picture_url ||
+                                        './images/members/unknown.png'
+                                    }
                                     course={member.branch}
                                     batch={member.grad_batch}
                                     linkedin={member.linkedin}
