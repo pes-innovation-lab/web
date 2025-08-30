@@ -159,7 +159,7 @@ function Events() {
                 animate="visible"
                 className="max-w-7xl mx-auto px-6 pb-20"
             >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 [&>*:last-child:nth-child(odd)]:col-span-2 [&>*:last-child:nth-child(odd)]:lg:mx-auto lg:[&>*:last-child:nth-child(odd)]:max-w-[calc(50%-1rem)]">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:[&>*:last-child:nth-child(odd)]:col-span-2 lg:[&>*:last-child:nth-child(odd)]:lg:mx-auto lg:[&>*:last-child:nth-child(odd)]:max-w-[calc(50%-1rem)]">
                     {events.map((event, index) => (
                         <motion.div
                             key={event.id}
