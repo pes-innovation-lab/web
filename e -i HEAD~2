@@ -1,0 +1,11 @@
+[33mcommit 4658c026da9348692926f9047efb1526ded9fcfe[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/issue-132-add-tags[m[33m, [m[1;31morigin/feature/issue-132-add-tags[m[33m)[m
+Author: BabluGupta123 <bablu8795379783@gmail.com>
+Date:   Mon Sep 1 12:52:59 2025 +0530
+
+    Update: updated ui of blog page same as publications
+
+[33mcommit e15af9c9c25f2633d98af15020a9b776e84ea378[m
+Author: BabluGupta123 <bablu8795379783@gmail.com>
+Date:   Mon Sep 1 12:03:42 2025 +0530
+
+    Fix: Added tags for issue #132 (blog and publications filters)
