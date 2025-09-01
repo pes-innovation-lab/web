@@ -1,10 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import AboutUs from './AboutUs'
+import AboutUs from './aboutUs'
 import Hero from './Hero'
 import ProfessorsInfo from './Professors'
 import Hunt3Video from './hunt3_2025'
+import MovingMatrixBG from './aboutUs'
 
 export default function Home() {
     const [isHeroVisible, setIsHeroVisible] = useState(true)
@@ -48,7 +49,7 @@ export default function Home() {
 
             {/* VIDEO SECTION */}
             {showVideo && (
-                <div className="fade-in">
+                <div className="fade-in h-screen">
                     <Hunt3Video onEnded={handleVideoEnd} />
                 </div>
             )}
@@ -65,12 +66,12 @@ export default function Home() {
                 </div>
             )}
 
-            {/* ABOUT US SECTION */}
+            {/* ABOUT US SECTION  */}
             <AboutUs />
 
-            {/* PROFESSOR INFO */}
+            {/* PROFESSOR INFO *
             <ProfessorsInfo />
-
+*/}
             <style jsx>{`
                 .fade-in {
                     opacity: 0;
