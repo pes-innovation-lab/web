@@ -4,6 +4,13 @@ export default function AboutUs() {
     return (
         <>
             <style jsx global>{`
+                #landingAbout {
+                    perspective: 100rem;
+                    -webkit-perspective: 100rem;
+                    transform-style: preserve-3d;
+                    -webkit-transform-style: preserve-3d;
+                }
+
                 .grid-container {
                     --grid: 10rem;
                     width: 100%;
@@ -13,96 +20,101 @@ export default function AboutUs() {
                     left: 0;
 
                     transform-style: preserve-3d;
-                    perspective: 100rem;
+                    -webkit-transform-style: preserve-3d;
+
                     animation: rotate 100s linear infinite forwards;
+                }
 
-                    .plane {
-                        --dir: 1;
-                        width: 300%;
-                        height: 150%;
-                        min-height: 70rem;
-                        position: absolute;
-                        bottom: 0;
+                .grid-container .plane {
+                    --dir: 1;
+                    width: 150%;
+                    height: 120%;
+                    min-height: 70rem;
+                    position: absolute;
+                    bottom: 0;
 
-                        left: 50%;
-                        transform-style: preserve-3d;
-                        transform-origin: bottom center;
+                    left: 50%;
+                    transform-style: preserve-3d;
+                    transform-origin: bottom center;
 
-                        backface-visibility: hidden;
-                        will-change: transform;
-                        transform: translate3d(-50%, 0, 0) rotateX(85deg);
+                    backface-visibility: hidden;
+                    -webkit-backface-visibility: hidden;
 
-                        &:last-child {
-                            --dir: -1;
-                            top: 0;
-                            transform-origin: top center;
-                            transform: translate3d(-50%, 0, 0) rotateX(-85deg);
+                    transform: translate3d(-50%, 0, 0) rotateX(85deg);
+                }
 
-                            & > * {
-                                &::after {
-                                    background-image: linear-gradient(
-                                        to top,
-                                        rgba(0, 0, 0, 255) var(--grid),
-                                        rgba(0, 0, 0, 0)
-                                    );
-                                }
-                            }
-                        }
+                .grid-container .plane:last-child {
+                    --dir: -1;
+                    top: 0;
+                    transform-origin: top center;
+                    transform: translate3d(-50%, 0, 0) rotateX(-85deg);
+                }
 
-                        & > * {
-                            transform-style: preserve-3d;
-                            height: 100%;
-                            width: 100%;
-                            position: absolute;
+                .grid-container .plane:last-child > *::after {
+                    background-image: linear-gradient(
+                        to top,
+                        rgba(0, 0, 0, 255) var(--grid),
+                        rgba(0, 0, 0, 0)
+                    );
+                }
 
-                            &::before,
-                            &::after {
-                                content: '';
-                                display: block;
-                                position: absolute;
-                                width: 100%;
-                                height: 100%;
-                                top: 0;
-                                left: 0;
-                            }
+                .grid-container .plane > * {
+                    transform-style: preserve-3d;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                }
 
-                            &::before {
-                                background-image:
-                                    repeating-linear-gradient(
-                                        to left,
-                                        var(--lab-green),
-                                        var(--lab-green) 4px,
-                                        transparent 4px,
-                                        transparent var(--grid)
-                                    ),
-                                    repeating-linear-gradient(
-                                        to bottom,
-                                        var(--lab-green),
-                                        var(--lab-green) 4px,
-                                        transparent 4px,
-                                        transparent var(--grid)
-                                    );
-                                animation: move 1s linear infinite forwards;
+                .grid-container .plane > *::before,
+                .grid-container .plane > *::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                }
 
-                                will-change: transform;
-                            }
+                .grid-container .plane > *::before {
+                    background-image:
+                        repeating-linear-gradient(
+                            to left,
+                            var(--lab-green),
+                            var(--lab-green) 4px,
+                            transparent 4px,
+                            transparent var(--grid)
+                        ),
+                        repeating-linear-gradient(
+                            to bottom,
+                            var(--lab-green),
+                            var(--lab-green) 4px,
+                            transparent 4px,
+                            transparent var(--grid)
+                        );
+                    animation: move 1s linear infinite forwards;
 
-                            &::after {
-                                background-image: linear-gradient(
-                                    to bottom,
-                                    rgba(0, 0, 0, 255) var(--grid),
-                                    rgba(0, 0, 0, 0)
-                                );
-                                z-index: 10;
-                                transform: translateZ(1px);
-                            }
-                        }
+                    will-change: transform;
+                }
 
-                        .glow {
-                            filter: blur(0.5rem);
-                            z-index: 11;
-                            mix-blend-mode: plus-lighter;
-                        }
+                .grid-container .plane > *::after {
+                    background-image: linear-gradient(
+                        to bottom,
+                        rgba(0, 0, 0, 255) var(--grid),
+                        rgba(0, 0, 0, 0)
+                    );
+                    z-index: 10;
+                    transform: translateZ(1px);
+                }
+
+                .grid-container .plane .glow {
+                    filter: blur(0.5rem);
+                    z-index: 11;
+                    mix-blend-mode: screen;
+                }
+                @supports (mix-blend-mode: plus-lighter) {
+                    .grid-container .plane .glow {
+                        mix-blend-mode: plus-lighter;
                     }
                 }
 
@@ -116,18 +128,11 @@ export default function AboutUs() {
                 }
 
                 @media (max-width: 640px) {
-                    .grid-container {
-                        --grid: 3rem;
+                    #landingAbout {
                         perspective: 70rem;
                     }
-                    .grid-container .plane {
-                        width: 240%;
-                        height: 110%;
-                        min-height: 0;
-                        transform: translate3d(-50%, 0, 0) rotateX(78deg);
-                    }
-                    .grid-container .plane:last-child {
-                        transform: translate3d(-50%, 0, 0) rotateX(-78deg);
+                    .grid-container {
+                        --grid: 3rem;
                     }
                 }
 
@@ -667,7 +672,7 @@ export default function AboutUs() {
                         on campus, driving niche projects and deep research
                         across domains!
                     </p>
-                    <span className="mt-4 md:mt-24 w-1/4 mx-auto flex flex-row justify-between">
+                    <span className="mt-6 md:mt-24 w-3/4 md:w-1/4 mx-auto flex flex-row justify-between">
                         <a
                             href="/events"
                             className="bg-gradient-to-br -skew-x-12 from-[var(--lab-green)] hover:scale-110 transition-all ease-in-out duration-600 to-green-700 text-center font-bold text-sm md:text-xl p-2 md:p-4"
