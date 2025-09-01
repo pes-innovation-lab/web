@@ -6,6 +6,7 @@ import Hero from './Hero'
 import ProfessorsInfo from './Professors'
 import Hunt3Video from './hunt3_2025'
 import MovingMatrixBG from './aboutUs'
+import { motion } from 'framer-motion'
 
 export default function Home() {
     const [isHeroVisible, setIsHeroVisible] = useState(true)
@@ -13,18 +14,18 @@ export default function Home() {
     const [isVideoPlaying, setIsVideoPlaying] = useState(false)
     const [heroFadeOut, setHeroFadeOut] = useState(false)
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setHeroFadeOut(true)
-            setTimeout(() => {
-                setIsHeroVisible(false)
-                setShowVideo(true)
-                setIsVideoPlaying(true)
-            }, 500)
-        }, 0)
+    /*    useEffect(() => {
+            const timer = setTimeout(() => {
+                setHeroFadeOut(true)
+                setTimeout(() => {
+                    setIsHeroVisible(false)
+                    setShowVideo(true)
+                    setIsVideoPlaying(true)
+                }, 500)
+            }, 0)
 
-        return () => clearTimeout(timer)
-    }, [])
+            return () => clearTimeout(timer)
+        }, [])*/
 
     const handleVideoEnd = () => {
         setIsHeroVisible(true)
@@ -39,17 +40,24 @@ export default function Home() {
     }
 
     return (
-        <div className="bg-lab-bg pt-16 text-white">
+        <div className="bg-lab-bg text-white">
             {/* HERO SECTION */}
             {isHeroVisible && (
-                <div className={heroFadeOut ? 'fade-out' : ''}>
-                    <Hero />
-                </div>
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="h-screen snap-start snap-always pt-16"
+                >
+                    <div className={heroFadeOut ? 'fade-out' : ''}>
+                        <Hero />
+                    </div>
+                </motion.div>
             )}
 
             {/* VIDEO SECTION */}
             {showVideo && (
-                <div className="fade-in h-screen">
+                <div className="fade-in h-screen snap-start">
                     <Hunt3Video onEnded={handleVideoEnd} />
                 </div>
             )}
@@ -67,7 +75,9 @@ export default function Home() {
             )}
 
             {/* ABOUT US SECTION  */}
-            <AboutUs />
+            <div className="h-screen snap-start snap-always">
+                <AboutUs />
+            </div>
 
             {/* PROFESSOR INFO *
             <ProfessorsInfo />

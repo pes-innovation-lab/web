@@ -5,7 +5,14 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { IoClose } from 'react-icons/io5'
-import { SiGmail, SiInstagram, SiTwitter, SiWhatsapp } from 'react-icons/si'
+import {
+    SiGmail,
+    SiInstagram,
+    SiTwitter,
+    SiWhatsapp,
+    SiLinkedin,
+    SiGithub,
+} from 'react-icons/si'
 
 const routes = [
     { title: 'Home', route: `/` },
@@ -24,6 +31,16 @@ export const socials = [
         icon: <SiInstagram size={18} />,
     },
     {
+        link: 'https://www.linkedin.com/company/pes-innovation-lab',
+        name: 'LinkedIn',
+        icon: <SiLinkedin size={18} />,
+    },
+    {
+        link: 'https://github.com/Innovation-Labs-PES',
+        name: 'GitHub',
+        icon: <SiGithub size={18} />,
+    },
+    {
         link: 'https://chat.whatsapp.com/ELOGHQUFDjUAWpBmhOMnRR',
         name: 'FAQ Whatsapp Group',
         icon: <SiWhatsapp size={18} />,
@@ -34,7 +51,7 @@ export const socials = [
         icon: <SiTwitter size={18} />,
     },
     {
-        link: 'mailto:pes.mlab@gmail.com',
+        link: 'mailto:innovationlab@pes.edu',
         name: 'Email',
         icon: <SiGmail size={18} />,
     },
