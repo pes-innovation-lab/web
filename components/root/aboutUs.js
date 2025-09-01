@@ -27,7 +27,7 @@ export default function AboutUs() {
 
                 .grid-container .plane {
                     --dir: 1;
-                    width: 150%;
+                    width: 200%;
                     height: 120%;
                     min-height: 70rem;
                     position: absolute;
@@ -612,7 +612,7 @@ export default function AboutUs() {
                     </div>
                 </div>
 
-                <div className="p-4 md:p-24 bg-black absolute left-0 top-1/2 right-0 -translate-y-1/2 w-full h-[38%] flex flex-col justify-center items-center">
+                <div className="p-4 md:p-24 bg-black absolute left-0 top-1/2 right-0 -translate-y-1/2 w-full h-[45%] flex flex-col justify-center items-center">
                     <p className="text-xs md:text-2xl text-center">
                         <a href="/" className="text-lab-green">
                             <ScrambleText
