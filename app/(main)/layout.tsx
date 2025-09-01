@@ -15,18 +15,18 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-    // Layouts must accept a children prop.
-    // This will be populated with nested layouts or pages
     children,
 }: {
     children: React.ReactNode
 }) {
     return (
         <html lang="en">
-            <body className="font-martian-mono">
+            <body className="font-martian-mono h-screen flex flex-col overflow-hidden">
                 <NavBar />
-                {children}
-                <Footer />
+                <main className="flex-grow overflow-y-scroll snap-mandatory snap-y scroll-smooth">
+                    {children}
+                    <Footer />
+                </main>
             </body>
         </html>
     )

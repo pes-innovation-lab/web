@@ -1,28 +1,25 @@
 'use client'
-
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function AnimatedDownArrow({ href = '', top = 90, left = 50 }) {
     const [hidden, setHidden] = useState(false)
-    const THRESHOLD = 120
-    let scrollTimer
+    const arrowRef = useRef(null)
+    const pathname = usePathname()
+    const isHome = pathname === '/'
 
     useEffect(() => {
-        const onScroll = () => {
-            setHidden(true)
-            clearTimeout(scrollTimer)
-            scrollTimer = setTimeout(() => {
-                if (window.scrollY <= THRESHOLD) {
-                    setHidden(false)
-                }
-            }, 150)
-        }
+        if (!arrowRef.current) return
 
-        window.addEventListener('scroll', onScroll, { passive: true })
-        return () => {
-            window.removeEventListener('scroll', onScroll)
-            clearTimeout(scrollTimer)
-        }
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setHidden(!entry.isIntersecting)
+            },
+            { threshold: 0.5 }
+        )
+
+        observer.observe(arrowRef.current)
+        return () => observer.disconnect()
     }, [])
 
     const onClick = (e) => {
@@ -30,7 +27,7 @@ export default function AnimatedDownArrow({ href = '', top = 90, left = 50 }) {
             const el = document.querySelector(href)
             if (el) {
                 e.preventDefault()
-                el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                el.scrollIntoView({ behavior: 'auto', block: 'start' })
             }
         }
     }
@@ -78,7 +75,6 @@ export default function AnimatedDownArrow({ href = '', top = 90, left = 50 }) {
                     transform-origin: top right;
                 }
 
-                // Animation
                 @keyframes arrow-movement {
                     0% {
                         opacity: 0;
@@ -92,17 +88,19 @@ export default function AnimatedDownArrow({ href = '', top = 90, left = 50 }) {
                     }
                 }
             `}</style>
-            {!hidden && (
-                <>
-                    <a
-                        onClick={onClick}
-                        className={`top-[${top - 5}%] left-1/2 w-[50px] h-full absolute z-50`}
-                        href={href}
-                    ></a>
-                    <div className="arrow arrow-first"></div>
-                    <div className="arrow arrow-second"></div>
-                </>
-            )}
+            <div ref={arrowRef}>
+                {!hidden && (
+                    <>
+                        <a
+                            onClick={onClick}
+                            className={`top-[${top - 5}%] left-1/2 w-[50px] h-full absolute z-50`}
+                            href={href}
+                        ></a>
+                        <div className="arrow arrow-first"></div>
+                        <div className="arrow arrow-second"></div>
+                    </>
+                )}
+            </div>
         </>
     )
 }

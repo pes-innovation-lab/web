@@ -1,109 +1,56 @@
 'use client'
-// components/Footer.js
-import { Grid, IconButton, Typography } from '@material-ui/core'
-import GitHubIcon from '@material-ui/icons/GitHub'
-import InstagramIcon from '@material-ui/icons/Instagram'
-import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { SiGithub, SiInstagram, SiLinkedin } from 'react-icons/si'
 
-// const headerStyle = {
-//   backgroundColor: 'black',
-//   color: 'white',
-//   width: '100%',
-//   height: '300px',
-//   marginTop: '2em',
-// };
+const Footer = () => {
+    const pathname = usePathname()
+    const isHome = pathname === '/'
 
-const contentTitleStyle = {
-    color: 'var(--lab-accent)',
-    fontSize: '1.5rem',
-    textAlign: 'center',
-}
-
-const contentBodyStyle = {
-    color: 'white',
-    fontSize: '1rem',
-    marginTop: '1em',
-    textAlign: 'center',
-}
-
-const Footer = () => (
-    <div className="footer">
-        <div className="footerContent">
-            <div className="footerSection"></div>
-            {/* Address first */}
-            <div className="footerSection">
-                <Typography style={contentTitleStyle}>Address</Typography>
-                <Typography style={contentBodyStyle}>
-                    PES University, RR Campus 100 Feet Ring Road,
-                    <br />
-                    BSK III Stage,
-                    <br />
-                    Bangalore-560085
-                    <br />
-                    Karnataka, India
-                </Typography>
-            </div>
-            {/* Logo in the middle */}
-            <div className="footerSection">
-                <Grid container justifyContent="center">
-                    <Link href={`/`}>
-                        <IconButton disableFocusRipple edge="start">
-                            <img
-                                style={{ width: '70%' }}
-                                className="footerLogo"
-                                src={`/images/mlab/mlab_logo.png`}
-                            />
-                        </IconButton>
-                    </Link>
-                </Grid>
-            </div>
-            {/* Contact/Connect last */}
-            <div className="footerSection">
-                <Typography style={contentTitleStyle}>Connect</Typography>
-                <Typography style={contentBodyStyle}>
-                    innovationlab@pes.edu pes.mlab@gmail.com
-                </Typography>
-                <Grid container justifyContent="center">
-                    <Grid item xs={2} style={{ textAlign: 'center' }}>
-                        <a
-                            href="https://www.linkedin.com/company/pes-innovation-lab"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <IconButton>
-                                <LinkedInIcon className="memberCardSocialIcons" />
-                            </IconButton>
-                        </a>
-                    </Grid>
-                    <Grid item xs={2} style={{ textAlign: 'center' }}>
-                        <a
-                            href="https://www.instagram.com/innovationlab.pes"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <IconButton>
-                                <InstagramIcon className="memberCardSocialIcons" />
-                            </IconButton>
-                        </a>
-                    </Grid>
-                    <Grid item xs={2} style={{ textAlign: 'center' }}>
+    return (
+        <div
+            className={`${isHome ? 'snap-start' : ''} bg-black/30 backdrop-blur-sm py-8`}
+        >
+            <div className="container mx-auto px-4">
+                <div className="flex flex-col items-center gap-6 text-center">
+                    <div className="flex gap-6">
                         <a
                             href="https://github.com/PES-Innovation-Lab"
                             target="_blank"
                             rel="noreferrer"
+                            className="text-gray-400 hover:text-lab-accent transition-colors"
                         >
-                            <IconButton>
-                                <GitHubIcon className="memberCardSocialIcons" />
-                            </IconButton>
+                            <SiGithub size={20} />
                         </a>
-                    </Grid>
-                </Grid>
+                        <a
+                            href="https://www.instagram.com/innovationlab.pes"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-gray-400 hover:text-lab-accent transition-colors"
+                        >
+                            <SiInstagram size={20} />
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/company/pes-innovation-lab"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-gray-400 hover:text-lab-accent transition-colors"
+                        >
+                            <SiLinkedin size={20} />
+                        </a>
+                    </div>
+
+                    <div className="text-gray-400 text-xs sm:text-sm">
+                        <p>innovationlab@pes.edu</p>
+                        <p className="mt-1">
+                            Pes University, 100 Feet Ring Rd, Banashankari 3rd
+                            Stage, Bengaluru, Karnataka 560085
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div className="footerSection"></div>
         </div>
-        <script></script>
-    </div>
-)
+    )
+}
 
 export default Footer

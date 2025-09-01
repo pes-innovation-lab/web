@@ -94,7 +94,7 @@ function Projectos() {
     }, [selectedId])
 
     const cardLayout = (
-        <div className="flex flex-wrap justify-around gap-8 lg:justify-center">
+        <div className="flex flex-wrap justify-around gap-8 lg:justify-center min-h-screen pt-8">
             {currentProjects.map((card, i) => {
                 return (
                     <motion.div
