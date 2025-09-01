@@ -667,12 +667,20 @@ export default function AboutUs() {
                         on campus, driving niche projects and deep research
                         across domains!
                     </p>
-                    <a
-                        href="/events"
-                        className="bg-gradient-to-br cursor-pointer mt-4 md:mt-24 -skew-x-12 layers glitch from-[var(--lab-green)] hover:scale-110 transition-all ease-in-out duration-600 to-green-700 text-center text-sm md:text-xl p-2 md:p-4"
-                    >
-                        What We Do
-                    </a>
+                    <span className="mt-4 md:mt-24 w-1/4 mx-auto flex flex-row justify-between">
+                        <a
+                            href="/events"
+                            className="bg-gradient-to-br -skew-x-12 from-[var(--lab-green)] hover:scale-110 transition-all ease-in-out duration-600 to-green-700 text-center font-bold text-sm md:text-xl p-2 md:p-4"
+                        >
+                            <span className="glitch layers">What We Do</span>
+                        </a>
+                        <a
+                            href="/projects"
+                            className="bg-gradient-to-br -skew-x-12 from-[var(--lab-green)] hover:scale-110 transition-all ease-in-out duration-600 to-green-700 text-center font-bold text-sm md:text-xl p-2 md:p-4"
+                        >
+                            <span className="glitch layers">Past Projects</span>
+                        </a>
+                    </span>
                 </div>
             </section>
         </>
