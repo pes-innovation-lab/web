@@ -134,6 +134,9 @@ export default function AboutUs() {
                     .grid-container {
                         --grid: 3rem;
                     }
+                    .grid-container .plane {
+                        min-height: 40rem;
+                    }
                 }
 
                 .layers {
