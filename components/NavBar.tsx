@@ -36,7 +36,7 @@ export const socials = [
         icon: <SiLinkedin size={18} />,
     },
     {
-        link: 'https://github.com/Innovation-Labs-PES',
+        link: 'https://github.com/PES-Innovation-Lab',
         name: 'GitHub',
         icon: <SiGithub size={18} />,
     },
