@@ -12,6 +12,7 @@ interface Publication {
     authors: string
     conference: string
     link: string
+    tags?: string[]
 }
 
 function PublicationCard({ publication }: { publication: Publication }) {
@@ -160,12 +161,20 @@ function FilterChip({
 export default function PublicationsPage() {
     const [selectedYear, setSelectedYear] = useState('All')
     const [hoveredCard, setHoveredCard] = useState<string | null>(null)
+    const [selectedTag, setSelectedTag] = useState<string>('All') // <-- ADD THIS
 
     // Transform publications
     const publications: Publication[] = publicationData.map((pub) => ({
         ...pub,
         short_description: pub.short_description || 'No description available',
     }))
+
+    const allTags = [
+        'All',
+        ...Array.from(
+            new Set(publications.flatMap((pub) => pub.tags || []))
+        ).sort(),
+    ]
 
     // Get unique years for filters
     const years = [
@@ -177,7 +186,11 @@ export default function PublicationsPage() {
 
     // Filter publications by year only
     const filteredPublications = publications.filter((publication) => {
-        return selectedYear === 'All' || publication.year === selectedYear
+        const yearMatch =
+            selectedYear === 'All' || publication.year === selectedYear
+        const tagMatch =
+            selectedTag === 'All' || publication.tags?.includes(selectedTag)
+        return yearMatch && tagMatch
     })
 
     const containerVariants = {
@@ -209,6 +222,8 @@ export default function PublicationsPage() {
                 </motion.div>
             </div>
 
+            {/* ///////////////// */}
+
             {/* Year Filter */}
             <div className="max-w-7xl mx-auto px-6 pb-8">
                 <motion.div
@@ -231,6 +246,30 @@ export default function PublicationsPage() {
                         ))}
                     </div>
                 </motion.div>
+
+                {/* Tag Filter */}
+                {allTags.length > 0 && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        className="text-center mb-8 mt-4"
+                    >
+                        <h3 className="text-step-1 font-semibold text-lab-green mb-4 font-martian-mono">
+                            Filter by Tag
+                        </h3>
+                        <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                            {allTags.map((tag) => (
+                                <FilterChip
+                                    key={tag}
+                                    label={tag}
+                                    isActive={selectedTag === tag}
+                                    onClick={() => setSelectedTag(tag)}
+                                />
+                            ))}
+                        </div>
+                    </motion.div>
+                )}
             </div>
 
             {/* Publications Grid */}

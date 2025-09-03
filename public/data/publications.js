@@ -9,6 +9,7 @@ export const publicationData = [
         conference:
             'First International Conference on Advances in Electrical, Electronics and Computational Intelligence (ICAEECI)',
         link: 'https://ieeexplore.ieee.org/document/10370769',
+        tags: ['Machine Learning', 'Networking'], // <-- ADD THIS
     },
     {
         year: '2021',
@@ -20,6 +21,7 @@ export const publicationData = [
         conference:
             '7th International Conference on Control, Automation and Robotics',
         link: 'https://www.proceedings.com/content/059/059478webtoc.pdf',
+        tags: ['Robotics', 'Assistive Technology'], // <-- ADD THIS
     },
     {
         year: '2020',
@@ -31,6 +33,7 @@ export const publicationData = [
         conference:
             'International Conference on Innovative Computing and Communications',
         link: 'https://link.springer.com/chapter/10.1007/978-981-15-5148-2_46',
+        tags: ['Healthcare', 'Machine Learning'], // <-- ADD THIS
     },
     {
         year: '2020',
@@ -42,6 +45,7 @@ export const publicationData = [
         conference:
             '2020 International Conference on Artificial Intelligence and Signal Processing (AISP)',
         link: 'https://ieeexplore.ieee.org/document/9073474',
+        tags: ['Machine Learning', 'Computer Vision'], // <-- ADD THIS
     },
     {
         year: '2019',
@@ -53,6 +57,7 @@ export const publicationData = [
         conference:
             'The 2nd International Conference on Emerging Data and Industry 4.0 (EDI40 2019)',
         link: 'https://www.sciencedirect.com/science/article/pii/S1877050919305964',
+        tags: ['Healthcare', 'Wearable Technology'], // <-- ADD THIS
     },
     {
         year: '2018',
@@ -64,5 +69,6 @@ export const publicationData = [
         conference:
             'The 10th International Conference on Ambient Systems, Networks and Technologies',
         link: 'https://www.researchgate.net/publication/336738283_IoT_Green_Corridor',
+        tags: ['IoT', 'Smart Cities'], // <-- ADD THIS
     },
 ]
