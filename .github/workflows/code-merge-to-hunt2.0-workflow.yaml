@@ -2,7 +2,7 @@ name: Code Merge to main Flow
 on:
   push:
     paths-ignore:
-      - '**.md'
+      - 'README.md'
     branches:
       - master
 jobs:
