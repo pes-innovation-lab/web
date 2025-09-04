@@ -1,13 +1,13 @@
 ---
 title: Mini CTF by Anthropic @ BSidesSF
 author: "Murali Krishna"
-date: 2024-07-19
+date: '2024-07-19'
 language: 'en'
 tags: ['Blog', 'CTF', 'Machine-Learning']
 draft: false
 ---
 
-*Originally from [https://www.murali.fyi/ramblings/ctfs/anthropic-bsidessf/](https://www.murali.fyi/ramblings/ctfs/anthropic-bsidessf/)*
+*Originally from [https://www.murali.fyi/ramblings/ctfs/anthropic-bsidessf/](https://www.murali.fyi/ramblings/ctfs/anthropic-bsidessf/).*
 
 This all started on this one lazy Sunday. I was scrolling through the group chat for the latest batch of The Innovation Lab at PES University (a lively space for current and former members of my university's nerdiest club), when one of my friends (find him at [rowjee.com!](https://rowjee.com)) shared a link to a Capture The Flag (CTF) challenge. I'm not sure why this one caught my eye, since I'd never actually participated in a CTF before, but it did.
 

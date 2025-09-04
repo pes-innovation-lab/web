@@ -1,13 +1,13 @@
 ---
 title: Making TLS-based censorship avoidance faster - BlindTLS?
 author: "Murali Krishna"
-date: 2024-12-22
+date: '2024-12-22'
 language: 'en'
 tags: ['Blog', 'Paper-Reading', 'TLS', 'Censorship-Avoidance']
 draft: false
 ---
 
-*Originally from [https://www.murali.fyi/ramblings/paper-reading/blindtls/](https://www.murali.fyi/ramblings/paper-reading/blindtls/)*
+*Originally from [https://www.murali.fyi/ramblings/paper-reading/blindtls/](https://www.murali.fyi/ramblings/paper-reading/blindtls/).*
 
 *(This requires atleast a somewhat basic understanding of the TLS Handshake process and the role of certificates in it.)*
 
