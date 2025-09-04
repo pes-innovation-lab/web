@@ -3,6 +3,8 @@ import path from 'path'
 import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
+import remarkGfm from 'remark-gfm'
+import remarkBreaks from 'remark-breaks'
 
 export type BlogPost = {
     slug: string
@@ -45,7 +47,9 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
                 }
 
                 const processedContent = await remark()
-                    .use(html)
+                    .use(remarkGfm) 
+                    .use(remarkBreaks) 
+                    .use(html, { sanitize: false }) 
                     .process(content)
                 const contentHtml = processedContent.toString()
 
@@ -79,7 +83,11 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
         return null
     }
 
-    const processedContent = await remark().use(html).process(content)
+    const processedContent = await remark()
+        .use(remarkGfm) 
+        .use(remarkBreaks) 
+        .use(html, { sanitize: false }) 
+        .process(content)
     const contentHtml = processedContent.toString()
 
     return {

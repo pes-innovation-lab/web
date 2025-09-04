@@ -2,6 +2,7 @@ import Footer from '../../components/Footer'
 import NavBar from '../../components/NavBar'
 import '../../css/global.css'
 import '../../css/new_projects.css'
+import '../../css/blog.css'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {

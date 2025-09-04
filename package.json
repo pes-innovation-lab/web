@@ -47,6 +47,8 @@
 		"react-responsive": "^8.2.0",
 		"react-responsive-carousel": "^3.2.23",
 		"remark": "^15.0.1",
+		"remark-breaks": "^4.0.0",
+		"remark-gfm": "^4.0.1",
 		"remark-html": "^16.0.1",
 		"sass": "^1.69.0",
 		"sharp": "^0.33.3",
