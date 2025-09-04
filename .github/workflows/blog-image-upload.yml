@@ -53,27 +53,24 @@ jobs:
           cd blog-repo
           BASE_URL="https://site-images.pages.dev/public/images/blogs"
 
-          blogs=$(find ../images-repo/public/images/blogs -mindepth 1 -maxdepth 1 -type d -printf '%f\n' || true)
+          for md in blogs/*.md; do
+            blog=$(basename "$md" .md)
+            echo "Processing blog: $blog"
 
-          if [ -z "$blogs" ]; then
-            echo "No images uploaded, skipping cleanup & link rewrite."
-            exit 0
-          fi
-
-          for blog in $blogs; do
-            echo "Rewriting image links for blog: $blog"
-
-            find blogs/$blog -name "*.md" | while read file; do
-              sed -i "s|(/images/blogs/$blog/|($BASE_URL/$blog/|g" "$file"
-            done
-
-            git rm -rf public/images/blogs/$blog || true
+            if [ -d "public/images/blogs/$blog" ]; then
+              sed -i "s|(/images/blogs/$blog/|($BASE_URL/$blog/|g" "$md"
+              git rm -rf public/images/blogs/$blog || true
+            else
+              echo "No images found for $blog, skipping rewrite."
+            fi
           done
 
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add .
           git commit -m "Remove images and rewrite Markdown links for PR #${{ github.event.pull_request.number }}" || echo "No cleanup changes"
-          git push origin HEAD:main
+          git pull --rebase origin master || true
+          git push origin HEAD:master
+
 
 
