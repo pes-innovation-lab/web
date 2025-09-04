@@ -47,9 +47,9 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
                 }
 
                 const processedContent = await remark()
-                    .use(remarkGfm) 
-                    .use(remarkBreaks) 
-                    .use(html, { sanitize: false }) 
+                    .use(remarkGfm)
+                    .use(remarkBreaks)
+                    .use(html, { sanitize: false })
                     .process(content)
                 const contentHtml = processedContent.toString()
 
@@ -84,9 +84,9 @@ export async function getBlogPost(slug: string): Promise<BlogPost | null> {
     }
 
     const processedContent = await remark()
-        .use(remarkGfm) 
-        .use(remarkBreaks) 
-        .use(html, { sanitize: false }) 
+        .use(remarkGfm)
+        .use(remarkBreaks)
+        .use(html, { sanitize: false })
         .process(content)
     const contentHtml = processedContent.toString()
 
