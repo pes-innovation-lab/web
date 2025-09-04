@@ -51,7 +51,7 @@ jobs:
       - name: Cleanup blog repo (remove images + rewrite links)
         run: |
           cd blog-repo
-          BASE_URL="https://site-images.pages.dev/public/images/blogs"
+          BASE_URL="https://site-images.pages.dev/images/blogs"
 
           for md in blogs/*.md; do
             blog=$(basename "$md" .md)
