@@ -113,9 +113,7 @@ export function getAllBlogSlugs(): { params: { slug: string } }[] {
                 },
             }
         })
-        .filter(
-            (slug): slug is { params: { slug: string } } => slug !== null
-        )
+        .filter((slug): slug is { params: { slug: string } } => slug !== null)
 }
 
 export async function getAllTags(): Promise<string[]> {
@@ -134,7 +132,8 @@ export async function getAllTags(): Promise<string[]> {
 export async function getPostsByTag(tag: string): Promise<BlogPost[]> {
     const posts = await getAllBlogPosts()
     return posts.filter(
-        (post) => post.tags && Array.isArray(post.tags) && post.tags.includes(tag)
+        (post) =>
+            post.tags && Array.isArray(post.tags) && post.tags.includes(tag)
     )
 }
 
