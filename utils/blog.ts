@@ -4,9 +4,20 @@ import matter from 'gray-matter'
 import { remark } from 'remark'
 import html from 'remark-html'
 
+export type BlogPost = {
+    slug: string
+    contentHtml: string
+    title?: string
+    date?: string
+    author?: string
+    excerpt?: string
+    tags?: string[]
+    draft?: boolean
+}
+
 const blogsDirectory = path.join(process.cwd(), 'blogs')
 
-export function formatBlogDate(dateString) {
+export function formatBlogDate(dateString: string): string {
     return new Date(dateString).toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
@@ -14,7 +25,7 @@ export function formatBlogDate(dateString) {
     })
 }
 
-export async function getAllBlogPosts() {
+export async function getAllBlogPosts(): Promise<BlogPost[]> {
     if (!fs.existsSync(blogsDirectory)) {
         return []
     }
@@ -29,6 +40,10 @@ export async function getAllBlogPosts() {
                 const fileContents = fs.readFileSync(fullPath, 'utf8')
                 const { data, content } = matter(fileContents)
 
+                if (data.draft === true) {
+                    return null
+                }
+
                 const processedContent = await remark()
                     .use(html)
                     .process(content)
@@ -38,20 +53,19 @@ export async function getAllBlogPosts() {
                     slug,
                     contentHtml,
                     ...data,
-                }
+                } as BlogPost
             })
     )
 
-    return allPostsData.sort((a, b) => {
-        if (a.date < b.date) {
-            return 1
-        } else {
-            return -1
-        }
-    })
+    return allPostsData
+        .filter((post): post is BlogPost => post !== null) // type guard
+        .sort((a, b) => {
+            if (!a.date || !b.date) return 0
+            return a.date < b.date ? 1 : -1
+        })
 }
 
-export async function getBlogPost(slug) {
+export async function getBlogPost(slug: string): Promise<BlogPost | null> {
     const fullPath = path.join(blogsDirectory, `${slug}.md`)
 
     if (!fs.existsSync(fullPath)) {
@@ -61,6 +75,10 @@ export async function getBlogPost(slug) {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
 
+    if (data.draft === true) {
+        return null
+    }
+
     const processedContent = await remark().use(html).process(content)
     const contentHtml = processedContent.toString()
 
@@ -68,27 +86,39 @@ export async function getBlogPost(slug) {
         slug,
         contentHtml,
         ...data,
-    }
+    } as BlogPost
 }
 
-export function getAllBlogSlugs() {
+export function getAllBlogSlugs(): { params: { slug: string } }[] {
     if (!fs.existsSync(blogsDirectory)) {
         return []
     }
 
     const fileNames = fs.readdirSync(blogsDirectory)
+
     return fileNames
         .filter((fileName) => fileName.endsWith('.md'))
-        .map((fileName) => ({
-            params: {
-                slug: fileName.replace(/\.md$/, ''),
-            },
-        }))
+        .map((fileName) => {
+            const fullPath = path.join(blogsDirectory, fileName)
+            const fileContents = fs.readFileSync(fullPath, 'utf8')
+            const { data } = matter(fileContents)
+
+            if (data.draft === true) {
+                return null
+            }
+
+            return {
+                params: {
+                    slug: fileName.replace(/\.md$/, ''),
+                },
+            }
+        })
+        .filter((slug): slug is { params: { slug: string } } => slug !== null)
 }
 
-export async function getAllTags() {
+export async function getAllTags(): Promise<string[]> {
     const posts = await getAllBlogPosts()
-    const tagSet = new Set()
+    const tagSet = new Set<string>()
 
     posts.forEach((post) => {
         if (post.tags && Array.isArray(post.tags)) {
@@ -99,7 +129,7 @@ export async function getAllTags() {
     return Array.from(tagSet).sort()
 }
 
-export async function getPostsByTag(tag) {
+export async function getPostsByTag(tag: string): Promise<BlogPost[]> {
     const posts = await getAllBlogPosts()
     return posts.filter(
         (post) =>
@@ -107,11 +137,9 @@ export async function getPostsByTag(tag) {
     )
 }
 
-export async function getAllTagSlugs() {
+export async function getAllTagSlugs(): Promise<{ params: { tag: string } }[]> {
     const tags = await getAllTags()
     return tags.map((tag) => ({
-        params: {
-            tag: tag,
-        },
+        params: { tag },
     }))
 }

@@ -28,7 +28,7 @@ export default async function BlogPage() {
                             <p className="text-3xl">Content coming soon!</p>
                         </div>
                     ) : (
-                        <div className="space-y-0">
+                        <div className="space-y-8">
                             {posts.map((post) => (
                                 <article
                                     key={post.slug}

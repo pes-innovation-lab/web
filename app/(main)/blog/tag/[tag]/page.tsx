@@ -51,7 +51,7 @@ export default async function TagPage({ params }: { params: { tag: string } }) {
                         </p>
                     </div>
 
-                    <div className="space-y-0">
+                    <div className="space-y-8">
                         {posts.map((post) => (
                             <article
                                 key={post.slug}
