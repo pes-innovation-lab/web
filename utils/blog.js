@@ -29,6 +29,11 @@ export async function getAllBlogPosts() {
                 const fileContents = fs.readFileSync(fullPath, 'utf8')
                 const { data, content } = matter(fileContents)
 
+                // Skip draft posts
+                if (data.draft === true) {
+                    return null
+                }
+
                 const processedContent = await remark()
                     .use(html)
                     .process(content)
@@ -42,13 +47,15 @@ export async function getAllBlogPosts() {
             })
     )
 
-    return allPostsData.sort((a, b) => {
-        if (a.date < b.date) {
-            return 1
-        } else {
-            return -1
-        }
-    })
+    return allPostsData
+        .filter((post) => post !== null) // remove drafts
+        .sort((a, b) => {
+            if (a.date < b.date) {
+                return 1
+            } else {
+                return -1
+            }
+        })
 }
 
 export async function getBlogPost(slug) {
@@ -60,6 +67,11 @@ export async function getBlogPost(slug) {
 
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
+
+    // Skip draft posts
+    if (data.draft === true) {
+        return null
+    }
 
     const processedContent = await remark().use(html).process(content)
     const contentHtml = processedContent.toString()
@@ -77,13 +89,25 @@ export function getAllBlogSlugs() {
     }
 
     const fileNames = fs.readdirSync(blogsDirectory)
+
     return fileNames
         .filter((fileName) => fileName.endsWith('.md'))
-        .map((fileName) => ({
-            params: {
-                slug: fileName.replace(/\.md$/, ''),
-            },
-        }))
+        .map((fileName) => {
+            const fullPath = path.join(blogsDirectory, fileName)
+            const fileContents = fs.readFileSync(fullPath, 'utf8')
+            const { data } = matter(fileContents)
+
+            if (data.draft === true) {
+                return null
+            }
+
+            return {
+                params: {
+                    slug: fileName.replace(/\.md$/, ''),
+                },
+            }
+        })
+        .filter((slug) => slug !== null)
 }
 
 export async function getAllTags() {
