@@ -40,6 +40,17 @@ index: Fix UI layout in mobile view.
 
 Blogs written in the markdown format are rendered and displayed on the site. To add a new blog, create a file with the `.md` extension in the `blogs/` directory under the root folder.
 
+If there are images in your blogs:
+- Add those images to `public/images/blogs/<blog_name>` 
+**<blog_name> should be the exact same as your markdown file name.**
+Example: if your new blog is `blogs/blog1.md`
+         Images should be added to: `public/images/blogs/blog1/`
+- In your markdown use the images the way you would use if the images existed in
+  the project directory. The workflow will automatically rewrite the paths to match the firebase path
+Example: if your image exists in `public/images/blogs/blog1/cover_image.png`
+         In your markdown use the image as: `![](/images/blogs/blog1/cover_image.png)`
+- Once you are done writing the blogs, raise the PR and wait for merging, once merged the workflow will run and automatically do the rest :)  
+
 Contact
 -----
 email : pes.mlab@gmail.com <br/>
