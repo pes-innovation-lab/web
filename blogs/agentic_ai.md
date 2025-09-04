@@ -6,7 +6,7 @@ excerpt: "Agentic AI Systems have taken over the world. This blog goes over what
 Agentic AI is and how it is different from regular ML!"
 tags: ["PIL", "AI", "Agents"] 
 ---
-![](/images/blogs/agentic_ai/cover_image.jpeg)
+![](https://site-images.pages.dev/public/images/blogs/agentic_ai/cover_image.jpeg)
 
 Artificial Intelligence (AI) has evolved so far — from simple automation to sophisticated deep learning models that can code, write, and even reproduce human-like conversations. But there’s a new buzzword circulating in the AI community: Agentic AI.
 
@@ -42,7 +42,7 @@ Let’s say you are trying to cook pasta. Typically you would look through the i
 Imagine if your machine could turn the stove on, measure the ingredients, season your food and plate it for you! That is an agentic system, a machine which does not just give you answers, but also does the work for you.
 
 LLMs are brains. Agents are brains with hands and a plan.
-![](/images/blogs/agentic_ai/brain_with_hands.jpeg)
+![](https://site-images.pages.dev/public/images/blogs/agentic_ai/brain_with_hands.jpeg)
 
 ## Why Agentic AI Actually Matters
 The shift from traditional AI systems to Agentic not only is technical but as well a philosphical one. Moving from passive AI to AI systems that interact with you proactively! It doesn’t wait around to be told what to do — it does it for you.
@@ -56,7 +56,7 @@ That means
 
 ## How Do These Little Agents Actually Work?
 Agents typically follow a series of steps to achieve their goal:
-![](/images/blogs/agentic_ai/agent_steps.jpeg)
+![](https://site-images.pages.dev/public/images/blogs/agentic_ai/agent_steps.jpeg)
 
 1. Reasoning: Plan -> Act -> Observe -> Reflect.
 2. Tool usage: Interact with the environment using tools. For example: access APIs, search the web or access your database.
