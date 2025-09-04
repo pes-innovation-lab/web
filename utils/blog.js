@@ -29,7 +29,6 @@ export async function getAllBlogPosts() {
                 const fileContents = fs.readFileSync(fullPath, 'utf8')
                 const { data, content } = matter(fileContents)
 
-                // Skip draft posts
                 if (data.draft === true) {
                     return null
                 }
@@ -48,7 +47,7 @@ export async function getAllBlogPosts() {
     )
 
     return allPostsData
-        .filter((post) => post !== null) // remove drafts
+        .filter((post) => post !== null)
         .sort((a, b) => {
             if (a.date < b.date) {
                 return 1
@@ -68,7 +67,6 @@ export async function getBlogPost(slug) {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
 
-    // Skip draft posts
     if (data.draft === true) {
         return null
     }
