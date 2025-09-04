@@ -7,7 +7,7 @@ dive deeper into the world of CyberSecurity and how AI can be used to identify
 patterns"
 tags: ["PIL", "AI", "Cybersecurity"] 
 ---
-![](https://site-images.pages.dev/public/images/blogs/ai_based_ips/cover_image.jpeg)
+![](https://site-images.pages.dev/images/blogs/ai_based_ips/cover_image.jpeg)
 
 ## Introduction
 As cyber threats grow increasingly sophisticated, traditional security measures struggle to keep up. Attackers constantly evolve their methods, exploiting vulnerabilities faster than rule-based security solutions can patch them. This challenge led me and my team to explore AI-driven cybersecurity at a recent hackathon, where we built an AI-based Intrusion Prevention System (IPS) capable of self-healing.
@@ -20,7 +20,7 @@ This article delves into AI-based IPS, its advantages, self-healing capabilities
 
 ## What is an AI-Based Intrusion Prevention System?
 An Intrusion Prevention System (IPS) is a cybersecurity solution that monitors network traffic, detects malicious activity, and prevents threats in real time.
-![](https://site-images.pages.dev/public/images/blogs/ai_based_ips/architecture.jpeg)
+![](https://site-images.pages.dev/images/blogs/ai_based_ips/architecture.jpeg)
 
 Traditional IPS solutions rely on predefined rules and signatures to identify known attack patterns, but they face several limitations:
 
@@ -41,7 +41,7 @@ AI transforms IPS by enabling systems to analyze vast amounts of data and recogn
 - **Reduced False Positives**: Context-aware AI models lower the rate of misclassified benign traffic.
 
 During the hackathon, we applied these AI-driven principles to our IPS project, training a neural network on the Kitsune Py dataset to differentiate between normal and malicious traffic patterns
-![](https://site-images.pages.dev/public/images/blogs/ai_based_ips/nn.jpeg)
+![](https://site-images.pages.dev/images/blogs/ai_based_ips/nn.jpeg)
 
 ---
 
@@ -54,7 +54,7 @@ A major breakthrough in AI-driven cybersecurity is self-healing IPS — a system
 - **Self-Healing & Adaptation**: The model retrains itself using newly detected attack data, improving future detection accuracy.
 
 In our hackathon project, we integrated neural networks that refined their detection capabilities over time. Each time an attack was detected, the model updated itself, reducing false positives and becoming more efficient at identifying threats.
-![](https://site-images.pages.dev/public/images/blogs/ai_based_ips/model_architecture.jpeg)
+![](https://site-images.pages.dev/images/blogs/ai_based_ips/model_architecture.jpeg)
 Our approach during the hackathon was to calculate the gradient for the new data points and then update the model with the new model parameters to avoid future errors.
 
 ---
