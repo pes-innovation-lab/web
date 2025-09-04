@@ -25,6 +25,13 @@ interface PageProps {
     }
 }
 
+const shuffleArray = <T,>(array: T[]): T[] => {
+    return array
+        .map((value) => ({ value, sort: Math.random() }))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value)
+}
+
 export async function generateStaticParams() {
     const slugs = getAllBlogSlugs()
     return slugs.map((slug) => ({
@@ -40,7 +47,7 @@ export default async function BlogPost({ params }: PageProps) {
     }
 
     const allPosts = await getAllBlogPosts()
-    const relatedPosts = allPosts
+    const relatedPosts = shuffleArray(allPosts)
         .filter((p) => p.slug !== params.slug)
         .slice(0, 4)
 
