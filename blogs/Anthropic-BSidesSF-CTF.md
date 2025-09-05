@@ -14,7 +14,7 @@ This all started on this one lazy Sunday. I was scrolling through the group chat
 
 #### The Beginning
 
-![The Home Page.](/images/blogs/Anthropic-BSidesSF-CTF/anthropicctfwebsite.png "Align=center,Width=60%")
+![The Home Page.](https://site-images.pages.dev/images/blogs/Anthropic-BSidesSF-CTF/anthropicctfwebsite.png "Align=center,Width=60%")
 <p align="center">
   <a href="https://anthropic-at-bsides.com"><i>https://anthropic-at-bsides.com</i></a>
 </p>
@@ -22,7 +22,7 @@ This all started on this one lazy Sunday. I was scrolling through the group chat
 
 Starting off, the website looked interesting. Minimalistic, but interesting. It felt intuitive that there'd be something hidden in the Developer Tools options, like the displayed HTML or other source files. I started poking around, and it didn't take me too long to find 'stego.png' in the website's source. Perhaps a little on-the-nose, but hey :D
 
-![stego.png](/images/blogs/Anthropic-BSidesSF-CTF/stego.png "Align=center,Width=60%")
+![stego.png](https://site-images.pages.dev/images/blogs/Anthropic-BSidesSF-CTF/stego.png "Align=center,Width=60%")
 <p align="center">
   <i>You may want to switch to light mode to get a better sense of what the image looks like.</i>
 </p>
@@ -49,7 +49,7 @@ I tossed it a simple follow-up: "is there anything weird about the script?"
 
 Claude, in its infinite AI wisdom, proceeded to explain to me why the plot of a movie about talking bees might be, and I quote, "bizarre and nonsensical." It listed, with the deadpan seriousness of a rocket scientist explaining gravity, that bees probably can't talk, sue humans, or fly jet airliners.
 
-![Claude being Claude.](/images/blogs/Anthropic-BSidesSF-CTF/claude-dumb.png "Align=center,Width=60%")
+![Claude being Claude.](https://site-images.pages.dev/images/blogs/Anthropic-BSidesSF-CTF/claude-dumb.png "Align=center,Width=60%")
 <p align="center">
   <i>I promise you this is not doctored.</i>
 </p>
@@ -59,7 +59,7 @@ I stared at the screen, blinked, and realized I was having a conversation with t
 
 Upon a slight re-steer, however, Claude uncovered something that there's no way I could've done myself:
 
-![Claude being Claude.](/images/blogs/Anthropic-BSidesSF-CTF/claude-figures.png "Align=center,Width=60%")
+![Claude being Claude.](https://site-images.pages.dev/images/blogs/Anthropic-BSidesSF-CTF/claude-figures.png "Align=center,Width=60%")
 <p align="center">
   <i>Perhaps if I was more up to date with the zeitgeist, I'd have known to feed it to an LLM a little earlier, but oh well. </i>
 </p>

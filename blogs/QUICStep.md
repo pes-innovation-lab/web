@@ -32,14 +32,14 @@ Over traditional TCP, a common inefficiency is what's known as the **'parking lo
 
 This super catastropic scenario happened because TCP relies on the unchangingness of the quad-tuple of \[Source-IP, Source-Port, Destination-IP, Destination-Port]. By walking beyond the office wi-fi's range, your IP Address (and potentially port) has changed, breaking your underlying TCP connection. To reconnect to your meeting, you had to establish a *new* TCP connection, costing you precious time and in this case, causing the end of the world.
 
-![TCP's reconnection problem](/images/blogs/QUICStep/tcp-reconnect.png "Align=center,Width=50%")
+![TCP's reconnection problem](https://site-images.pages.dev/images/blogs/QUICStep/tcp-reconnect.png "Align=center,Width=50%")
 <p align="center">
   <i>Source: https://pulse.internetsociety.org/blog/how-quic-helps-you-seamlessly-connect-to-different-networks/</i>
 </p>
 
 The way QUIC avoids this is armageddon is via *connection migration*. QUIC does not rely *only* on the above quad-tuple; instead, it assigns a *set of 'connection IDs'* for each connection, exchanged *post* handshake. Anytime a client changes the network through which it is contacting the server (and hence, its IP address), it uses the 'next CID' in the set to identify itself. Since these CIDs were communicated over a secure QUIC connection *after* the handshake was completed, this set of CIDs is completely unknown to anyone but the client and server! This is very analogous to the concept of Session Tickets. (This explanation is heavily oversimplified, but the concept is enough to understand the beauty behind QUICStep!)
 
-![QUIC's connection migration](/images/blogs/QUICStep/quic-migration.png "Align=center,Width=50%")
+![QUIC's connection migration](https://site-images.pages.dev/images/blogs/QUICStep/quic-migration.png "Align=center,Width=50%")
 <p align="center">
   <i>Source: https://pulse.internetsociety.org/blog/how-quic-helps-you-seamlessly-connect-to-different-networks/</i>
 </p>
@@ -48,7 +48,7 @@ The way QUIC avoids this is armageddon is via *connection migration*. QUIC does 
 
 In a nutshell, the concept behind QUICStep is to initiate your QUIC connection to the censored domain via a VPN or trusted proxy, and then *migrate* it to your vanilla, direct path.
 
-![QUICStep](/images/blogs/QUICStep/quicstep.png "Align=center")
+![QUICStep](https://site-images.pages.dev/images/blogs/QUICStep/quicstep.png "Align=center")
 <p align="center">
   <i>Taken straight from the QUICStep paper!</i>
 </p>
