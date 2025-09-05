@@ -1,6 +1,6 @@
 ---
 title: "The Future of Cybersecurity: AI-Based Self-Healing Intrusion Prevention Systems"
-date: 2025-02-17
+date: '2025-02-17'
 author: Manas G
 excerpt: "AI revolution has changed the way we can observe. With this blog let's
 dive deeper into the world of CyberSecurity and how AI can be used to identify

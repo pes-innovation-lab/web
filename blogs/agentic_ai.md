@@ -1,6 +1,6 @@
 ---
 title: "Agentic AI: The AI That Doesn’t Just Talk — It Does Stuff!"
-date: 2025-07-17
+date: '2025-07-17'
 author: Manas G
 excerpt: "Agentic AI Systems have taken over the world. This blog goes over what
 Agentic AI is and how it is different from regular ML!"
