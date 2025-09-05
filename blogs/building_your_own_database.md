@@ -1,10 +1,10 @@
 ---
 title: "Building your own database?"
-date: 2025-09-01
+date: '2025-09-01'
 author: Manas G
 excerpt: "Ever wondered how databases work and wanted to build one yourself?
 This blog walks you through building a simple key-value database using
-write-ahead logs"
+write-ahead logs."
 tags: ["PIL", "Systems", "Databases"] 
 ---
 ![](https://site-images.pages.dev/images/blogs/building_your_own_database/cover_image.jpeg)

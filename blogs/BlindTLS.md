@@ -1,9 +1,10 @@
 ---
 title: Making TLS-based censorship avoidance faster - BlindTLS?
 author: "Murali Krishna"
-date: '2024-12-22'
+date: '2024-12-30'
 language: 'en'
 tags: ['Blog', 'Paper-Reading', 'TLS', 'Censorship-Avoidance']
+excerpt: "Internet Censorship is a thing. There's many mechanisms by which this censorship happens, one of which is via inspecting the supposedly unbreakable TLS Handshake itself. Read on to learn about a system to bypass this entirely, at breakneck speeds!"
 draft: false
 ---
 
@@ -23,7 +24,7 @@ The TLS handshake (both the 1.2 and 1.3 variants) utilize a field in the *Client
 With the former, when you resolve the server's IP via DNS to perform a TLS handshake with (and send your ClientHello), the server knows exactly which website's certificate to present, since there's only one that it's hosting anyway. With the latter (and without SNI), the server has no idea which of the many certificates it holds (corresponding to the many domains it hosts) to present to you, since it doesn't know what website you're trying to connect to.
 
 The SNI tells the server this exact information, alongside the ClientHello.
-![SNI!](/img/SNI.jpg "Align=center,Width=60%")
+![SNI!](/images/blogs/BlindTLS/SNI.jpg "Align=center,Width=60%")
 <p align="center">
   <i>Source: https://www.wallarm.com/what/what-is-server-name-indication-sni</i>
 </p>
@@ -35,7 +36,7 @@ This is exactly what censors exploit - they figure out you're trying to connect 
 #### Virtual Private Networks (VPNs)
 
 VPNs and trusted proxies offer a reprieve. VPNs essentially 'tunnel' your internet traffic to 'middlemen' nodes and encrypt it using a public-private keypair that both you and the VPN share. This means that your Internet Service Provider (ISP) or government can now only see that there's encrypted traffic being sent to a VPN, but not the fact that the traffic in question is a ClientHello packet with your SNI exposed.
-![VPN!](/img/VPN.png "Align=center,Width=60%")
+![VPN!](/images/blogs/BlindTLS/VPN.png "Align=center,Width=60%")
 <p align="center">
   <i>Source: https://medium.com/@hnasr/how-vpns-really-work-a5da843d0eb3</i>
 </p>
@@ -50,7 +51,7 @@ The [*BlindTLS*](https://sambhav.info/files/blindtls-foci21.pdf) system comes up
 
 Resumption is a method to make the TLS handshaking process between a client and server who've already connected before, faster. Vanilla handshaking is a computationally expensive process - generating a secure private key and authenticating certificates takes a while. So when a TLS connection is established and the connection is secure, the server sends a *'ticket'* unique to this client, server and connection triad. The client can present this ticket *alongside* the ClientHello the next time it's trying to connect. Importantly, this ticket is unintelligble to anyone but the server.
 
-![Resumption.](/img/Resumption.png "Align=center,Width=90%")
+![Resumption.](/images/blogs/BlindTLS/Resumption.png "Align=center,Width=90%")
 <p align="center">
   <i>Source: https://blog.cloudflare.com/microsoft-tls-downgrade-schannel-bug/</i>
 </p>
@@ -67,7 +68,7 @@ BlindTLS exploits this lack of necessity for a certificate during resumption. Th
 
 The logic is that during resumption the SNI field is in effect ignored, and we can get away with it being anything. ISPs looking to see if the SNI is censored are then fooled into allowing it through.
 
-![BlindTLS.](/img/BlindTLS.png "Align=center")
+![BlindTLS.](/images/blogs/BlindTLS/BlindTLS.png "Align=center")
 <p align="center">
   <i>Taken straight from the BlindTLS paper!</i>
 </p>

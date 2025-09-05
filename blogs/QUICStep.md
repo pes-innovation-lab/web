@@ -1,19 +1,22 @@
 ---
 author: "Murali Krishna"
-title: Avoiding QUIC based censorship - QUICStep?
-date: '2025-06-15'
+title: Avoiding TLS based censorship via QUIC - QUICStep?
+date: '2025-07-19'
 language: 'en'
 tags: ['Blog', 'Paper-Reading', 'QUIC', 'Censorship-Avoidance']
+excerpt: "Internet Censorship is a thing. There's many mechanisms by which this censorship happens, one of which is via inspecting the supposedly unbreakable TLS Handshake itself. Read on to learn about a system specific to the TCP/TLS alternative QUIC to bypass this entirely, at breakneck speeds!"
 draft: false
 ---
 
 *Originally from [https://www.murali.fyi/ramblings/paper-reading/quicstep/](https://www.murali.fyi/ramblings/paper-reading/quicstep/).*
 
-*(This requires atleast a somewhat basic understanding of QUIC. Also, I recommend you read the blog post about BlindTLS first!)*
+*(This requires atleast a somewhat basic understanding of [QUIC](https://blog.cloudflare.com/the-road-to-quic/). Also, I recommend you read the blog post about [BlindTLS](/blog/BlindTLS) first!)*
 
 **Please read the section TLS Censorship in the [BlindTLS](/blog/BlindTLS) post first!**
 
 Once you've done that, carry on :)
+
+(Oh wait! Before that, you should know that although QUIC is best defined as a TCP alternative, it also bundles TLS into itself, as opposed to tacking it on as a separate layer of abstraction. That is the basis of this system, since TLS-SNI based censorship still works for QUIC!)
 
 ### QUICStep
 
@@ -29,14 +32,14 @@ Over traditional TCP, a common inefficiency is what's known as the **'parking lo
 
 This super catastropic scenario happened because TCP relies on the unchangingness of the quad-tuple of \[Source-IP, Source-Port, Destination-IP, Destination-Port]. By walking beyond the office wi-fi's range, your IP Address (and potentially port) has changed, breaking your underlying TCP connection. To reconnect to your meeting, you had to establish a *new* TCP connection, costing you precious time and in this case, causing the end of the world.
 
-![TCP's reconnection problem](/img/tcp-reconnect.png "Align=center,Width=50%")
+![TCP's reconnection problem](/images/blogs/QUICStep/tcp-reconnect.png "Align=center,Width=50%")
 <p align="center">
   <i>Source: https://pulse.internetsociety.org/blog/how-quic-helps-you-seamlessly-connect-to-different-networks/</i>
 </p>
 
 The way QUIC avoids this is armageddon is via *connection migration*. QUIC does not rely *only* on the above quad-tuple; instead, it assigns a *set of 'connection IDs'* for each connection, exchanged *post* handshake. Anytime a client changes the network through which it is contacting the server (and hence, its IP address), it uses the 'next CID' in the set to identify itself. Since these CIDs were communicated over a secure QUIC connection *after* the handshake was completed, this set of CIDs is completely unknown to anyone but the client and server! This is very analogous to the concept of Session Tickets. (This explanation is heavily oversimplified, but the concept is enough to understand the beauty behind QUICStep!)
 
-![QUIC's connection migration](/img/quic-migration.png "Align=center,Width=50%")
+![QUIC's connection migration](/images/blogs/QUICStep/quic-migration.png "Align=center,Width=50%")
 <p align="center">
   <i>Source: https://pulse.internetsociety.org/blog/how-quic-helps-you-seamlessly-connect-to-different-networks/</i>
 </p>
@@ -45,7 +48,7 @@ The way QUIC avoids this is armageddon is via *connection migration*. QUIC does 
 
 In a nutshell, the concept behind QUICStep is to initiate your QUIC connection to the censored domain via a VPN or trusted proxy, and then *migrate* it to your vanilla, direct path.
 
-![QUICStep](/img/quicstep.png "Align=center")
+![QUICStep](/images/blogs/QUICStep/quicstep.png "Align=center")
 <p align="center">
   <i>Taken straight from the QUICStep paper!</i>
 </p>

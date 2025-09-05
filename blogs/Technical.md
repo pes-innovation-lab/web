@@ -1,6 +1,6 @@
 ---
 title: 'Basic Technical Concepts'
-date: '02-05-2025'
+date: '2025-02-05'
 language: 'en'
 tags: ['Blog', 'Forensics', 'DFIR']
 author: 'Anirudh Revanur'
