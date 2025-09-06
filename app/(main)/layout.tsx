@@ -22,12 +22,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className="font-martian-mono h-screen flex flex-col overflow-hidden">
+            <body className="font-martian-mono">
                 <NavBar />
-                <main className="flex-grow overflow-y-scroll snap-mandatory snap-y scroll-smooth">
-                    {children}
-                    <Footer />
-                </main>
+                {children}
+                <Footer />
             </body>
         </html>
     )
