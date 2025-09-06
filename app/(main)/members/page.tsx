@@ -36,9 +36,10 @@ const shuffleArray = <T,>(array: T[]): T[] => {
 }
 
 function Members() {
-    const years: number[] = [
+    const [years, setYears] = useState([
         2025, 2024, 2023, 2022, 2020, 2019, 2018, 2017, 2016, 2015,
-    ]
+    ])
+
     const [currentYear, setCurrentYear] = useState<number>(
         years.sort((a, b) => b - a)[0]
     )
@@ -64,12 +65,25 @@ function Members() {
     const [isDataLoaded, setDataLoaded] = useState<boolean>(false)
 
     useEffect(() => {
+        if (mOrH === 'Members') {
+            if (currentYear === 2021) setCurrentYear(2022)
+            setYears([
+                2025, 2024, 2023, 2022, 2020, 2019, 2018, 2017, 2016, 2015,
+            ])
+        } else {
+            setYears([
+                2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016,
+                2015,
+            ])
+        }
         setDataLoaded(false)
         setCards([])
         const fetch = () => {
             const membersOutput = (membersData as YearData)[
                 currentYear.toString()
-            ].members
+            ]
+                ? (membersData as YearData)[currentYear.toString()].members
+                : []
             const headsOutput = (headsData as HeadsData)[currentYear.toString()]
                 ? (headsData as HeadsData)[currentYear.toString()].heads
                 : []
